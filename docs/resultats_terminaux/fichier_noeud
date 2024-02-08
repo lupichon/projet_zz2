@@ -1,0 +1,1802 @@
+Building application "test_recv" for "openmote-b" with MCU "cc2538".
+
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/boards/common/init
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/boards/openmote-b
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/core
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/core/lib
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/cpu/cc2538
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/cpu/cc2538/periph
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/cpu/cortexm_common
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/cpu/cortexm_common/periph
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/drivers
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/drivers/at86rf215
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/drivers/netdev
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/drivers/periph_common
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/auto_init
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/div
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/ecc
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/evtimer
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/fmt
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/frac
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/isrpipe
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/luid
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/malloc_thread_safe
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/net/gnrc
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/net/gnrc/link_layer/mac
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/net/gnrc/netapi
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/net/gnrc/netif
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/net/gnrc/netif/hdr
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/net/gnrc/netif/ieee802154
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/net/gnrc/netif/init_devs
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/net/gnrc/netreg
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/net/gnrc/pkt
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/net/gnrc/pktbuf
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/net/gnrc/pktbuf_static
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/net/gnrc/priority_pktqueue
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/net/link_layer/csma_sender
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/net/link_layer/eui_provider
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/net/link_layer/ieee802154
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/net/link_layer/l2util
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/net/netif
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/newlib_syscalls_default
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/pm_layered
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/ps
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/random
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/shell
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/shell/commands
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/stdio_uart
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/tsrb
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/xtimer
+"make" -C /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/sys/ztimer
+   text	   data	    bss	    dec	    hex	filename
+  60024	    204	  14708	  74936	  124b8	/home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/examples/Raphael/test_recv/bin/openmote-b/test_recv.elf
+/home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/dist/tools/cc2538-bsl/cc2538-bsl.py  -p "/dev/ttyUSB1" --bootloader-invert-lines --write-erase -v -b 460800 /home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/examples/Raphael/test_recv/bin/openmote-b/test_recv.bin
+/home/lucas/ISIMA/Projet_capteurs/riot-master/RIOT/dist/tools/pyterm/pyterm -p "/dev/ttyUSB1" -b "115200"  
+2024-02-07 11:42:52,398 # Connect to serial port /dev/ttyUSB1
+Welcome to pyterm!
+Type '/exit' to exit.
+2024-02-07 11:43:09,022 # value of ptr : type 1 
+2024-02-07 11:43:09,037 # ENVOYE !!!
+2024-02-07 11:43:09,197 # value of ptr : type 1 
+2024-02-07 11:43:09,373 # value of ptr : type 1 
+2024-02-07 11:43:09,726 # value of ptr : type 1 
+2024-02-07 11:43:09,789 # value of ptr : type 1 
+2024-02-07 11:43:09,821 # value of ptr : type 1 
+2024-02-07 11:43:09,869 # value of ptr : type 1 
+2024-02-07 11:43:09,966 # value of ptr : type 1 
+2024-02-07 11:43:10,077 # value of ptr : type 1 
+2024-02-07 11:43:10,254 # value of ptr : type 1 
+2024-02-07 11:43:10,590 # value of ptr : type 1 
+2024-02-07 11:43:10,701 # value of ptr : type 1 
+2024-02-07 11:43:10,845 # value of ptr : type 1 
+2024-02-07 11:43:10,973 # value of ptr : type 1 
+2024-02-07 11:43:11,181 # value of ptr : type 1 
+2024-02-07 11:43:11,518 # value of ptr : type 1 
+2024-02-07 11:43:11,661 # value of ptr : type 1 
+2024-02-07 11:43:11,773 # value of ptr : type 1 
+2024-02-07 11:43:11,885 # value of ptr : type 1 
+2024-02-07 11:43:12,109 # value of ptr : type 1 
+2024-02-07 11:43:12,461 # value of ptr : type 1 
+2024-02-07 11:43:12,637 # value of ptr : type 1 
+2024-02-07 11:43:12,750 # value of ptr : type 1 
+2024-02-07 11:43:12,925 # value of ptr : type 1 
+2024-02-07 11:43:13,245 # value of ptr : type 1 
+2024-02-07 11:43:13,581 # value of ptr : type 1 
+2024-02-07 11:43:13,597 # value of ptr : type 1 
+2024-02-07 11:43:13,645 # value of ptr : type 1 
+2024-02-07 11:43:13,709 # value of ptr : type 1 
+2024-02-07 11:43:13,789 # value of ptr : type 1 
+2024-02-07 11:43:13,917 # value of ptr : type 1 
+2024-02-07 11:43:14,062 # value of ptr : type 1 
+2024-02-07 11:43:14,270 # value of ptr : type 1 
+2024-02-07 11:43:14,589 # value of ptr : type 1 
+2024-02-07 11:43:14,909 # value of ptr : type 1 
+2024-02-07 11:43:15,261 # value of ptr : type 1 
+2024-02-07 11:43:15,565 # value of ptr : type 1 
+2024-02-07 11:43:15,837 # value of ptr : type 1 
+2024-02-07 11:43:15,981 # value of ptr : type 1 
+2024-02-07 11:43:16,189 # value of ptr : type 1 
+2024-02-07 11:43:16,557 # value of ptr : type 1 
+2024-02-07 11:43:16,797 # value of ptr : type 1 
+2024-02-07 11:43:17,085 # value of ptr : type 1 
+2024-02-07 11:43:17,261 # value of ptr : type 1 
+2024-02-07 11:43:17,533 # value of ptr : type 1 
+2024-02-07 11:43:17,757 # value of ptr : type 1 
+2024-02-07 11:43:17,997 # value of ptr : type 1 
+2024-02-07 11:43:18,269 # value of ptr : type 1 
+2024-02-07 11:43:18,573 # value of ptr : type 1 
+2024-02-07 11:43:18,653 # value of ptr : type 1 
+2024-02-07 11:43:18,717 # value of ptr : type 1 
+2024-02-07 11:43:18,781 # value of ptr : type 1 
+2024-02-07 11:43:18,973 # value of ptr : type 1 
+2024-02-07 11:43:19,309 # value of ptr : type 1 
+2024-02-07 11:43:19,597 # value of ptr : type 1 
+2024-02-07 11:43:19,645 # value of ptr : type 1 
+2024-02-07 11:43:19,709 # value of ptr : type 1 
+2024-02-07 11:43:19,789 # value of ptr : type 1 
+2024-02-07 11:43:19,901 # value of ptr : type 1 
+2024-02-07 11:43:20,077 # value of ptr : type 1 
+2024-02-07 11:43:20,413 # value of ptr : type 1 
+2024-02-07 11:43:20,493 # value of ptr : type 1 
+2024-02-07 11:43:20,589 # value of ptr : type 1 
+2024-02-07 11:43:20,701 # value of ptr : type 1 
+2024-02-07 11:43:20,861 # value of ptr : type 1 
+2024-02-07 11:43:20,925 # value of ptr : type 1 
+2024-02-07 11:43:20,957 # value of ptr : type 1 
+2024-02-07 11:43:21,005 # value of ptr : type 1 
+2024-02-07 11:43:21,037 # value of ptr : type 1 
+2024-02-07 11:43:21,069 # value of ptr : type 1 
+2024-02-07 11:43:21,101 # value of ptr : type 1 
+2024-02-07 11:43:21,149 # value of ptr : type 1 
+2024-02-07 11:43:21,197 # value of ptr : type 1 
+2024-02-07 11:43:21,309 # value of ptr : type 1 
+2024-02-07 11:43:21,565 # value of ptr : type 1 
+2024-02-07 11:43:21,709 # value of ptr : type 1 
+2024-02-07 11:43:21,805 # value of ptr : type 1 
+2024-02-07 11:43:22,045 # value of ptr : type 1 
+2024-02-07 11:43:22,077 # value of ptr : type 1 
+2024-02-07 11:43:22,093 # value of ptr : type 1 
+2024-02-07 11:43:22,173 # value of ptr : type 1 
+2024-02-07 11:43:22,317 # value of ptr : type 1 
+2024-02-07 11:43:22,413 # value of ptr : type 1 
+2024-02-07 11:43:22,557 # value of ptr : type 1 
+2024-02-07 11:43:22,829 # value of ptr : type 1 
+2024-02-07 11:43:23,101 # value of ptr : type 1 
+2024-02-07 11:43:23,261 # value of ptr : type 1 
+2024-02-07 11:43:23,389 # value of ptr : type 1 
+2024-02-07 11:43:23,565 # value of ptr : type 1 
+2024-02-07 11:43:23,837 # value of ptr : type 1 
+2024-02-07 11:43:24,013 # value of ptr : type 1 
+2024-02-07 11:43:24,221 # value of ptr : type 1 
+2024-02-07 11:43:24,573 # value of ptr : type 1 
+2024-02-07 11:43:24,733 # value of ptr : type 1 
+2024-02-07 11:43:24,877 # value of ptr : type 1 
+2024-02-07 11:43:24,924 # value of ptr : type 1 
+2024-02-07 11:43:24,957 # value of ptr : type 1 
+2024-02-07 11:43:25,020 # value of ptr : type 1 
+2024-02-07 11:43:25,133 # value of ptr : type 1 
+2024-02-07 11:43:25,261 # value of ptr : type 1 
+2024-02-07 11:43:25,581 # value of ptr : type 1 
+2024-02-07 11:43:25,885 # value of ptr : type 1 
+2024-02-07 11:43:26,205 # value of ptr : type 1 
+2024-02-07 11:43:26,381 # value of ptr : type 1 
+2024-02-07 11:43:26,557 # value of ptr : type 1 
+2024-02-07 11:43:26,861 # value of ptr : type 1 
+2024-02-07 11:43:27,181 # value of ptr : type 1 
+2024-02-07 11:43:27,517 # value of ptr : type 1 
+2024-02-07 11:43:27,677 # value of ptr : type 1 
+2024-02-07 11:43:27,869 # value of ptr : type 1 
+2024-02-07 11:43:28,237 # value of ptr : type 1 
+2024-02-07 11:43:28,317 # value of ptr : type 1 
+2024-02-07 11:43:28,413 # value of ptr : type 1 
+2024-02-07 11:43:28,588 # value of ptr : type 1 
+2024-02-07 11:43:28,876 # value of ptr : type 1 
+2024-02-07 11:43:29,149 # value of ptr : type 1 
+2024-02-07 11:43:29,373 # value of ptr : type 1 
+2024-02-07 11:43:29,692 # value of ptr : type 1 
+2024-02-07 11:43:29,868 # value of ptr : type 1 
+2024-02-07 11:43:30,109 # value of ptr : type 1 
+2024-02-07 11:43:30,460 # value of ptr : type 1 
+2024-02-07 11:43:30,797 # value of ptr : type 1 
+2024-02-07 11:43:30,845 # value of ptr : type 1 
+2024-02-07 11:43:30,876 # value of ptr : type 1 
+2024-02-07 11:43:30,972 # value of ptr : type 1 
+2024-02-07 11:43:31,053 # value of ptr : type 1 
+2024-02-07 11:43:31,148 # value of ptr : type 1 
+2024-02-07 11:43:31,260 # value of ptr : type 1 
+2024-02-07 11:43:31,436 # value of ptr : type 1 
+2024-02-07 11:43:31,772 # value of ptr : type 1 
+2024-02-07 11:43:31,821 # value of ptr : type 1 
+2024-02-07 11:43:31,852 # value of ptr : type 1 
+2024-02-07 11:43:31,900 # value of ptr : type 1 
+2024-02-07 11:43:31,981 # value of ptr : type 1 
+2024-02-07 11:43:32,076 # value of ptr : type 1 
+2024-02-07 11:43:32,189 # value of ptr : type 1 
+2024-02-07 11:43:32,317 # value of ptr : type 1 
+2024-02-07 11:43:32,444 # value of ptr : type 1 
+2024-02-07 11:43:32,604 # value of ptr : type 1 
+2024-02-07 11:43:32,908 # value of ptr : type 1 
+2024-02-07 11:43:33,244 # value of ptr : type 1 
+2024-02-07 11:43:33,516 # value of ptr : type 1 
+2024-02-07 11:43:33,644 # value of ptr : type 1 
+2024-02-07 11:43:33,788 # value of ptr : type 1 
+2024-02-07 11:43:34,108 # value of ptr : type 1 
+2024-02-07 11:43:34,428 # value of ptr : type 1 
+2024-02-07 11:43:34,716 # value of ptr : type 1 
+2024-02-07 11:43:34,796 # value of ptr : type 1 
+2024-02-07 11:43:34,812 # value of ptr : type 1 
+2024-02-07 11:43:34,844 # value of ptr : type 1 
+2024-02-07 11:43:34,892 # value of ptr : type 1 
+2024-02-07 11:43:34,972 # value of ptr : type 1 
+2024-02-07 11:43:35,132 # value of ptr : type 1 
+2024-02-07 11:43:35,356 # value of ptr : type 1 
+2024-02-07 11:43:35,724 # value of ptr : type 1 
+2024-02-07 11:43:35,836 # value of ptr : type 1 
+2024-02-07 11:43:35,948 # value of ptr : type 1 
+2024-02-07 11:43:36,236 # value of ptr : type 1 
+2024-02-07 11:43:36,460 # value of ptr : type 1 
+2024-02-07 11:43:36,636 # value of ptr : type 1 
+2024-02-07 11:43:36,925 # value of ptr : type 1 
+2024-02-07 11:43:37,004 # value of ptr : type 1 
+2024-02-07 11:43:37,052 # value of ptr : type 1 
+2024-02-07 11:43:37,100 # value of ptr : type 1 
+2024-02-07 11:43:37,212 # value of ptr : type 1 
+2024-02-07 11:43:37,404 # value of ptr : type 1 
+2024-02-07 11:43:37,660 # value of ptr : type 1 
+2024-02-07 11:43:37,740 # value of ptr : type 1 
+2024-02-07 11:43:37,820 # value of ptr : type 1 
+2024-02-07 11:43:37,964 # value of ptr : type 1 
+2024-02-07 11:43:38,156 # value of ptr : type 1 
+2024-02-07 11:43:38,236 # value of ptr : type 1 
+2024-02-07 11:43:38,332 # value of ptr : type 1 
+2024-02-07 11:43:38,460 # value of ptr : type 1 
+2024-02-07 11:43:38,684 # value of ptr : type 1 
+2024-02-07 11:43:38,748 # value of ptr : type 1 
+2024-02-07 11:43:38,780 # value of ptr : type 1 
+2024-02-07 11:43:38,860 # value of ptr : type 1 
+2024-02-07 11:43:38,988 # value of ptr : type 1 
+2024-02-07 11:43:39,116 # value of ptr : type 1 
+2024-02-07 11:43:39,436 # value of ptr : type 1 
+2024-02-07 11:43:39,725 # value of ptr : type 1 
+2024-02-07 11:43:40,076 # value of ptr : type 1 
+2024-02-07 11:43:40,204 # value of ptr : type 1 
+2024-02-07 11:43:40,284 # value of ptr : type 1 
+2024-02-07 11:43:40,396 # value of ptr : type 1 
+2024-02-07 11:43:40,636 # value of ptr : type 1 
+2024-02-07 11:43:40,941 # value of ptr : type 1 
+2024-02-07 11:43:41,036 # value of ptr : type 1 
+2024-02-07 11:43:41,133 # value of ptr : type 1 
+2024-02-07 11:43:41,324 # value of ptr : type 1 
+2024-02-07 11:43:41,644 # value of ptr : type 1 
+2024-02-07 11:43:42,012 # value of ptr : type 1 
+2024-02-07 11:43:42,172 # value of ptr : type 1 
+2024-02-07 11:43:42,396 # value of ptr : type 1 
+2024-02-07 11:43:42,492 # value of ptr : type 1 
+2024-02-07 11:43:42,508 # value of ptr : type 1 
+2024-02-07 11:43:42,556 # value of ptr : type 1 
+2024-02-07 11:43:42,636 # value of ptr : type 1 
+2024-02-07 11:43:42,748 # value of ptr : type 1 
+2024-02-07 11:43:42,988 # value of ptr : type 1 
+2024-02-07 11:43:43,244 # value of ptr : type 1 
+2024-02-07 11:43:43,356 # value of ptr : type 1 
+2024-02-07 11:43:43,452 # value of ptr : type 1 
+2024-02-07 11:43:43,628 # value of ptr : type 1 
+2024-02-07 11:43:43,883 # value of ptr : type 1 
+2024-02-07 11:43:44,236 # value of ptr : type 1 
+2024-02-07 11:43:44,508 # value of ptr : type 1 
+2024-02-07 11:43:44,828 # value of ptr : type 1 
+2024-02-07 11:43:45,084 # value of ptr : type 1 
+2024-02-07 11:43:45,292 # value of ptr : type 1 
+2024-02-07 11:43:45,564 # value of ptr : type 1 
+2024-02-07 11:43:45,916 # value of ptr : type 1 
+2024-02-07 11:43:46,252 # value of ptr : type 1 
+2024-02-07 11:43:46,604 # value of ptr : type 1 
+2024-02-07 11:43:46,796 # value of ptr : type 1 
+2024-02-07 11:43:46,956 # value of ptr : type 1 
+2024-02-07 11:43:47,115 # value of ptr : type 1 
+2024-02-07 11:43:47,420 # value of ptr : type 1 
+2024-02-07 11:43:47,484 # value of ptr : type 1 
+2024-02-07 11:43:47,516 # value of ptr : type 1 
+2024-02-07 11:43:47,611 # value of ptr : type 1 
+2024-02-07 11:43:47,708 # value of ptr : type 1 
+2024-02-07 11:43:47,868 # value of ptr : type 1 
+2024-02-07 11:43:48,188 # value of ptr : type 1 
+2024-02-07 11:43:48,396 # value of ptr : type 1 
+2024-02-07 11:43:48,587 # value of ptr : type 1 
+2024-02-07 11:43:48,796 # value of ptr : type 1 
+2024-02-07 11:43:48,860 # value of ptr : type 1 
+2024-02-07 11:43:48,940 # value of ptr : type 1 
+2024-02-07 11:43:49,036 # value of ptr : type 1 
+2024-02-07 11:43:49,164 # value of ptr : type 1 
+2024-02-07 11:43:49,403 # value of ptr : type 1 
+2024-02-07 11:43:49,756 # value of ptr : type 1 
+2024-02-07 11:43:49,852 # value of ptr : type 1 
+2024-02-07 11:43:49,948 # value of ptr : type 1 
+2024-02-07 11:43:50,172 # value of ptr : type 1 
+2024-02-07 11:43:50,332 # value of ptr : type 1 
+2024-02-07 11:43:50,475 # value of ptr : type 1 
+2024-02-07 11:43:50,731 # value of ptr : type 1 
+2024-02-07 11:43:50,827 # value of ptr : type 1 
+2024-02-07 11:43:50,924 # value of ptr : type 1 
+2024-02-07 11:43:51,148 # value of ptr : type 1 
+2024-02-07 11:43:51,228 # value of ptr : type 1 
+2024-02-07 11:43:51,371 # value of ptr : type 1 
+2024-02-07 11:43:51,595 # value of ptr : type 1 
+2024-02-07 11:43:51,803 # value of ptr : type 1 
+2024-02-07 11:43:51,852 # value of ptr : type 1 
+2024-02-07 11:43:51,899 # value of ptr : type 1 
+2024-02-07 11:43:51,979 # value of ptr : type 1 
+2024-02-07 11:43:52,108 # value of ptr : type 1 
+2024-02-07 11:43:52,347 # value of ptr : type 1 
+2024-02-07 11:43:52,716 # value of ptr : type 1 
+2024-02-07 11:43:53,051 # value of ptr : type 1 
+2024-02-07 11:43:53,387 # value of ptr : type 1 
+2024-02-07 11:43:53,755 # value of ptr : type 1 
+2024-02-07 11:43:53,947 # value of ptr : type 1 
+2024-02-07 11:43:54,139 # value of ptr : type 1 
+2024-02-07 11:43:54,491 # value of ptr : type 1 
+2024-02-07 11:43:54,843 # value of ptr : type 1 
+2024-02-07 11:43:55,211 # value of ptr : type 1 
+2024-02-07 11:43:55,579 # value of ptr : type 1 
+2024-02-07 11:43:55,899 # value of ptr : type 1 
+2024-02-07 11:43:56,267 # value of ptr : type 1 
+2024-02-07 11:43:56,636 # value of ptr : type 1 
+2024-02-07 11:43:56,843 # value of ptr : type 1 
+2024-02-07 11:43:57,067 # value of ptr : type 1 
+2024-02-07 11:43:57,099 # value of ptr : type 1 
+2024-02-07 11:43:57,131 # value of ptr : type 1 
+2024-02-07 11:43:57,179 # value of ptr : type 1 
+2024-02-07 11:43:57,323 # value of ptr : type 1 
+2024-02-07 11:43:57,435 # value of ptr : type 1 
+2024-02-07 11:43:57,595 # value of ptr : type 1 
+2024-02-07 11:43:57,883 # value of ptr : type 1 
+2024-02-07 11:43:58,235 # value of ptr : type 1 
+2024-02-07 11:43:58,539 # value of ptr : type 1 
+2024-02-07 11:43:58,891 # value of ptr : type 1 
+2024-02-07 11:43:58,939 # value of ptr : type 1 
+2024-02-07 11:43:58,987 # value of ptr : type 1 
+2024-02-07 11:43:59,099 # value of ptr : type 1 
+2024-02-07 11:43:59,339 # value of ptr : type 1 
+2024-02-07 11:43:59,403 # value of ptr : type 1 
+2024-02-07 11:43:59,499 # value of ptr : type 1 
+2024-02-07 11:43:59,643 # value of ptr : type 1 
+2024-02-07 11:43:59,867 # value of ptr : type 1 
+2024-02-07 11:43:59,899 # value of ptr : type 1 
+2024-02-07 11:43:59,947 # value of ptr : type 1 
+2024-02-07 11:43:59,995 # value of ptr : type 1 
+2024-02-07 11:44:00,107 # value of ptr : type 1 
+2024-02-07 11:44:00,299 # value of ptr : type 1 
+2024-02-07 11:44:00,571 # value of ptr : type 1 
+2024-02-07 11:44:00,683 # value of ptr : type 1 
+2024-02-07 11:44:00,795 # value of ptr : type 1 
+2024-02-07 11:44:00,891 # value of ptr : type 1 
+2024-02-07 11:44:01,035 # value of ptr : type 1 
+2024-02-07 11:44:01,339 # value of ptr : type 1 
+2024-02-07 11:44:01,451 # value of ptr : type 1 
+2024-02-07 11:44:01,547 # value of ptr : type 1 
+2024-02-07 11:44:01,611 # value of ptr : type 1 
+2024-02-07 11:44:01,723 # value of ptr : type 1 
+2024-02-07 11:44:01,883 # value of ptr : type 1 
+2024-02-07 11:44:02,123 # value of ptr : type 1 
+2024-02-07 11:44:02,171 # value of ptr : type 1 
+2024-02-07 11:44:02,251 # value of ptr : type 1 
+2024-02-07 11:44:02,379 # value of ptr : type 1 
+2024-02-07 11:44:02,603 # value of ptr : type 1 
+2024-02-07 11:44:02,923 # value of ptr : type 1 
+2024-02-07 11:44:03,019 # value of ptr : type 1 
+2024-02-07 11:44:03,179 # value of ptr : type 1 
+2024-02-07 11:44:03,515 # value of ptr : type 1 
+2024-02-07 11:44:03,867 # value of ptr : type 1 
+2024-02-07 11:44:04,235 # value of ptr : type 1 
+2024-02-07 11:44:04,411 # value of ptr : type 1 
+2024-02-07 11:44:04,603 # value of ptr : type 1 
+2024-02-07 11:44:04,683 # value of ptr : type 1 
+2024-02-07 11:44:04,795 # value of ptr : type 1 
+2024-02-07 11:44:05,082 # value of ptr : type 1 
+2024-02-07 11:44:05,291 # value of ptr : type 1 
+2024-02-07 11:44:05,483 # value of ptr : type 1 
+2024-02-07 11:44:05,547 # value of ptr : type 1 
+2024-02-07 11:44:05,579 # value of ptr : type 1 
+2024-02-07 11:44:05,627 # value of ptr : type 1 
+2024-02-07 11:44:05,739 # value of ptr : type 1 
+2024-02-07 11:44:05,963 # value of ptr : type 1 
+2024-02-07 11:44:06,011 # value of ptr : type 1 
+2024-02-07 11:44:06,074 # value of ptr : type 1 
+2024-02-07 11:44:06,123 # value of ptr : type 1 
+2024-02-07 11:44:06,187 # value of ptr : type 1 
+2024-02-07 11:44:06,283 # value of ptr : type 1 
+2024-02-07 11:44:06,443 # value of ptr : type 1 
+2024-02-07 11:44:06,731 # value of ptr : type 1 
+2024-02-07 11:44:06,939 # value of ptr : type 1 
+2024-02-07 11:44:07,051 # value of ptr : type 1 
+2024-02-07 11:44:07,307 # value of ptr : type 1 
+2024-02-07 11:44:07,659 # value of ptr : type 1 
+2024-02-07 11:44:07,771 # value of ptr : type 1 
+2024-02-07 11:44:07,931 # value of ptr : type 1 
+2024-02-07 11:44:08,155 # value of ptr : type 1 
+2024-02-07 11:44:08,218 # value of ptr : type 1 
+2024-02-07 11:44:08,234 # value of ptr : type 1 
+2024-02-07 11:44:08,299 # value of ptr : type 1 
+2024-02-07 11:44:08,394 # value of ptr : type 1 
+2024-02-07 11:44:08,586 # value of ptr : type 1 
+2024-02-07 11:44:08,906 # value of ptr : type 1 
+2024-02-07 11:44:08,939 # value of ptr : type 1 
+2024-02-07 11:44:08,970 # value of ptr : type 1 
+2024-02-07 11:44:09,050 # value of ptr : type 1 
+2024-02-07 11:44:09,194 # value of ptr : type 1 
+2024-02-07 11:44:09,402 # value of ptr : type 1 
+2024-02-07 11:44:09,595 # value of ptr : type 1 
+2024-02-07 11:44:09,819 # value of ptr : type 1 
+2024-02-07 11:44:10,139 # value of ptr : type 1 
+2024-02-07 11:44:10,250 # value of ptr : type 1 
+2024-02-07 11:44:10,427 # value of ptr : type 1 
+2024-02-07 11:44:10,641 # value of ptr : type 1 
+2024-02-07 11:44:10,682 # value of ptr : type 1 
+2024-02-07 11:44:10,714 # value of ptr : type 1 
+2024-02-07 11:44:10,762 # value of ptr : type 1 
+2024-02-07 11:44:10,858 # value of ptr : type 1 
+2024-02-07 11:44:11,003 # value of ptr : type 1 
+2024-02-07 11:44:11,227 # value of ptr : type 1 
+2024-02-07 11:44:11,498 # value of ptr : type 1 
+2024-02-07 11:44:11,547 # value of ptr : type 1 
+2024-02-07 11:44:11,595 # value of ptr : type 1 
+2024-02-07 11:44:11,723 # value of ptr : type 1 
+2024-02-07 11:44:11,882 # value of ptr : type 1 
+2024-02-07 11:44:12,154 # value of ptr : type 1 
+2024-02-07 11:44:12,218 # value of ptr : type 1 
+2024-02-07 11:44:12,282 # value of ptr : type 1 
+2024-02-07 11:44:12,394 # value of ptr : type 1 
+2024-02-07 11:44:12,698 # value of ptr : type 1 
+2024-02-07 11:44:12,858 # value of ptr : type 1 
+2024-02-07 11:44:12,970 # value of ptr : type 1 
+2024-02-07 11:44:13,130 # value of ptr : type 1 
+2024-02-07 11:44:13,370 # value of ptr : type 1 
+2024-02-07 11:44:13,531 # value of ptr : type 1 
+2024-02-07 11:44:13,690 # value of ptr : type 1 
+2024-02-07 11:44:14,010 # value of ptr : type 1 
+2024-02-07 11:44:14,154 # value of ptr : type 1 
+2024-02-07 11:44:14,314 # value of ptr : type 1 
+2024-02-07 11:44:14,603 # value of ptr : type 1 
+2024-02-07 11:44:14,746 # value of ptr : type 1 
+2024-02-07 11:44:14,874 # value of ptr : type 1 
+2024-02-07 11:44:15,018 # value of ptr : type 1 
+2024-02-07 11:44:15,370 # value of ptr : type 1 
+2024-02-07 11:44:15,594 # value of ptr : type 1 
+2024-02-07 11:44:15,770 # value of ptr : type 1 
+2024-02-07 11:44:16,026 # value of ptr : type 1 
+2024-02-07 11:44:16,138 # value of ptr : type 1 
+2024-02-07 11:44:16,266 # value of ptr : type 1 
+2024-02-07 11:44:16,554 # value of ptr : type 1 
+2024-02-07 11:44:16,618 # value of ptr : type 1 
+2024-02-07 11:44:16,666 # value of ptr : type 1 
+2024-02-07 11:44:16,730 # value of ptr : type 1 
+2024-02-07 11:44:16,826 # value of ptr : type 1 
+2024-02-07 11:44:17,034 # value of ptr : type 1 
+2024-02-07 11:44:17,354 # value of ptr : type 1 
+2024-02-07 11:44:17,418 # value of ptr : type 1 
+2024-02-07 11:44:17,466 # value of ptr : type 1 
+2024-02-07 11:44:17,594 # value of ptr : type 1 
+2024-02-07 11:44:17,818 # value of ptr : type 1 
+2024-02-07 11:44:18,138 # value of ptr : type 1 
+2024-02-07 11:44:18,298 # value of ptr : type 1 
+2024-02-07 11:44:18,458 # value of ptr : type 1 
+2024-02-07 11:44:18,698 # value of ptr : type 1 
+2024-02-07 11:44:18,970 # value of ptr : type 1 
+2024-02-07 11:44:19,082 # value of ptr : type 1 
+2024-02-07 11:44:19,194 # value of ptr : type 1 
+2024-02-07 11:44:19,370 # value of ptr : type 1 
+2024-02-07 11:44:19,578 # value of ptr : type 1 
+2024-02-07 11:44:19,946 # value of ptr : type 1 
+2024-02-07 11:44:20,042 # value of ptr : type 1 
+2024-02-07 11:44:20,138 # value of ptr : type 1 
+2024-02-07 11:44:20,362 # value of ptr : type 1 
+2024-02-07 11:44:20,666 # value of ptr : type 1 
+2024-02-07 11:44:20,794 # value of ptr : type 1 
+2024-02-07 11:44:20,874 # value of ptr : type 1 
+2024-02-07 11:44:21,082 # value of ptr : type 1 
+2024-02-07 11:44:21,114 # value of ptr : type 1 
+2024-02-07 11:44:21,130 # value of ptr : type 1 
+2024-02-07 11:44:21,226 # value of ptr : type 1 
+2024-02-07 11:44:21,418 # value of ptr : type 1 
+2024-02-07 11:44:21,802 # value of ptr : type 1 
+2024-02-07 11:44:22,138 # value of ptr : type 1 
+2024-02-07 11:44:22,186 # value of ptr : type 1 
+2024-02-07 11:44:22,218 # value of ptr : type 1 
+2024-02-07 11:44:22,298 # value of ptr : type 1 
+2024-02-07 11:44:22,442 # value of ptr : type 1 
+2024-02-07 11:44:22,682 # value of ptr : type 1 
+2024-02-07 11:44:23,034 # value of ptr : type 1 
+2024-02-07 11:44:23,386 # value of ptr : type 1 
+2024-02-07 11:44:23,738 # value of ptr : type 1 
+2024-02-07 11:44:23,914 # value of ptr : type 1 
+2024-02-07 11:44:24,090 # value of ptr : type 1 
+2024-02-07 11:44:24,378 # value of ptr : type 1 
+2024-02-07 11:44:24,474 # value of ptr : type 1 
+2024-02-07 11:44:24,506 # value of ptr : type 1 
+2024-02-07 11:44:24,585 # value of ptr : type 1 
+2024-02-07 11:44:24,698 # value of ptr : type 1 
+2024-02-07 11:44:24,810 # value of ptr : type 1 
+2024-02-07 11:44:24,890 # value of ptr : type 1 
+2024-02-07 11:44:25,130 # value of ptr : type 1 
+2024-02-07 11:44:25,482 # value of ptr : type 1 
+2024-02-07 11:44:25,722 # value of ptr : type 1 
+2024-02-07 11:44:25,946 # value of ptr : type 1 
+2024-02-07 11:44:26,170 # value of ptr : type 1 
+2024-02-07 11:44:26,201 # value of ptr : type 1 
+2024-02-07 11:44:26,217 # value of ptr : type 1 
+2024-02-07 11:44:26,298 # value of ptr : type 1 
+2024-02-07 11:44:26,378 # value of ptr : type 1 
+2024-02-07 11:44:26,554 # value of ptr : type 1 
+2024-02-07 11:44:26,746 # value of ptr : type 1 
+2024-02-07 11:44:27,066 # value of ptr : type 1 
+2024-02-07 11:44:27,337 # value of ptr : type 1 
+2024-02-07 11:44:27,369 # value of ptr : type 1 
+2024-02-07 11:44:27,386 # value of ptr : type 1 
+2024-02-07 11:44:27,449 # value of ptr : type 1 
+2024-02-07 11:44:27,562 # value of ptr : type 1 
+2024-02-07 11:44:27,689 # value of ptr : type 1 
+2024-02-07 11:44:27,914 # value of ptr : type 1 
+2024-02-07 11:44:28,281 # value of ptr : type 1 
+2024-02-07 11:44:28,473 # value of ptr : type 1 
+2024-02-07 11:44:28,649 # value of ptr : type 1 
+2024-02-07 11:44:29,001 # value of ptr : type 1 
+2024-02-07 11:44:29,193 # value of ptr : type 1 
+2024-02-07 11:44:29,369 # value of ptr : type 1 
+2024-02-07 11:44:29,642 # value of ptr : type 1 
+2024-02-07 11:44:29,690 # value of ptr : type 1 
+2024-02-07 11:44:29,753 # value of ptr : type 1 
+2024-02-07 11:44:29,833 # value of ptr : type 1 
+2024-02-07 11:44:29,946 # value of ptr : type 1 
+2024-02-07 11:44:30,073 # value of ptr : type 1 
+2024-02-07 11:44:30,153 # value of ptr : type 1 
+2024-02-07 11:44:30,218 # value of ptr : type 1 
+2024-02-07 11:44:30,330 # value of ptr : type 1 
+2024-02-07 11:44:30,490 # value of ptr : type 1 
+2024-02-07 11:44:30,777 # value of ptr : type 1 
+2024-02-07 11:44:30,809 # value of ptr : type 1 
+2024-02-07 11:44:30,826 # value of ptr : type 1 
+2024-02-07 11:44:30,953 # value of ptr : type 1 
+2024-02-07 11:44:31,097 # value of ptr : type 1 
+2024-02-07 11:44:31,353 # value of ptr : type 1 
+2024-02-07 11:44:31,546 # value of ptr : type 1 
+2024-02-07 11:44:31,769 # value of ptr : type 1 
+2024-02-07 11:44:31,785 # value of ptr : type 1 
+2024-02-07 11:44:31,801 # value of ptr : type 1 
+2024-02-07 11:44:31,913 # value of ptr : type 1 
+2024-02-07 11:44:32,041 # value of ptr : type 1 
+2024-02-07 11:44:32,186 # value of ptr : type 1 
+2024-02-07 11:44:32,361 # value of ptr : type 1 
+2024-02-07 11:44:32,682 # value of ptr : type 1 
+2024-02-07 11:44:32,729 # value of ptr : type 1 
+2024-02-07 11:44:32,745 # value of ptr : type 1 
+2024-02-07 11:44:32,809 # value of ptr : type 1 
+2024-02-07 11:44:32,857 # value of ptr : type 1 
+2024-02-07 11:44:32,985 # value of ptr : type 1 
+2024-02-07 11:44:33,065 # value of ptr : type 1 
+2024-02-07 11:44:33,162 # value of ptr : type 1 
+2024-02-07 11:44:33,305 # value of ptr : type 1 
+2024-02-07 11:44:33,465 # value of ptr : type 1 
+2024-02-07 11:44:33,705 # value of ptr : type 1 
+2024-02-07 11:44:33,849 # value of ptr : type 1 
+2024-02-07 11:44:33,898 # value of ptr : type 1 
+2024-02-07 11:44:33,993 # value of ptr : type 1 
+2024-02-07 11:44:34,137 # value of ptr : type 1 
+2024-02-07 11:44:34,393 # value of ptr : type 1 
+2024-02-07 11:44:34,441 # value of ptr : type 1 
+2024-02-07 11:44:34,489 # value of ptr : type 1 
+2024-02-07 11:44:34,537 # value of ptr : type 1 
+2024-02-07 11:44:34,745 # value of ptr : type 1 
+2024-02-07 11:44:34,969 # value of ptr : type 1 
+2024-02-07 11:44:35,289 # value of ptr : type 1 
+2024-02-07 11:44:35,641 # value of ptr : type 1 
+2024-02-07 11:44:35,945 # value of ptr : type 1 
+2024-02-07 11:44:36,281 # value of ptr : type 1 
+2024-02-07 11:44:36,617 # value of ptr : type 1 
+2024-02-07 11:44:36,985 # value of ptr : type 1 
+2024-02-07 11:44:37,305 # value of ptr : type 1 
+2024-02-07 11:44:37,353 # value of ptr : type 1 
+2024-02-07 11:44:37,385 # value of ptr : type 1 
+2024-02-07 11:44:37,497 # value of ptr : type 1 
+2024-02-07 11:44:37,577 # value of ptr : type 1 
+2024-02-07 11:44:37,689 # value of ptr : type 1 
+2024-02-07 11:44:37,914 # value of ptr : type 1 
+2024-02-07 11:44:38,281 # value of ptr : type 1 
+2024-02-07 11:44:38,441 # value of ptr : type 1 
+2024-02-07 11:44:38,537 # value of ptr : type 1 
+2024-02-07 11:44:38,713 # value of ptr : type 1 
+2024-02-07 11:44:39,049 # value of ptr : type 1 
+2024-02-07 11:44:39,113 # value of ptr : type 1 
+2024-02-07 11:44:39,209 # value of ptr : type 1 
+2024-02-07 11:44:39,370 # value of ptr : type 1 
+2024-02-07 11:44:39,689 # value of ptr : type 1 
+2024-02-07 11:44:39,817 # value of ptr : type 1 
+2024-02-07 11:44:39,945 # value of ptr : type 1 
+2024-02-07 11:44:40,233 # value of ptr : type 1 
+2024-02-07 11:44:40,601 # value of ptr : type 1 
+2024-02-07 11:44:40,969 # value of ptr : type 1 
+2024-02-07 11:44:41,017 # value of ptr : type 1 
+2024-02-07 11:44:41,097 # value of ptr : type 1 
+2024-02-07 11:44:41,209 # value of ptr : type 1 
+2024-02-07 11:44:41,337 # value of ptr : type 1 
+2024-02-07 11:44:41,529 # value of ptr : type 1 
+2024-02-07 11:44:41,865 # value of ptr : type 1 
+2024-02-07 11:44:41,977 # value of ptr : type 1 
+2024-02-07 11:44:42,137 # value of ptr : type 1 
+2024-02-07 11:44:42,345 # value of ptr : type 1 
+2024-02-07 11:44:42,681 # value of ptr : type 1 
+2024-02-07 11:44:42,937 # value of ptr : type 1 
+2024-02-07 11:44:43,193 # value of ptr : type 1 
+2024-02-07 11:44:43,561 # value of ptr : type 1 
+2024-02-07 11:44:43,929 # value of ptr : type 1 
+2024-02-07 11:44:44,169 # value of ptr : type 1 
+2024-02-07 11:44:44,457 # value of ptr : type 1 
+2024-02-07 11:44:44,553 # value of ptr : type 1 
+2024-02-07 11:44:44,601 # value of ptr : type 1 
+2024-02-07 11:44:44,697 # value of ptr : type 1 
+2024-02-07 11:44:44,937 # value of ptr : type 1 
+2024-02-07 11:44:44,953 # value of ptr : type 1 
+2024-02-07 11:44:45,049 # value of ptr : type 5 
+2024-02-07 11:44:45,081 # value of ptr : type 11 
+2024-02-07 11:44:45,081 # Order 0 => [order] f241 
+2024-02-07 11:44:45,082 # led0
+2024-02-07 11:44:45,082 # value of ptr : type 5 
+2024-02-07 11:44:45,113 # value of ptr : type 5 
+2024-02-07 11:44:45,129 # value of ptr : type 5 
+2024-02-07 11:44:45,160 # value of ptr : type 12 
+2024-02-07 11:44:45,161 # Order 1 => [mixed] f241 
+2024-02-07 11:44:45,161 # led1
+2024-02-07 11:44:45,177 # value of ptr : type 5 
+2024-02-07 11:44:45,193 # value of ptr : type 5 
+2024-02-07 11:44:45,225 # value of ptr : type 5 
+2024-02-07 11:44:45,241 # value of ptr : type 5 
+2024-02-07 11:44:45,257 # value of ptr : type 12 
+2024-02-07 11:44:45,258 # Order 2 => [mixed] f241 
+2024-02-07 11:44:45,272 # led1
+2024-02-07 11:44:45,289 # value of ptr : type 5 
+2024-02-07 11:44:45,305 # value of ptr : type 5 
+2024-02-07 11:44:45,321 # value of ptr : type 5 
+2024-02-07 11:44:45,353 # value of ptr : type 5 
+2024-02-07 11:44:45,369 # value of ptr : type 12 
+2024-02-07 11:44:45,371 # Order 3 => [mixed] f241 
+2024-02-07 11:44:45,372 # led1
+2024-02-07 11:44:45,385 # value of ptr : type 5 
+2024-02-07 11:44:45,417 # value of ptr : type 5 
+2024-02-07 11:44:45,433 # value of ptr : type 5 
+2024-02-07 11:44:45,449 # value of ptr : type 5 
+2024-02-07 11:44:45,481 # value of ptr : type 12 
+2024-02-07 11:44:45,482 # Order 4 => [mixed] f241 
+2024-02-07 11:44:45,483 # led1
+2024-02-07 11:44:45,497 # value of ptr : type 5 
+2024-02-07 11:44:45,529 # value of ptr : type 5 
+2024-02-07 11:44:45,545 # value of ptr : type 5 
+2024-02-07 11:44:45,561 # value of ptr : type 5 
+2024-02-07 11:44:45,593 # value of ptr : type 12 
+2024-02-07 11:44:45,594 # Order 5 => [mixed] f241 
+2024-02-07 11:44:45,594 # led1
+2024-02-07 11:44:45,609 # value of ptr : type 5 
+2024-02-07 11:44:45,625 # value of ptr : type 5 
+2024-02-07 11:44:45,657 # value of ptr : type 5 
+2024-02-07 11:44:45,673 # value of ptr : type 12 
+2024-02-07 11:44:45,674 # Order 6 => [mixed] f241 
+2024-02-07 11:44:45,674 # led1
+2024-02-07 11:44:45,689 # value of ptr : type 5 
+2024-02-07 11:44:45,721 # value of ptr : type 5 
+2024-02-07 11:44:45,737 # value of ptr : type 5 
+2024-02-07 11:44:45,753 # value of ptr : type 5 
+2024-02-07 11:44:45,785 # value of ptr : type 12 
+2024-02-07 11:44:45,786 # Order 7 => [mixed] f241 
+2024-02-07 11:44:45,786 # led1
+2024-02-07 11:44:45,801 # value of ptr : type 5 
+2024-02-07 11:44:45,817 # value of ptr : type 5 
+2024-02-07 11:44:45,849 # value of ptr : type 5 
+2024-02-07 11:44:45,865 # value of ptr : type 5 
+2024-02-07 11:44:45,881 # value of ptr : type 12 
+2024-02-07 11:44:45,897 # Order 8 => [mixed] f241 
+2024-02-07 11:44:45,898 # led1
+2024-02-07 11:44:45,913 # value of ptr : type 5 
+2024-02-07 11:44:45,929 # value of ptr : type 5 
+2024-02-07 11:44:45,961 # value of ptr : type 11 
+2024-02-07 11:44:45,962 # Order 9 => [order] f241 
+2024-02-07 11:44:45,963 # led0
+2024-02-07 11:44:45,977 # value of ptr : type 5 
+2024-02-07 11:44:45,993 # value of ptr : type 12 
+2024-02-07 11:44:45,993 # Order 10 => [mixed] f241 
+2024-02-07 11:44:45,994 # led1
+2024-02-07 11:44:46,009 # value of ptr : type 5 
+2024-02-07 11:44:46,041 # value of ptr : type 5 
+2024-02-07 11:44:46,057 # value of ptr : type 5 
+2024-02-07 11:44:46,073 # value of ptr : type 5 
+2024-02-07 11:44:46,105 # value of ptr : type 12 
+2024-02-07 11:44:46,106 # Order 11 => [mixed] f241 
+2024-02-07 11:44:46,106 # led1
+2024-02-07 11:44:46,121 # value of ptr : type 5 
+2024-02-07 11:44:46,137 # value of ptr : type 5 
+2024-02-07 11:44:46,169 # value of ptr : type 5 
+2024-02-07 11:44:46,185 # value of ptr : type 5 
+2024-02-07 11:44:46,201 # value of ptr : type 12 
+2024-02-07 11:44:46,217 # Order 12 => [mixed] f241 
+2024-02-07 11:44:46,218 # led1
+2024-02-07 11:44:46,234 # value of ptr : type 5 
+2024-02-07 11:44:46,249 # value of ptr : type 5 
+2024-02-07 11:44:46,265 # value of ptr : type 5 
+2024-02-07 11:44:46,297 # value of ptr : type 12 
+2024-02-07 11:44:46,298 # Order 13 => [mixed] f241 
+2024-02-07 11:44:46,298 # led1
+2024-02-07 11:44:46,313 # value of ptr : type 5 
+2024-02-07 11:44:46,344 # value of ptr : type 5 
+2024-02-07 11:44:46,361 # value of ptr : type 5 
+2024-02-07 11:44:46,377 # value of ptr : type 5 
+2024-02-07 11:44:46,409 # value of ptr : type 12 
+2024-02-07 11:44:46,409 # Order 14 => [mixed] f241 
+2024-02-07 11:44:46,410 # led1
+2024-02-07 11:44:46,425 # value of ptr : type 5 
+2024-02-07 11:44:46,441 # value of ptr : type 5 
+2024-02-07 11:44:46,473 # value of ptr : type 5 
+2024-02-07 11:44:46,489 # value of ptr : type 5 
+2024-02-07 11:44:46,505 # value of ptr : type 12 
+2024-02-07 11:44:46,506 # Order 15 => [mixed] f241 
+2024-02-07 11:44:46,520 # led1
+2024-02-07 11:44:46,537 # value of ptr : type 5 
+2024-02-07 11:44:46,553 # value of ptr : type 5 
+2024-02-07 11:44:46,569 # value of ptr : type 5 
+2024-02-07 11:44:46,601 # value of ptr : type 5 
+2024-02-07 11:44:46,617 # value of ptr : type 12 
+2024-02-07 11:44:46,618 # Order 16 => [mixed] f241 
+2024-02-07 11:44:46,618 # led1
+2024-02-07 11:44:46,633 # value of ptr : type 5 
+2024-02-07 11:44:46,665 # value of ptr : type 5 
+2024-02-07 11:44:46,681 # value of ptr : type 5 
+2024-02-07 11:44:46,696 # value of ptr : type 5 
+2024-02-07 11:44:46,729 # value of ptr : type 12 
+2024-02-07 11:44:46,730 # Order 17 => [mixed] f241 
+2024-02-07 11:44:46,730 # led1
+2024-02-07 11:44:46,745 # value of ptr : type 5 
+2024-02-07 11:44:46,776 # value of ptr : type 5 
+2024-02-07 11:44:46,793 # value of ptr : type 5 
+2024-02-07 11:44:46,809 # value of ptr : type 11 
+2024-02-07 11:44:46,825 # Order 19 => [order] f241 
+2024-02-07 11:44:46,825 # led0
+2024-02-07 11:44:46,826 # value of ptr : type 12 
+2024-02-07 11:44:46,826 # Order 18 => [mixed] f241 
+2024-02-07 11:44:46,826 # led1
+2024-02-07 11:44:46,857 # value of ptr : type 5 
+2024-02-07 11:44:46,873 # value of ptr : type 5 
+2024-02-07 11:44:46,889 # value of ptr : type 5 
+2024-02-07 11:44:46,921 # value of ptr : type 12 
+2024-02-07 11:44:46,922 # Order 20 => [mixed] f241 
+2024-02-07 11:44:46,922 # led1
+2024-02-07 11:44:46,937 # value of ptr : type 5 
+2024-02-07 11:44:46,953 # value of ptr : type 5 
+2024-02-07 11:44:46,985 # value of ptr : type 5 
+2024-02-07 11:44:47,001 # value of ptr : type 5 
+2024-02-07 11:44:47,017 # value of ptr : type 12 
+2024-02-07 11:44:47,033 # Order 21 => [mixed] f241 
+2024-02-07 11:44:47,034 # led1
+2024-02-07 11:44:47,049 # value of ptr : type 5 
+2024-02-07 11:44:47,065 # value of ptr : type 5 
+2024-02-07 11:44:47,081 # value of ptr : type 5 
+2024-02-07 11:44:47,113 # value of ptr : type 5 
+2024-02-07 11:44:47,129 # value of ptr : type 12 
+2024-02-07 11:44:47,129 # Order 22 => [mixed] f241 
+2024-02-07 11:44:47,130 # led1
+2024-02-07 11:44:47,160 # value of ptr : type 5 
+2024-02-07 11:44:47,177 # value of ptr : type 5 
+2024-02-07 11:44:47,193 # value of ptr : type 5 
+2024-02-07 11:44:47,225 # value of ptr : type 5 
+2024-02-07 11:44:47,241 # value of ptr : type 12 
+2024-02-07 11:44:47,242 # Order 23 => [mixed] f241 
+2024-02-07 11:44:47,242 # led1
+2024-02-07 11:44:47,257 # value of ptr : type 5 
+2024-02-07 11:44:47,289 # value of ptr : type 5 
+2024-02-07 11:44:47,304 # value of ptr : type 5 
+2024-02-07 11:44:47,320 # value of ptr : type 5 
+2024-02-07 11:44:47,353 # value of ptr : type 12 
+2024-02-07 11:44:47,353 # Order 24 => [mixed] f241 
+2024-02-07 11:44:47,354 # led1
+2024-02-07 11:44:47,369 # value of ptr : type 5 
+2024-02-07 11:44:47,385 # value of ptr : type 5 
+2024-02-07 11:44:47,417 # value of ptr : type 5 
+2024-02-07 11:44:47,433 # value of ptr : type 12 
+2024-02-07 11:44:47,434 # Order 25 => [mixed] f241 
+2024-02-07 11:44:47,434 # led1
+2024-02-07 11:44:47,449 # value of ptr : type 5 
+2024-02-07 11:44:47,481 # value of ptr : type 5 
+2024-02-07 11:44:47,497 # value of ptr : type 5 
+2024-02-07 11:44:47,513 # value of ptr : type 5 
+2024-02-07 11:44:47,545 # value of ptr : type 12 
+2024-02-07 11:44:47,546 # Order 26 => [mixed] f241 
+2024-02-07 11:44:47,546 # led1
+2024-02-07 11:44:47,561 # value of ptr : type 5 
+2024-02-07 11:44:47,593 # value of ptr : type 5 
+2024-02-07 11:44:47,609 # value of ptr : type 5 
+2024-02-07 11:44:47,625 # value of ptr : type 5 
+2024-02-07 11:44:47,657 # value of ptr : type 12 
+2024-02-07 11:44:47,658 # Order 27 => [mixed] f241 
+2024-02-07 11:44:47,658 # led1
+2024-02-07 11:44:47,673 # value of ptr : type 5 
+2024-02-07 11:44:47,704 # value of ptr : type 11 
+2024-02-07 11:44:47,705 # Order 28 => [order] f241 
+2024-02-07 11:44:47,706 # led0
+2024-02-07 11:44:47,706 # value of ptr : type 5 
+2024-02-07 11:44:47,737 # value of ptr : type 5 
+2024-02-07 11:44:47,753 # value of ptr : type 12 
+2024-02-07 11:44:47,753 # Order 29 => [mixed] f241 
+2024-02-07 11:44:47,754 # led1
+2024-02-07 11:44:47,769 # value of ptr : type 5 
+2024-02-07 11:44:47,801 # value of ptr : type 5 
+2024-02-07 11:44:47,817 # value of ptr : type 5 
+2024-02-07 11:44:47,833 # value of ptr : type 5 
+2024-02-07 11:44:47,865 # value of ptr : type 12 
+2024-02-07 11:44:47,866 # Order 30 => [mixed] f241 
+2024-02-07 11:44:47,866 # led1
+2024-02-07 11:44:47,881 # value of ptr : type 5 
+2024-02-07 11:44:47,897 # value of ptr : type 5 
+2024-02-07 11:44:47,929 # value of ptr : type 5 
+2024-02-07 11:44:47,945 # value of ptr : type 12 
+2024-02-07 11:44:47,947 # Order 31 => [mixed] f241 
+2024-02-07 11:44:47,947 # led1
+2024-02-07 11:44:47,977 # value of ptr : type 5 
+2024-02-07 11:44:47,992 # value of ptr : type 5 
+2024-02-07 11:44:48,009 # value of ptr : type 5 
+2024-02-07 11:44:48,040 # value of ptr : type 5 
+2024-02-07 11:44:48,057 # value of ptr : type 12 
+2024-02-07 11:44:48,058 # Order 32 => [mixed] f241 
+2024-02-07 11:44:48,059 # led1
+2024-02-07 11:44:48,073 # value of ptr : type 5 
+2024-02-07 11:44:48,105 # value of ptr : type 5 
+2024-02-07 11:44:48,121 # value of ptr : type 5 
+2024-02-07 11:44:48,137 # value of ptr : type 5 
+2024-02-07 11:44:48,168 # value of ptr : type 12 
+2024-02-07 11:44:48,169 # Order 33 => [mixed] f241 
+2024-02-07 11:44:48,169 # led1
+2024-02-07 11:44:48,184 # value of ptr : type 5 
+2024-02-07 11:44:48,201 # value of ptr : type 5 
+2024-02-07 11:44:48,233 # value of ptr : type 5 
+2024-02-07 11:44:48,248 # value of ptr : type 5 
+2024-02-07 11:44:48,265 # value of ptr : type 12 
+2024-02-07 11:44:48,281 # Order 34 => [mixed] f241 
+2024-02-07 11:44:48,282 # led1
+2024-02-07 11:44:48,297 # value of ptr : type 5 
+2024-02-07 11:44:48,313 # value of ptr : type 5 
+2024-02-07 11:44:48,344 # value of ptr : type 5 
+2024-02-07 11:44:48,361 # value of ptr : type 5 
+2024-02-07 11:44:48,377 # value of ptr : type 12 
+2024-02-07 11:44:48,378 # Order 35 => [mixed] f241 
+2024-02-07 11:44:48,378 # led1
+2024-02-07 11:44:48,409 # value of ptr : type 5 
+2024-02-07 11:44:48,425 # value of ptr : type 5 
+2024-02-07 11:44:48,441 # value of ptr : type 5 
+2024-02-07 11:44:48,472 # value of ptr : type 12 
+2024-02-07 11:44:48,473 # Order 36 => [mixed] f241 
+2024-02-07 11:44:48,473 # led1
+2024-02-07 11:44:48,489 # value of ptr : type 5 
+2024-02-07 11:44:48,505 # value of ptr : type 5 
+2024-02-07 11:44:48,537 # value of ptr : type 5 
+2024-02-07 11:44:48,553 # value of ptr : type 5 
+2024-02-07 11:44:48,569 # value of ptr : type 12 
+2024-02-07 11:44:48,584 # Order 37 => [mixed] f241 
+2024-02-07 11:44:48,585 # led1
+2024-02-07 11:44:48,601 # value of ptr : type 5 
+2024-02-07 11:44:48,617 # value of ptr : type 5 
+2024-02-07 11:44:48,632 # value of ptr : type 5 
+2024-02-07 11:44:48,665 # value of ptr : type 5 
+2024-02-07 11:44:48,681 # value of ptr : type 12 
+2024-02-07 11:44:48,681 # Order 38 => [mixed] f241 
+2024-02-07 11:44:48,682 # led1
+2024-02-07 11:44:48,697 # value of ptr : type 5 
+2024-02-07 11:44:48,729 # value of ptr : type 5 
+2024-02-07 11:44:48,745 # value of ptr : type 5 
+2024-02-07 11:44:48,776 # value of ptr : type 5 
+2024-02-07 11:44:48,793 # value of ptr : type 12 
+2024-02-07 11:44:48,794 # Order 39 => [mixed] f241 
+2024-02-07 11:44:48,795 # led1
+2024-02-07 11:44:48,809 # value of ptr : type 5 
+2024-02-07 11:44:48,841 # value of ptr : type 5 
+2024-02-07 11:44:48,857 # value of ptr : type 5 
+2024-02-07 11:44:48,873 # value of ptr : type 5 
+2024-02-07 11:44:48,905 # value of ptr : type 12 
+2024-02-07 11:44:48,906 # Order 40 => [mixed] f241 
+2024-02-07 11:44:48,906 # led1
+2024-02-07 11:44:48,921 # value of ptr : type 5 
+2024-02-07 11:44:48,937 # value of ptr : type 5 
+2024-02-07 11:44:48,969 # value of ptr : type 5 
+2024-02-07 11:44:48,985 # value of ptr : type 12 
+2024-02-07 11:44:48,985 # Order 41 => [mixed] f241 
+2024-02-07 11:44:48,986 # led1
+2024-02-07 11:44:49,001 # value of ptr : type 5 
+2024-02-07 11:44:49,033 # value of ptr : type 5 
+2024-02-07 11:44:49,049 # value of ptr : type 5 
+2024-02-07 11:44:49,065 # value of ptr : type 5 
+2024-02-07 11:44:49,097 # value of ptr : type 12 
+2024-02-07 11:44:49,098 # Order 42 => [mixed] f241 
+2024-02-07 11:44:49,098 # led1
+2024-02-07 11:44:49,113 # value of ptr : type 5 
+2024-02-07 11:44:49,129 # value of ptr : type 5 
+2024-02-07 11:44:49,161 # value of ptr : type 5 
+2024-02-07 11:44:49,177 # value of ptr : type 5 
+2024-02-07 11:44:49,208 # value of ptr : type 12 
+2024-02-07 11:44:49,210 # Order 43 => [mixed] f241 
+2024-02-07 11:44:49,210 # led1
+2024-02-07 11:44:49,225 # value of ptr : type 5 
+2024-02-07 11:44:49,240 # value of ptr : type 5 
+2024-02-07 11:44:49,273 # value of ptr : type 5 
+2024-02-07 11:44:49,289 # value of ptr : type 5 
+2024-02-07 11:44:49,305 # value of ptr : type 12 
+2024-02-07 11:44:49,306 # Order 44 => [mixed] f241 
+2024-02-07 11:44:49,320 # led1
+2024-02-07 11:44:49,337 # value of ptr : type 5 
+2024-02-07 11:44:49,353 # value of ptr : type 5 
+2024-02-07 11:44:49,369 # value of ptr : type 5 
+2024-02-07 11:44:49,401 # value of ptr : type 5 
+2024-02-07 11:44:49,417 # value of ptr : type 12 
+2024-02-07 11:44:49,418 # Order 45 => [mixed] f241 
+2024-02-07 11:44:49,418 # led1
+2024-02-07 11:44:49,433 # value of ptr : type 5 
+2024-02-07 11:44:49,465 # value of ptr : type 11 
+2024-02-07 11:44:49,466 # Order 46 => [order] f241 
+2024-02-07 11:44:49,466 # led0
+2024-02-07 11:44:49,481 # value of ptr : type 5 
+2024-02-07 11:44:49,497 # value of ptr : type 5 
+2024-02-07 11:44:49,528 # value of ptr : type 12 
+2024-02-07 11:44:49,529 # Order 47 => [mixed] f241 
+2024-02-07 11:44:49,529 # led1
+2024-02-07 11:44:49,545 # value of ptr : type 5 
+2024-02-07 11:44:49,561 # value of ptr : type 5 
+2024-02-07 11:44:49,592 # value of ptr : type 5 
+2024-02-07 11:44:49,609 # value of ptr : type 12 
+2024-02-07 11:44:49,609 # Order 48 => [mixed] f241 
+2024-02-07 11:44:49,609 # led1
+2024-02-07 11:44:49,625 # value of ptr : type 5 
+2024-02-07 11:44:49,657 # value of ptr : type 5 
+2024-02-07 11:44:49,673 # value of ptr : type 5 
+2024-02-07 11:44:49,689 # value of ptr : type 5 
+2024-02-07 11:44:49,721 # value of ptr : type 12 
+2024-02-07 11:44:49,721 # Order 49 => [mixed] f241 
+2024-02-07 11:44:49,722 # led1
+2024-02-07 11:44:49,737 # value of ptr : type 5 
+2024-02-07 11:44:49,753 # value of ptr : type 5 
+2024-02-07 11:44:49,785 # value of ptr : type 5 
+2024-02-07 11:44:49,801 # value of ptr : type 5 
+2024-02-07 11:44:49,817 # value of ptr : type 12 
+2024-02-07 11:44:49,832 # Order 50 => [mixed] f241 
+2024-02-07 11:44:49,833 # led1
+2024-02-07 11:44:49,848 # value of ptr : type 5 
+2024-02-07 11:44:49,864 # value of ptr : type 5 
+2024-02-07 11:44:49,881 # value of ptr : type 5 
+2024-02-07 11:44:49,913 # value of ptr : type 5 
+2024-02-07 11:44:49,929 # value of ptr : type 12 
+2024-02-07 11:44:49,930 # Order 51 => [mixed] f241 
+2024-02-07 11:44:49,930 # led1
+2024-02-07 11:44:49,960 # value of ptr : type 5 
+2024-02-07 11:44:49,977 # value of ptr : type 5 
+2024-02-07 11:44:49,993 # value of ptr : type 5 
+2024-02-07 11:44:50,024 # value of ptr : type 5 
+2024-02-07 11:44:50,041 # value of ptr : type 12 
+2024-02-07 11:44:50,042 # Order 52 => [mixed] f241 
+2024-02-07 11:44:50,042 # led1
+2024-02-07 11:44:50,057 # value of ptr : type 5 
+2024-02-07 11:44:50,089 # value of ptr : type 5 
+2024-02-07 11:44:50,105 # value of ptr : type 5 
+2024-02-07 11:44:50,121 # value of ptr : type 12 
+2024-02-07 11:44:50,121 # Order 53 => [mixed] f241 
+2024-02-07 11:44:50,136 # led1
+2024-02-07 11:44:50,153 # value of ptr : type 5 
+2024-02-07 11:44:50,169 # value of ptr : type 5 
+2024-02-07 11:44:50,185 # value of ptr : type 5 
+2024-02-07 11:44:50,217 # value of ptr : type 5 
+2024-02-07 11:44:50,233 # value of ptr : type 12 
+2024-02-07 11:44:50,233 # Order 54 => [mixed] f241 
+2024-02-07 11:44:50,234 # led1
+2024-02-07 11:44:50,249 # value of ptr : type 5 
+2024-02-07 11:44:50,281 # value of ptr : type 5 
+2024-02-07 11:44:50,297 # value of ptr : type 5 
+2024-02-07 11:44:50,313 # value of ptr : type 5 
+2024-02-07 11:44:50,345 # value of ptr : type 12 
+2024-02-07 11:44:50,346 # Order 55 => [mixed] f241 
+2024-02-07 11:44:50,346 # led1
+2024-02-07 11:44:50,360 # value of ptr : type 5 
+2024-02-07 11:44:50,392 # value of ptr : type 5 
+2024-02-07 11:44:50,409 # value of ptr : type 5 
+2024-02-07 11:44:50,425 # value of ptr : type 5 
+2024-02-07 11:44:50,457 # value of ptr : type 12 
+2024-02-07 11:44:50,458 # Order 56 => [mixed] f241 
+2024-02-07 11:44:50,458 # led1
+2024-02-07 11:44:50,472 # value of ptr : type 5 
+2024-02-07 11:44:50,489 # value of ptr : type 5 
+2024-02-07 11:44:50,521 # value of ptr : type 5 
+2024-02-07 11:44:50,537 # value of ptr : type 5 
+2024-02-07 11:44:50,553 # value of ptr : type 12 
+2024-02-07 11:44:50,568 # Order 57 => [mixed] f241 
+2024-02-07 11:44:50,569 # led1
+2024-02-07 11:44:50,585 # value of ptr : type 5 
+2024-02-07 11:44:50,601 # value of ptr : type 5 
+2024-02-07 11:44:50,617 # value of ptr : type 5 
+2024-02-07 11:44:50,648 # value of ptr : type 12 
+2024-02-07 11:44:50,649 # Order 58 => [mixed] f241 
+2024-02-07 11:44:50,649 # led1
+2024-02-07 11:44:50,665 # value of ptr : type 5 
+2024-02-07 11:44:50,680 # value of ptr : type 5 
+2024-02-07 11:44:50,712 # value of ptr : type 5 
+2024-02-07 11:44:50,728 # value of ptr : type 5 
+2024-02-07 11:44:50,744 # value of ptr : type 12 
+2024-02-07 11:44:50,760 # Order 59 => [mixed] f241 
+2024-02-07 11:44:50,761 # led1
+2024-02-07 11:44:50,777 # value of ptr : type 5 
+2024-02-07 11:44:50,792 # value of ptr : type 5 
+2024-02-07 11:44:50,824 # value of ptr : type 5 
+2024-02-07 11:44:50,841 # value of ptr : type 5 
+2024-02-07 11:44:50,857 # value of ptr : type 12 
+2024-02-07 11:44:50,858 # Order 60 => [mixed] f241 
+2024-02-07 11:44:50,858 # led1
+2024-02-07 11:44:50,889 # value of ptr : type 5 
+2024-02-07 11:44:50,905 # value of ptr : type 5 
+2024-02-07 11:44:50,920 # value of ptr : type 5 
+2024-02-07 11:44:50,952 # value of ptr : type 5 
+2024-02-07 11:44:50,968 # value of ptr : type 12 
+2024-02-07 11:44:50,969 # Order 61 => [mixed] f241 
+2024-02-07 11:44:50,969 # led1
+2024-02-07 11:44:50,985 # value of ptr : type 5 
+2024-02-07 11:44:51,017 # value of ptr : type 5 
+2024-02-07 11:44:51,032 # value of ptr : type 5 
+2024-02-07 11:44:51,048 # value of ptr : type 5 
+2024-02-07 11:44:51,080 # value of ptr : type 12 
+2024-02-07 11:44:51,081 # Order 62 => [mixed] f241 
+2024-02-07 11:44:51,081 # led1
+2024-02-07 11:44:51,096 # value of ptr : type 5 
+2024-02-07 11:44:51,112 # value of ptr : type 5 
+2024-02-07 11:44:51,145 # value of ptr : type 5 
+2024-02-07 11:44:51,161 # value of ptr : type 12 
+2024-02-07 11:44:51,162 # Order 63 => [mixed] f241 
+2024-02-07 11:44:51,162 # led1
+2024-02-07 11:44:51,176 # value of ptr : type 5 
+2024-02-07 11:44:51,209 # value of ptr : type 5 
+2024-02-07 11:44:51,224 # value of ptr : type 11 
+2024-02-07 11:44:51,240 # Order 64 => [order] f241 
+2024-02-07 11:44:51,241 # led0
+2024-02-07 11:44:51,241 # value of ptr : type 5 
+2024-02-07 11:44:51,272 # value of ptr : type 12 
+2024-02-07 11:44:51,273 # Order 65 => [mixed] f241 
+2024-02-07 11:44:51,274 # led1
+2024-02-07 11:44:51,288 # value of ptr : type 5 
+2024-02-07 11:44:51,305 # value of ptr : type 5 
+2024-02-07 11:44:51,337 # value of ptr : type 5 
+2024-02-07 11:44:51,353 # value of ptr : type 5 
+2024-02-07 11:44:51,368 # value of ptr : type 12 
+2024-02-07 11:44:51,384 # Order 66 => [mixed] f241 
+2024-02-07 11:44:51,385 # led1
+2024-02-07 11:44:51,400 # value of ptr : type 5 
+2024-02-07 11:44:51,416 # value of ptr : type 5 
+2024-02-07 11:44:51,432 # value of ptr : type 5 
+2024-02-07 11:44:51,464 # value of ptr : type 5 
+2024-02-07 11:44:51,480 # value of ptr : type 12 
+2024-02-07 11:44:51,481 # Order 67 => [mixed] f241 
+2024-02-07 11:44:51,481 # led1
+2024-02-07 11:44:51,497 # value of ptr : type 5 
+2024-02-07 11:44:51,528 # value of ptr : type 5 
+2024-02-07 11:44:51,545 # value of ptr : type 5 
+2024-02-07 11:44:51,561 # value of ptr : type 5 
+2024-02-07 11:44:51,592 # value of ptr : type 12 
+2024-02-07 11:44:51,593 # Order 68 => [mixed] f241 
+2024-02-07 11:44:51,593 # led1
+2024-02-07 11:44:51,609 # value of ptr : type 5 
+2024-02-07 11:44:51,640 # value of ptr : type 5 
+2024-02-07 11:44:51,656 # value of ptr : type 5 
+2024-02-07 11:44:51,673 # value of ptr : type 5 
+2024-02-07 11:44:51,704 # value of ptr : type 12 
+2024-02-07 11:44:51,705 # Order 69 => [mixed] f241 
+2024-02-07 11:44:51,705 # led1
+2024-02-07 11:44:51,720 # value of ptr : type 5 
+2024-02-07 11:44:51,736 # value of ptr : type 5 
+2024-02-07 11:44:51,769 # value of ptr : type 5 
+2024-02-07 11:44:51,785 # value of ptr : type 12 
+2024-02-07 11:44:51,785 # Order 70 => [mixed] f241 
+2024-02-07 11:44:51,786 # led1
+2024-02-07 11:44:51,801 # value of ptr : type 5 
+2024-02-07 11:44:51,833 # value of ptr : type 5 
+2024-02-07 11:44:51,849 # value of ptr : type 5 
+2024-02-07 11:44:51,864 # value of ptr : type 5 
+2024-02-07 11:44:51,897 # value of ptr : type 12 
+2024-02-07 11:44:51,898 # Order 71 => [mixed] f241 
+2024-02-07 11:44:51,899 # led1
+2024-02-07 11:44:51,913 # value of ptr : type 5 
+2024-02-07 11:44:51,928 # value of ptr : type 5 
+2024-02-07 11:44:51,961 # value of ptr : type 5 
+2024-02-07 11:44:51,976 # value of ptr : type 5 
+2024-02-07 11:44:52,008 # value of ptr : type 12 
+2024-02-07 11:44:52,009 # Order 72 => [mixed] f241 
+2024-02-07 11:44:52,009 # led1
+2024-02-07 11:44:52,024 # value of ptr : type 5 
+2024-02-07 11:44:52,040 # value of ptr : type 5 
+2024-02-07 11:44:52,072 # value of ptr : type 5 
+2024-02-07 11:44:52,089 # value of ptr : type 5 
+2024-02-07 11:44:52,105 # value of ptr : type 12 
+2024-02-07 11:44:52,106 # Order 73 => [mixed] f241 
+2024-02-07 11:44:52,107 # led1
+2024-02-07 11:44:52,137 # value of ptr : type 5 
+2024-02-07 11:44:52,152 # value of ptr : type 5 
+2024-02-07 11:44:52,169 # value of ptr : type 5 
+2024-02-07 11:44:52,201 # value of ptr : type 12 
+2024-02-07 11:44:52,201 # Order 74 => [mixed] f241 
+2024-02-07 11:44:52,202 # led1
+2024-02-07 11:44:52,217 # value of ptr : type 5 
+2024-02-07 11:44:52,233 # value of ptr : type 5 
+2024-02-07 11:44:52,265 # value of ptr : type 5 
+2024-02-07 11:44:52,281 # value of ptr : type 5 
+2024-02-07 11:44:52,296 # value of ptr : type 12 
+2024-02-07 11:44:52,313 # Order 75 => [mixed] f241 
+2024-02-07 11:44:52,313 # led1
+2024-02-07 11:44:52,329 # value of ptr : type 5 
+2024-02-07 11:44:52,345 # value of ptr : type 5 
+2024-02-07 11:44:52,360 # value of ptr : type 5 
+2024-02-07 11:44:52,392 # value of ptr : type 5 
+2024-02-07 11:44:52,408 # value of ptr : type 12 
+2024-02-07 11:44:52,409 # Order 76 => [mixed] f241 
+2024-02-07 11:44:52,409 # led1
+2024-02-07 11:44:52,440 # value of ptr : type 5 
+2024-02-07 11:44:52,456 # value of ptr : type 5 
+2024-02-07 11:44:52,473 # value of ptr : type 5 
+2024-02-07 11:44:52,504 # value of ptr : type 5 
+2024-02-07 11:44:52,520 # value of ptr : type 12 
+2024-02-07 11:44:52,521 # Order 77 => [mixed] f241 
+2024-02-07 11:44:52,521 # led1
+2024-02-07 11:44:52,536 # value of ptr : type 5 
+2024-02-07 11:44:52,569 # value of ptr : type 5 
+2024-02-07 11:44:52,585 # value of ptr : type 5 
+2024-02-07 11:44:52,600 # value of ptr : type 5 
+2024-02-07 11:44:52,633 # value of ptr : type 12 
+2024-02-07 11:44:52,633 # Order 78 => [mixed] f241 
+2024-02-07 11:44:52,634 # led1
+2024-02-07 11:44:52,649 # value of ptr : type 5 
+2024-02-07 11:44:52,665 # value of ptr : type 5 
+2024-02-07 11:44:52,696 # value of ptr : type 5 
+2024-02-07 11:44:52,712 # value of ptr : type 12 
+2024-02-07 11:44:52,713 # Order 79 => [mixed] f241 
+2024-02-07 11:44:52,714 # led1
+2024-02-07 11:44:52,728 # value of ptr : type 5 
+2024-02-07 11:44:52,761 # value of ptr : type 5 
+2024-02-07 11:44:52,776 # value of ptr : type 5 
+2024-02-07 11:44:52,792 # value of ptr : type 5 
+2024-02-07 11:44:52,824 # value of ptr : type 12 
+2024-02-07 11:44:52,825 # Order 80 => [mixed] f241 
+2024-02-07 11:44:52,825 # led1
+2024-02-07 11:44:52,841 # value of ptr : type 5 
+2024-02-07 11:44:52,872 # value of ptr : type 5 
+2024-02-07 11:44:52,888 # value of ptr : type 5 
+2024-02-07 11:44:52,904 # value of ptr : type 5 
+2024-02-07 11:44:52,936 # value of ptr : type 12 
+2024-02-07 11:44:52,937 # Order 81 => [mixed] f241 
+2024-02-07 11:44:52,937 # led1
+2024-02-07 11:44:52,953 # value of ptr : type 5 
+2024-02-07 11:44:52,968 # value of ptr : type 5 
+2024-02-07 11:44:53,001 # value of ptr : type 11 
+2024-02-07 11:44:53,002 # Order 82 => [order] f241 
+2024-02-07 11:44:53,003 # led0
+2024-02-07 11:44:53,016 # value of ptr : type 5 
+2024-02-07 11:44:53,033 # value of ptr : type 12 
+2024-02-07 11:44:53,034 # Order 83 => [mixed] f241 
+2024-02-07 11:44:53,034 # led1
+2024-02-07 11:44:53,048 # value of ptr : type 5 
+2024-02-07 11:44:53,080 # value of ptr : type 5 
+2024-02-07 11:44:53,097 # value of ptr : type 5 
+2024-02-07 11:44:53,113 # value of ptr : type 5 
+2024-02-07 11:44:53,145 # value of ptr : type 12 
+2024-02-07 11:44:53,145 # Order 84 => [mixed] f241 
+2024-02-07 11:44:53,145 # led1
+2024-02-07 11:44:53,161 # value of ptr : type 5 
+2024-02-07 11:44:53,177 # value of ptr : type 5 
+2024-02-07 11:44:53,208 # value of ptr : type 5 
+2024-02-07 11:44:53,224 # value of ptr : type 5 
+2024-02-07 11:44:53,256 # value of ptr : type 12 
+2024-02-07 11:44:53,257 # Order 85 => [mixed] f241 
+2024-02-07 11:44:53,257 # led1
+2024-02-07 11:44:53,272 # value of ptr : type 5 
+2024-02-07 11:44:53,289 # value of ptr : type 5 
+2024-02-07 11:44:53,320 # value of ptr : type 5 
+2024-02-07 11:44:53,337 # value of ptr : type 12 
+2024-02-07 11:44:53,337 # Order 86 => [mixed] f241 
+2024-02-07 11:44:53,337 # led1
+2024-02-07 11:44:53,353 # value of ptr : type 5 
+2024-02-07 11:44:53,384 # value of ptr : type 5 
+2024-02-07 11:44:53,400 # value of ptr : type 5 
+2024-02-07 11:44:53,416 # value of ptr : type 5 
+2024-02-07 11:44:53,448 # value of ptr : type 12 
+2024-02-07 11:44:53,449 # Order 87 => [mixed] f241 
+2024-02-07 11:44:53,449 # led1
+2024-02-07 11:44:53,465 # value of ptr : type 5 
+2024-02-07 11:44:53,481 # value of ptr : type 5 
+2024-02-07 11:44:53,512 # value of ptr : type 5 
+2024-02-07 11:44:53,528 # value of ptr : type 5 
+2024-02-07 11:44:53,545 # value of ptr : type 12 
+2024-02-07 11:44:53,561 # Order 88 => [mixed] f241 
+2024-02-07 11:44:53,561 # led1
+2024-02-07 11:44:53,577 # value of ptr : type 5 
+2024-02-07 11:44:53,592 # value of ptr : type 5 
+2024-02-07 11:44:53,624 # value of ptr : type 5 
+2024-02-07 11:44:53,640 # value of ptr : type 5 
+2024-02-07 11:44:53,657 # value of ptr : type 12 
+2024-02-07 11:44:53,657 # Order 89 => [mixed] f241 
+2024-02-07 11:44:53,658 # led1
+2024-02-07 11:44:53,688 # value of ptr : type 5 
+2024-02-07 11:44:53,705 # value of ptr : type 5 
+2024-02-07 11:44:53,720 # value of ptr : type 5 
+2024-02-07 11:44:53,752 # value of ptr : type 5 
+2024-02-07 11:44:53,769 # value of ptr : type 12 
+2024-02-07 11:44:53,770 # Order 90 => [mixed] f241 
+2024-02-07 11:44:53,770 # led1
+2024-02-07 11:44:53,785 # value of ptr : type 5 
+2024-02-07 11:44:53,816 # value of ptr : type 5 
+2024-02-07 11:44:53,832 # value of ptr : type 5 
+2024-02-07 11:44:53,848 # value of ptr : type 12 
+2024-02-07 11:44:53,864 # Order 91 => [mixed] f241 
+2024-02-07 11:44:53,865 # led1
+2024-02-07 11:44:53,881 # value of ptr : type 5 
+2024-02-07 11:44:53,897 # value of ptr : type 5 
+2024-02-07 11:44:53,912 # value of ptr : type 5 
+2024-02-07 11:44:53,945 # value of ptr : type 5 
+2024-02-07 11:44:53,961 # value of ptr : type 12 
+2024-02-07 11:44:53,961 # Order 92 => [mixed] f241 
+2024-02-07 11:44:53,962 # led1
+2024-02-07 11:44:53,976 # value of ptr : type 5 
+2024-02-07 11:44:54,009 # value of ptr : type 5 
+2024-02-07 11:44:54,024 # value of ptr : type 5 
+2024-02-07 11:44:54,056 # value of ptr : type 5 
+2024-02-07 11:44:54,073 # value of ptr : type 12 
+2024-02-07 11:44:54,073 # Order 93 => [mixed] f241 
+2024-02-07 11:44:54,074 # led1
+2024-02-07 11:44:54,089 # value of ptr : type 5 
+2024-02-07 11:44:54,120 # value of ptr : type 5 
+2024-02-07 11:44:54,136 # value of ptr : type 5 
+2024-02-07 11:44:54,152 # value of ptr : type 5 
+2024-02-07 11:44:54,185 # value of ptr : type 12 
+2024-02-07 11:44:54,186 # Order 94 => [mixed] f241 
+2024-02-07 11:44:54,186 # led1
+2024-02-07 11:44:54,201 # value of ptr : type 5 
+2024-02-07 11:44:54,217 # value of ptr : type 5 
+2024-02-07 11:44:54,248 # value of ptr : type 5 
+2024-02-07 11:44:54,264 # value of ptr : type 5 
+2024-02-07 11:44:54,281 # value of ptr : type 12 
+2024-02-07 11:44:54,296 # Order 95 => [mixed] f241 
+2024-02-07 11:44:54,297 # led1
+2024-02-07 11:44:54,313 # value of ptr : type 5 
+2024-02-07 11:44:54,328 # value of ptr : type 5 
+2024-02-07 11:44:54,345 # value of ptr : type 5 
+2024-02-07 11:44:54,377 # value of ptr : type 12 
+2024-02-07 11:44:54,378 # Order 96 => [mixed] f241 
+2024-02-07 11:44:54,378 # led1
+2024-02-07 11:44:54,392 # value of ptr : type 5 
+2024-02-07 11:44:54,409 # value of ptr : type 5 
+2024-02-07 11:44:54,441 # value of ptr : type 5 
+2024-02-07 11:44:54,457 # value of ptr : type 5 
+2024-02-07 11:44:54,488 # value of ptr : type 12 
+2024-02-07 11:44:54,489 # Order 97 => [mixed] f241 
+2024-02-07 11:44:54,490 # led1
+2024-02-07 11:44:54,504 # value of ptr : type 5 
+2024-02-07 11:44:54,520 # value of ptr : type 5 
+2024-02-07 11:44:54,552 # value of ptr : type 5 
+2024-02-07 11:44:54,568 # value of ptr : type 5 
+2024-02-07 11:44:54,584 # value of ptr : type 12 
+2024-02-07 11:44:54,585 # Order 98 => [mixed] f241 
+2024-02-07 11:44:54,600 # led1
+2024-02-07 11:44:54,617 # value of ptr : type 5 
+2024-02-07 11:44:54,632 # value of ptr : type 5 
+2024-02-07 11:44:54,648 # value of ptr : type 5 
+2024-02-07 11:44:54,680 # value of ptr : type 5 
+2024-02-07 11:44:54,697 # value of ptr : type 12 
+2024-02-07 11:44:54,697 # Order 99 => [mixed] f241 
+2024-02-07 11:44:54,698 # led1
+2024-02-07 11:44:54,712 # value of ptr : type 5 
+2024-02-07 11:44:54,744 # value of ptr : type 5 
+2024-02-07 11:44:54,761 # value of ptr : type 11 
+2024-02-07 11:44:54,776 # Order 100 => [order] f241 
+2024-02-07 11:44:54,776 # led0
+2024-02-07 11:44:54,777 # value of ptr : type 5 
+2024-02-07 11:44:54,808 # value of ptr : type 12 
+2024-02-07 11:44:54,809 # Order 101 => [mixed] f241 
+2024-02-07 11:44:54,809 # led1
+2024-02-07 11:44:54,825 # value of ptr : type 5 
+2024-02-07 11:44:54,841 # value of ptr : type 5 
+2024-02-07 11:44:54,872 # value of ptr : type 5 
+2024-02-07 11:44:54,888 # value of ptr : type 5 
+2024-02-07 11:44:54,905 # value of ptr : type 12 
+2024-02-07 11:44:54,907 # Order 102 => [mixed] f241 
+2024-02-07 11:44:54,907 # led1
+2024-02-07 11:44:54,936 # value of ptr : type 5 
+2024-02-07 11:44:54,952 # value of ptr : type 5 
+2024-02-07 11:44:54,968 # value of ptr : type 5 
+2024-02-07 11:44:55,000 # value of ptr : type 12 
+2024-02-07 11:44:55,001 # Order 103 => [mixed] f241 
+2024-02-07 11:44:55,001 # led1
+2024-02-07 11:44:55,016 # value of ptr : type 5 
+2024-02-07 11:44:55,033 # value of ptr : type 5 
+2024-02-07 11:44:55,065 # value of ptr : type 5 
+2024-02-07 11:44:55,080 # value of ptr : type 5 
+2024-02-07 11:44:55,096 # value of ptr : type 12 
+2024-02-07 11:44:55,112 # Order 104 => [mixed] f241 
+2024-02-07 11:44:55,112 # led1
+2024-02-07 11:44:55,128 # value of ptr : type 5 
+2024-02-07 11:44:55,145 # value of ptr : type 5 
+2024-02-07 11:44:55,160 # value of ptr : type 5 
+2024-02-07 11:44:55,192 # value of ptr : type 5 
+2024-02-07 11:44:55,208 # value of ptr : type 12 
+2024-02-07 11:44:55,209 # Order 105 => [mixed] f241 
+2024-02-07 11:44:55,210 # led1
+2024-02-07 11:44:55,240 # value of ptr : type 5 
+2024-02-07 11:44:55,257 # value of ptr : type 5 
+2024-02-07 11:44:55,272 # value of ptr : type 5 
+2024-02-07 11:44:55,304 # value of ptr : type 5 
+2024-02-07 11:44:55,321 # value of ptr : type 12 
+2024-02-07 11:44:55,322 # Order 106 => [mixed] f241 
+2024-02-07 11:44:55,322 # led1
+2024-02-07 11:44:55,336 # value of ptr : type 5 
+2024-02-07 11:44:55,368 # value of ptr : type 5 
+2024-02-07 11:44:55,384 # value of ptr : type 5 
+2024-02-07 11:44:55,400 # value of ptr : type 5 
+2024-02-07 11:44:55,433 # value of ptr : type 12 
+2024-02-07 11:44:55,434 # Order 107 => [mixed] f241 
+2024-02-07 11:44:55,434 # led1
+2024-02-07 11:44:55,448 # value of ptr : type 5 
+2024-02-07 11:44:55,465 # value of ptr : type 5 
+2024-02-07 11:44:55,496 # value of ptr : type 5 
+2024-02-07 11:44:55,512 # value of ptr : type 12 
+2024-02-07 11:44:55,513 # Order 108 => [mixed] f241 
+2024-02-07 11:44:55,514 # led1
+2024-02-07 11:44:55,529 # value of ptr : type 5 
+2024-02-07 11:44:55,560 # value of ptr : type 5 
+2024-02-07 11:44:55,576 # value of ptr : type 5 
+2024-02-07 11:44:55,593 # value of ptr : type 5 
+2024-02-07 11:44:55,624 # value of ptr : type 11 
+2024-02-07 11:44:55,626 # Order 110 => [order] f241 
+2024-02-07 11:44:55,626 # led0
+2024-02-07 11:44:55,641 # value of ptr : type 12 
+2024-02-07 11:44:55,642 # Order 109 => [mixed] f241 
+2024-02-07 11:44:55,642 # led1
+2024-02-07 11:44:55,657 # value of ptr : type 5 
+2024-02-07 11:44:55,688 # value of ptr : type 5 
+2024-02-07 11:44:55,705 # value of ptr : type 5 
+2024-02-07 11:44:55,721 # value of ptr : type 12 
+2024-02-07 11:44:55,722 # Order 111 => [mixed] f241 
+2024-02-07 11:44:55,722 # led1
+2024-02-07 11:44:55,752 # value of ptr : type 5 
+2024-02-07 11:44:55,769 # value of ptr : type 5 
+2024-02-07 11:44:55,784 # value of ptr : type 5 
+2024-02-07 11:44:55,816 # value of ptr : type 5 
+2024-02-07 11:44:55,832 # value of ptr : type 12 
+2024-02-07 11:44:55,833 # Order 112 => [mixed] f241 
+2024-02-07 11:44:55,833 # led1
+2024-02-07 11:44:55,848 # value of ptr : type 5 
+2024-02-07 11:44:55,880 # value of ptr : type 5 
+2024-02-07 11:44:55,896 # value of ptr : type 5 
+2024-02-07 11:44:55,912 # value of ptr : type 5 
+2024-02-07 11:44:55,945 # value of ptr : type 12 
+2024-02-07 11:44:55,946 # Order 113 => [mixed] f241 
+2024-02-07 11:44:55,946 # led1
+2024-02-07 11:44:55,960 # value of ptr : type 5 
+2024-02-07 11:44:55,977 # value of ptr : type 5 
+2024-02-07 11:44:56,008 # value of ptr : type 5 
+2024-02-07 11:44:56,024 # value of ptr : type 5 
+2024-02-07 11:44:56,056 # value of ptr : type 12 
+2024-02-07 11:44:56,057 # Order 114 => [mixed] f241 
+2024-02-07 11:44:56,057 # led1
+2024-02-07 11:44:56,073 # value of ptr : type 5 
+2024-02-07 11:44:56,088 # value of ptr : type 5 
+2024-02-07 11:44:56,120 # value of ptr : type 5 
+2024-02-07 11:44:56,136 # value of ptr : type 12 
+2024-02-07 11:44:56,137 # Order 115 => [mixed] f241 
+2024-02-07 11:44:56,137 # led1
+2024-02-07 11:44:56,152 # value of ptr : type 5 
+2024-02-07 11:44:56,185 # value of ptr : type 5 
+2024-02-07 11:44:56,201 # value of ptr : type 5 
+2024-02-07 11:44:56,216 # value of ptr : type 5 
+2024-02-07 11:44:56,248 # value of ptr : type 12 
+2024-02-07 11:44:56,249 # Order 116 => [mixed] f241 
+2024-02-07 11:44:56,250 # led1
+2024-02-07 11:44:56,264 # value of ptr : type 5 
+2024-02-07 11:44:56,280 # value of ptr : type 5 
+2024-02-07 11:44:56,312 # value of ptr : type 5 
+2024-02-07 11:44:56,328 # value of ptr : type 5 
+2024-02-07 11:44:56,344 # value of ptr : type 12 
+2024-02-07 11:44:56,360 # Order 117 => [mixed] f241 
+2024-02-07 11:44:56,360 # led1
+2024-02-07 11:44:56,376 # value of ptr : type 5 
+2024-02-07 11:44:56,392 # value of ptr : type 5 
+2024-02-07 11:44:56,408 # value of ptr : type 5 
+2024-02-07 11:44:56,440 # value of ptr : type 5 
+2024-02-07 11:44:56,456 # value of ptr : type 12 
+2024-02-07 11:44:56,457 # Order 118 => [mixed] f241 
+2024-02-07 11:44:56,457 # led1
+2024-02-07 11:44:56,488 # value of ptr : type 5 
+2024-02-07 11:44:56,504 # value of ptr : type 11 
+2024-02-07 11:44:56,505 # Order 119 => [order] f241 
+2024-02-07 11:44:56,505 # led0
+2024-02-07 11:44:56,520 # value of ptr : type 5 
+2024-02-07 11:44:56,536 # value of ptr : type 5 
+2024-02-07 11:44:56,569 # value of ptr : type 12 
+2024-02-07 11:44:56,570 # Order 120 => [mixed] f241 
+2024-02-07 11:44:56,570 # led1
+2024-02-07 11:44:56,585 # value of ptr : type 5 
+2024-02-07 11:44:56,600 # value of ptr : type 5 
+2024-02-07 11:44:56,632 # value of ptr : type 5 
+2024-02-07 11:44:56,648 # value of ptr : type 5 
+2024-02-07 11:44:56,665 # value of ptr : type 12 
+2024-02-07 11:44:56,680 # Order 121 => [mixed] f241 
+2024-02-07 11:44:56,681 # led1
+2024-02-07 11:44:56,696 # value of ptr : type 5 
+2024-02-07 11:44:56,713 # value of ptr : type 5 
+2024-02-07 11:44:56,728 # value of ptr : type 5 
+2024-02-07 11:44:56,760 # value of ptr : type 12 
+2024-02-07 11:44:56,761 # Order 122 => [mixed] f241 
+2024-02-07 11:44:56,761 # led1
+2024-02-07 11:44:56,777 # value of ptr : type 5 
+2024-02-07 11:44:56,793 # value of ptr : type 5 
+2024-02-07 11:44:56,824 # value of ptr : type 5 
+2024-02-07 11:44:56,840 # value of ptr : type 5 
+2024-02-07 11:44:56,872 # value of ptr : type 12 
+2024-02-07 11:44:56,874 # Order 123 => [mixed] f241 
+2024-02-07 11:44:56,874 # led1
+2024-02-07 11:44:56,888 # value of ptr : type 5 
+2024-02-07 11:44:56,905 # value of ptr : type 5 
+2024-02-07 11:44:56,936 # value of ptr : type 5 
+2024-02-07 11:44:56,952 # value of ptr : type 5 
+2024-02-07 11:44:56,969 # value of ptr : type 12 
+2024-02-07 11:44:56,970 # Order 124 => [mixed] f241 
+2024-02-07 11:44:56,984 # led1
+2024-02-07 11:44:57,001 # value of ptr : type 5 
+2024-02-07 11:44:57,017 # value of ptr : type 5 
+2024-02-07 11:44:57,032 # value of ptr : type 5 
+2024-02-07 11:44:57,064 # value of ptr : type 5 
+2024-02-07 11:44:57,080 # value of ptr : type 12 
+2024-02-07 11:44:57,081 # Order 125 => [mixed] f241 
+2024-02-07 11:44:57,081 # led1
+2024-02-07 11:44:57,096 # value of ptr : type 5 
+2024-02-07 11:44:57,128 # value of ptr : type 5 
+2024-02-07 11:44:57,145 # value of ptr : type 5 
+2024-02-07 11:44:57,160 # value of ptr : type 5 
+2024-02-07 11:44:57,193 # value of ptr : type 12 
+2024-02-07 11:44:57,194 # Order 126 => [mixed] f241 
+2024-02-07 11:44:57,194 # led1
+2024-02-07 11:44:57,208 # value of ptr : type 5 
+2024-02-07 11:44:57,240 # value of ptr : type 5 
+2024-02-07 11:44:57,257 # value of ptr : type 5 
+2024-02-07 11:44:57,272 # value of ptr : type 12 
+2024-02-07 11:44:57,273 # Order 127 => [mixed] f241 
+2024-02-07 11:44:57,273 # led1
+2024-02-07 11:44:57,304 # value of ptr : type 5 
+2024-02-07 11:44:57,320 # value of ptr : type 5 
+2024-02-07 11:44:57,336 # value of ptr : type 5 
+2024-02-07 11:44:57,368 # value of ptr : type 5 
+2024-02-07 11:44:57,384 # value of ptr : type 12 
+2024-02-07 11:44:57,385 # Order 128 => [mixed] f241 
+2024-02-07 11:44:57,386 # led1
+2024-02-07 11:44:57,400 # value of ptr : type 5 
+2024-02-07 11:44:57,433 # value of ptr : type 5 
+2024-02-07 11:44:57,448 # value of ptr : type 5 
+2024-02-07 11:44:57,464 # value of ptr : type 5 
+2024-02-07 11:44:57,497 # value of ptr : type 12 
+2024-02-07 11:44:57,498 # Order 129 => [mixed] f241 
+2024-02-07 11:44:57,498 # led1
+2024-02-07 11:44:57,512 # value of ptr : type 5 
+2024-02-07 11:44:57,529 # value of ptr : type 5 
+2024-02-07 11:44:57,560 # value of ptr : type 5 
+2024-02-07 11:44:57,577 # value of ptr : type 5 
+2024-02-07 11:44:57,592 # value of ptr : type 12 
+2024-02-07 11:44:57,609 # Order 130 => [mixed] f241 
+2024-02-07 11:44:57,609 # led1
+2024-02-07 11:44:57,624 # value of ptr : type 5 
+2024-02-07 11:44:57,641 # value of ptr : type 5 
+2024-02-07 11:44:57,672 # value of ptr : type 5 
+2024-02-07 11:44:57,688 # value of ptr : type 5 
+2024-02-07 11:44:57,705 # value of ptr : type 12 
+2024-02-07 11:44:57,706 # Order 131 => [mixed] f241 
+2024-02-07 11:44:57,706 # led1
+2024-02-07 11:44:57,736 # value of ptr : type 5 
+2024-02-07 11:44:57,752 # value of ptr : type 5 
+2024-02-07 11:44:57,768 # value of ptr : type 5 
+2024-02-07 11:44:57,800 # value of ptr : type 12 
+2024-02-07 11:44:57,801 # Order 132 => [mixed] f241 
+2024-02-07 11:44:57,801 # led1
+2024-02-07 11:44:57,816 # value of ptr : type 5 
+2024-02-07 11:44:57,832 # value of ptr : type 5 
+2024-02-07 11:44:57,864 # value of ptr : type 5 
+2024-02-07 11:44:57,880 # value of ptr : type 5 
+2024-02-07 11:44:57,896 # value of ptr : type 12 
+2024-02-07 11:44:57,912 # Order 133 => [mixed] f241 
+2024-02-07 11:44:57,913 # led1
+2024-02-07 11:44:57,928 # value of ptr : type 5 
+2024-02-07 11:44:57,944 # value of ptr : type 5 
+2024-02-07 11:44:57,960 # value of ptr : type 5 
+2024-02-07 11:44:57,992 # value of ptr : type 5 
+2024-02-07 11:44:58,009 # value of ptr : type 12 
+2024-02-07 11:44:58,010 # Order 134 => [mixed] f241 
+2024-02-07 11:44:58,010 # led1
+2024-02-07 11:44:58,024 # value of ptr : type 5 
+2024-02-07 11:44:58,056 # value of ptr : type 5 
+2024-02-07 11:44:58,073 # value of ptr : type 5 
+2024-02-07 11:44:58,104 # value of ptr : type 5 
+2024-02-07 11:44:58,120 # value of ptr : type 12 
+2024-02-07 11:44:58,121 # Order 135 => [mixed] f241 
+2024-02-07 11:44:58,121 # led1
+2024-02-07 11:44:58,137 # value of ptr : type 5 
+2024-02-07 11:44:58,168 # value of ptr : type 5 
+2024-02-07 11:44:58,184 # value of ptr : type 5 
+2024-02-07 11:44:58,201 # value of ptr : type 5 
+2024-02-07 11:44:58,233 # value of ptr : type 12 
+2024-02-07 11:44:58,234 # Order 136 => [mixed] f241 
+2024-02-07 11:44:58,234 # led1
+2024-02-07 11:44:58,248 # value of ptr : type 5 
+2024-02-07 11:44:58,280 # value of ptr : type 11 
+2024-02-07 11:44:58,281 # Order 137 => [order] f241 
+2024-02-07 11:44:58,281 # led0
+2024-02-07 11:44:58,281 # value of ptr : type 5 
+2024-02-07 11:44:58,312 # value of ptr : type 5 
+2024-02-07 11:44:58,328 # value of ptr : type 12 
+2024-02-07 11:44:58,329 # Order 138 => [mixed] f241 
+2024-02-07 11:44:58,329 # led1
+2024-02-07 11:44:58,345 # value of ptr : type 5 
+2024-02-07 11:44:58,376 # value of ptr : type 5 
+2024-02-07 11:44:58,392 # value of ptr : type 5 
+2024-02-07 11:44:58,424 # value of ptr : type 12 
+2024-02-07 11:44:58,425 # Order 139 => [mixed] f241 
+2024-02-07 11:44:58,425 # led1
+2024-02-07 11:44:58,441 # value of ptr : type 5 
+2024-02-07 11:44:58,456 # value of ptr : type 5 
+2024-02-07 11:44:58,488 # value of ptr : type 5 
+2024-02-07 11:44:58,504 # value of ptr : type 5 
+2024-02-07 11:44:58,520 # value of ptr : type 12 
+2024-02-07 11:44:58,521 # Order 140 => [mixed] f241 
+2024-02-07 11:44:58,521 # led1
+2024-02-07 11:44:58,552 # value of ptr : type 5 
+2024-02-07 11:44:58,569 # value of ptr : type 5 
+2024-02-07 11:44:58,584 # value of ptr : type 5 
+2024-02-07 11:44:58,616 # value of ptr : type 5 
+2024-02-07 11:44:58,632 # value of ptr : type 12 
+2024-02-07 11:44:58,634 # Order 141 => [mixed] f241 
+2024-02-07 11:44:58,634 # led1
+2024-02-07 11:44:58,649 # value of ptr : type 5 
+2024-02-07 11:44:58,680 # value of ptr : type 5 
+2024-02-07 11:44:58,696 # value of ptr : type 5 
+2024-02-07 11:44:58,712 # value of ptr : type 5 
+2024-02-07 11:44:58,744 # value of ptr : type 12 
+2024-02-07 11:44:58,745 # Order 142 => [mixed] f241 
+2024-02-07 11:44:58,745 # led1
+2024-02-07 11:44:58,760 # value of ptr : type 5 
+2024-02-07 11:44:58,776 # value of ptr : type 5 
+2024-02-07 11:44:58,808 # value of ptr : type 5 
+2024-02-07 11:44:58,824 # value of ptr : type 5 
+2024-02-07 11:44:58,856 # value of ptr : type 12 
+2024-02-07 11:44:58,857 # Order 143 => [mixed] f241 
+2024-02-07 11:44:58,857 # led1
+2024-02-07 11:44:58,872 # value of ptr : type 5 
+2024-02-07 11:44:58,888 # value of ptr : type 5 
+2024-02-07 11:44:58,920 # value of ptr : type 5 
+2024-02-07 11:44:58,936 # value of ptr : type 12 
+2024-02-07 11:44:58,937 # Order 144 => [mixed] f241 
+2024-02-07 11:44:58,937 # led1
+2024-02-07 11:44:58,952 # value of ptr : type 5 
+2024-02-07 11:44:58,984 # value of ptr : type 5 
+2024-02-07 11:44:59,000 # value of ptr : type 5 
+2024-02-07 11:44:59,016 # value of ptr : type 5 
+2024-02-07 11:44:59,048 # value of ptr : type 12 
+2024-02-07 11:44:59,049 # Order 145 => [mixed] f241 
+2024-02-07 11:44:59,049 # led1
+2024-02-07 11:44:59,064 # value of ptr : type 5 
+2024-02-07 11:44:59,080 # value of ptr : type 5 
+2024-02-07 11:44:59,112 # value of ptr : type 5 
+2024-02-07 11:44:59,128 # value of ptr : type 5 
+2024-02-07 11:44:59,144 # value of ptr : type 12 
+2024-02-07 11:44:59,160 # Order 146 => [mixed] f241 
+2024-02-07 11:44:59,161 # led1
+2024-02-07 11:44:59,176 # value of ptr : type 5 
+2024-02-07 11:44:59,192 # value of ptr : type 5 
+2024-02-07 11:44:59,208 # value of ptr : type 5 
+2024-02-07 11:44:59,240 # value of ptr : type 5 
+2024-02-07 11:44:59,256 # value of ptr : type 12 
+2024-02-07 11:44:59,257 # Order 147 => [mixed] f241 
+2024-02-07 11:44:59,258 # led1
+2024-02-07 11:44:59,288 # value of ptr : type 5 
+2024-02-07 11:44:59,304 # value of ptr : type 5 
+2024-02-07 11:44:59,321 # value of ptr : type 5 
+2024-02-07 11:44:59,352 # value of ptr : type 5 
+2024-02-07 11:44:59,368 # value of ptr : type 12 
+2024-02-07 11:44:59,369 # Order 148 => [mixed] f241 
+2024-02-07 11:44:59,369 # led1
+2024-02-07 11:44:59,384 # value of ptr : type 5 
+2024-02-07 11:44:59,416 # value of ptr : type 5 
+2024-02-07 11:44:59,432 # value of ptr : type 5 
+2024-02-07 11:44:59,448 # value of ptr : type 12 
+2024-02-07 11:44:59,464 # Order 149 => [mixed] f241 
+2024-02-07 11:44:59,464 # led1
+2024-02-07 11:44:59,480 # value of ptr : type 5 
+2024-02-07 11:44:59,496 # value of ptr : type 5 
+2024-02-07 11:44:59,512 # value of ptr : type 5 
+2024-02-07 11:44:59,544 # value of ptr : type 5 
+2024-02-07 11:44:59,560 # value of ptr : type 12 
+2024-02-07 11:44:59,562 # Order 150 => [mixed] f241 
+2024-02-07 11:44:59,562 # led1
+2024-02-07 11:44:59,576 # value of ptr : type 5 
+2024-02-07 11:44:59,609 # value of ptr : type 5 
+2024-02-07 11:44:59,625 # value of ptr : type 5 
+2024-02-07 11:44:59,641 # value of ptr : type 5 
+2024-02-07 11:44:59,672 # value of ptr : type 12 
+2024-02-07 11:44:59,673 # Order 151 => [mixed] f241 
+2024-02-07 11:44:59,673 # led1
+2024-02-07 11:44:59,688 # value of ptr : type 5 
+2024-02-07 11:44:59,720 # value of ptr : type 5 
+2024-02-07 11:44:59,736 # value of ptr : type 5 
+2024-02-07 11:44:59,753 # value of ptr : type 5 
+2024-02-07 11:44:59,784 # value of ptr : type 12 
+2024-02-07 11:44:59,785 # Order 152 => [mixed] f241 
+2024-02-07 11:44:59,785 # led1
+2024-02-07 11:44:59,800 # value of ptr : type 5 
+2024-02-07 11:44:59,816 # value of ptr : type 5 
+2024-02-07 11:44:59,848 # value of ptr : type 5 
+2024-02-07 11:44:59,864 # value of ptr : type 5 
+2024-02-07 11:44:59,880 # value of ptr : type 12 
+2024-02-07 11:44:59,896 # Order 153 => [mixed] f241 
+2024-02-07 11:44:59,896 # led1
+2024-02-07 11:44:59,913 # value of ptr : type 5 
+2024-02-07 11:44:59,928 # value of ptr : type 5 
+2024-02-07 11:44:59,944 # value of ptr : type 5 
+2024-02-07 11:44:59,976 # value of ptr : type 12 
+2024-02-07 11:44:59,977 # Order 154 => [mixed] f241 
+2024-02-07 11:44:59,977 # led1
+2024-02-07 11:44:59,992 # value of ptr : type 5 
+2024-02-07 11:45:00,008 # value of ptr : type 5 
+2024-02-07 11:45:00,040 # value of ptr : type 11 
+2024-02-07 11:45:00,041 # Order 155 => [order] f241 
+2024-02-07 11:45:00,041 # led0
+2024-02-07 11:45:00,056 # value of ptr : type 5 
+2024-02-07 11:45:00,072 # value of ptr : type 12 
+2024-02-07 11:45:00,074 # Order 156 => [mixed] f241 
+2024-02-07 11:45:00,074 # led1
+2024-02-07 11:45:00,104 # value of ptr : type 5 
+2024-02-07 11:45:00,120 # value of ptr : type 5 
+2024-02-07 11:45:00,136 # value of ptr : type 5 
+2024-02-07 11:45:00,168 # value of ptr : type 5 
+2024-02-07 11:45:00,185 # value of ptr : type 12 
+2024-02-07 11:45:00,185 # Order 157 => [mixed] f241 
+2024-02-07 11:45:00,185 # led1
+2024-02-07 11:45:00,200 # value of ptr : type 5 
+2024-02-07 11:45:00,232 # value of ptr : type 5 
+2024-02-07 11:45:00,248 # value of ptr : type 5 
+2024-02-07 11:45:00,264 # value of ptr : type 5 
+2024-02-07 11:45:00,296 # value of ptr : type 12 
+2024-02-07 11:45:00,297 # Order 158 => [mixed] f241 
+2024-02-07 11:45:00,297 # led1
+2024-02-07 11:45:00,312 # value of ptr : type 5 
+2024-02-07 11:45:00,328 # value of ptr : type 5 
+2024-02-07 11:45:00,360 # value of ptr : type 5 
+2024-02-07 11:45:00,376 # value of ptr : type 5 
+2024-02-07 11:45:00,392 # value of ptr : type 12 
+2024-02-07 11:45:00,408 # Order 159 => [mixed] f241 
+2024-02-07 11:45:00,409 # led1
+2024-02-07 11:45:00,424 # value of ptr : type 5 
+2024-02-07 11:45:00,440 # value of ptr : type 5 
+2024-02-07 11:45:00,456 # value of ptr : type 5 
+2024-02-07 11:45:00,488 # value of ptr : type 5 
+2024-02-07 11:45:00,504 # value of ptr : type 12 
+2024-02-07 11:45:00,505 # Order 160 => [mixed] f241 
+2024-02-07 11:45:00,505 # led1
+2024-02-07 11:45:00,536 # value of ptr : type 5 
+2024-02-07 11:45:00,552 # value of ptr : type 5 
+2024-02-07 11:45:00,568 # value of ptr : type 5 
+2024-02-07 11:45:00,600 # value of ptr : type 12 
+2024-02-07 11:45:00,601 # Order 161 => [mixed] f241 
+2024-02-07 11:45:00,601 # led1
+2024-02-07 11:45:00,616 # value of ptr : type 5 
+2024-02-07 11:45:00,632 # value of ptr : type 5 
+2024-02-07 11:45:00,664 # value of ptr : type 5 
+2024-02-07 11:45:00,680 # value of ptr : type 5 
+2024-02-07 11:45:00,696 # value of ptr : type 12 
+2024-02-07 11:45:00,712 # Order 162 => [mixed] f241 
+2024-02-07 11:45:00,713 # led1
+2024-02-07 11:45:00,728 # value of ptr : type 5 
+2024-02-07 11:45:00,744 # value of ptr : type 5 
+2024-02-07 11:45:00,760 # value of ptr : type 5 
+2024-02-07 11:45:00,792 # value of ptr : type 5 
+2024-02-07 11:45:00,808 # value of ptr : type 12 
+2024-02-07 11:45:00,809 # Order 163 => [mixed] f241 
+2024-02-07 11:45:00,809 # led1
+2024-02-07 11:45:00,824 # value of ptr : type 5 
+2024-02-07 11:45:00,856 # value of ptr : type 5 
+2024-02-07 11:45:00,872 # value of ptr : type 5 
+2024-02-07 11:45:00,888 # value of ptr : type 5 
+2024-02-07 11:45:00,920 # value of ptr : type 12 
+2024-02-07 11:45:00,921 # Order 164 => [mixed] f241 
+2024-02-07 11:45:00,921 # led1
+2024-02-07 11:45:00,936 # value of ptr : type 5 
+2024-02-07 11:45:00,968 # value of ptr : type 5 
+2024-02-07 11:45:00,984 # value of ptr : type 5 
+2024-02-07 11:45:01,000 # value of ptr : type 5 
+2024-02-07 11:45:01,032 # value of ptr : type 12 
+2024-02-07 11:45:01,033 # Order 165 => [mixed] f241 
+2024-02-07 11:45:01,033 # led1
+2024-02-07 11:45:01,048 # value of ptr : type 5 
+2024-02-07 11:45:01,064 # value of ptr : type 5 
+2024-02-07 11:45:01,096 # value of ptr : type 5 
+2024-02-07 11:45:01,112 # value of ptr : type 12 
+2024-02-07 11:45:01,113 # Order 166 => [mixed] f241 
+2024-02-07 11:45:01,114 # led1
+2024-02-07 11:45:01,128 # value of ptr : type 5 
+2024-02-07 11:45:01,160 # value of ptr : type 5 
+2024-02-07 11:45:01,176 # value of ptr : type 5 
+2024-02-07 11:45:01,193 # value of ptr : type 5 
+2024-02-07 11:45:01,224 # value of ptr : type 12 
+2024-02-07 11:45:01,226 # Order 167 => [mixed] f241 
+2024-02-07 11:45:01,226 # led1
+2024-02-07 11:45:01,240 # value of ptr : type 5 
+2024-02-07 11:45:01,256 # value of ptr : type 5 
+2024-02-07 11:45:01,288 # value of ptr : type 5 
+2024-02-07 11:45:01,304 # value of ptr : type 5 
+2024-02-07 11:45:01,336 # value of ptr : type 12 
+2024-02-07 11:45:01,337 # Order 168 => [mixed] f241 
+2024-02-07 11:45:01,338 # led1
+2024-02-07 11:45:01,352 # value of ptr : type 5 
+2024-02-07 11:45:01,368 # value of ptr : type 5 
+2024-02-07 11:45:01,400 # value of ptr : type 5 
+2024-02-07 11:45:01,416 # value of ptr : type 5 
+2024-02-07 11:45:01,432 # value of ptr : type 12 
+2024-02-07 11:45:01,433 # Order 169 => [mixed] f241 
+2024-02-07 11:45:01,433 # led1
+2024-02-07 11:45:01,464 # value of ptr : type 5 
+2024-02-07 11:45:01,481 # value of ptr : type 5 
+2024-02-07 11:45:01,496 # value of ptr : type 5 
+2024-02-07 11:45:01,528 # value of ptr : type 5 
+2024-02-07 11:45:01,545 # value of ptr : type 12 
+2024-02-07 11:45:01,546 # Order 170 => [mixed] f241 
+2024-02-07 11:45:01,546 # led1
+2024-02-07 11:45:01,560 # value of ptr : type 5 
+2024-02-07 11:45:01,592 # value of ptr : type 5 
+2024-02-07 11:45:01,608 # value of ptr : type 5 
+2024-02-07 11:45:01,624 # value of ptr : type 12 
+2024-02-07 11:45:01,640 # Order 171 => [mixed] f241 
+2024-02-07 11:45:01,641 # led1
+2024-02-07 11:45:01,656 # value of ptr : type 5 
+2024-02-07 11:45:01,672 # value of ptr : type 5 
+2024-02-07 11:45:01,689 # value of ptr : type 5 
+2024-02-07 11:45:01,720 # value of ptr : type 5 
+2024-02-07 11:45:01,737 # value of ptr : type 12 
+2024-02-07 11:45:01,738 # Order 172 => [mixed] f241 
+2024-02-07 11:45:01,739 # led1
+2024-02-07 11:45:01,768 # value of ptr : type 5 
+2024-02-07 11:45:01,785 # value of ptr : type 5 
+2024-02-07 11:45:01,800 # value of ptr : type 11 
+2024-02-07 11:45:01,816 # Order 173 => [order] f241 
+2024-02-07 11:45:01,816 # led0
+2024-02-07 11:45:01,817 # value of ptr : type 5 
+2024-02-07 11:45:01,848 # value of ptr : type 12 
+2024-02-07 11:45:01,849 # Order 174 => [mixed] f241 
+2024-02-07 11:45:01,849 # led1
+2024-02-07 11:45:01,864 # value of ptr : type 5 
+2024-02-07 11:45:01,880 # value of ptr : type 5 
+2024-02-07 11:45:01,912 # value of ptr : type 5 
+2024-02-07 11:45:01,928 # value of ptr : type 5 
+2024-02-07 11:45:01,944 # value of ptr : type 12 
+2024-02-07 11:45:01,960 # Order 175 => [mixed] f241 
+2024-02-07 11:45:01,961 # led1
+2024-02-07 11:45:01,977 # value of ptr : type 5 
+2024-02-07 11:45:01,992 # value of ptr : type 5 
+2024-02-07 11:45:02,008 # value of ptr : type 5 
+2024-02-07 11:45:02,040 # value of ptr : type 5 
+2024-02-07 11:45:02,056 # value of ptr : type 12 
+2024-02-07 11:45:02,057 # Order 176 => [mixed] f241 
+2024-02-07 11:45:02,057 # led1
+2024-02-07 11:45:02,072 # value of ptr : type 5 
+2024-02-07 11:45:02,104 # value of ptr : type 5 
+2024-02-07 11:45:02,120 # value of ptr : type 5 
+2024-02-07 11:45:02,152 # value of ptr : type 5 
+2024-02-07 11:45:02,168 # value of ptr : type 12 
+2024-02-07 11:45:02,169 # Order 177 => [mixed] f241 
+2024-02-07 11:45:02,170 # led1
+2024-02-07 11:45:02,184 # value of ptr : type 5 
+2024-02-07 11:45:02,216 # value of ptr : type 5 
+2024-02-07 11:45:02,232 # value of ptr : type 5 
+2024-02-07 11:45:02,248 # value of ptr : type 12 
+2024-02-07 11:45:02,249 # Order 178 => [mixed] f241 
+2024-02-07 11:45:02,249 # led1
+2024-02-07 11:45:02,280 # value of ptr : type 5 
+2024-02-07 11:45:02,296 # value of ptr : type 5 
+2024-02-07 11:45:02,312 # value of ptr : type 5 
+2024-02-07 11:45:02,344 # value of ptr : type 5 
+2024-02-07 11:45:02,360 # value of ptr : type 12 
+2024-02-07 11:45:02,361 # Order 179 => [mixed] f241 
+2024-02-07 11:45:02,361 # led1
+2024-02-07 11:45:02,376 # value of ptr : type 5 
+2024-02-07 11:45:02,409 # value of ptr : type 5 
+2024-02-07 11:45:02,424 # value of ptr : type 5 
+2024-02-07 11:45:02,440 # value of ptr : type 5 
+2024-02-07 11:45:02,472 # value of ptr : type 12 
+2024-02-07 11:45:02,473 # Order 180 => [mixed] f241 
+2024-02-07 11:45:02,473 # led1
+2024-02-07 11:45:02,489 # value of ptr : type 5 
+2024-02-07 11:45:02,519 # value of ptr : type 5 
+2024-02-07 11:45:02,536 # value of ptr : type 5 
+2024-02-07 11:45:02,552 # value of ptr : type 5 
+2024-02-07 11:45:02,584 # value of ptr : type 12 
+2024-02-07 11:45:02,585 # Order 181 => [mixed] f241 
+2024-02-07 11:45:02,585 # led1
+2024-02-07 11:45:02,600 # value of ptr : type 5 
+2024-02-07 11:45:02,616 # value of ptr : type 5 
+2024-02-07 11:45:02,648 # value of ptr : type 5 
+2024-02-07 11:45:02,664 # value of ptr : type 5 
+2024-02-07 11:45:25,970 # Exiting Pyterm
