@@ -1,0 +1,968 @@
+Building application "test_recv" for "openmote-b" with MCU "cc2538".
+
+"make" -C /home/theophile/riot-master/RIOT/boards/common/init
+"make" -C /home/theophile/riot-master/RIOT/boards/openmote-b
+"make" -C /home/theophile/riot-master/RIOT/core
+"make" -C /home/theophile/riot-master/RIOT/core/lib
+"make" -C /home/theophile/riot-master/RIOT/cpu/cc2538
+"make" -C /home/theophile/riot-master/RIOT/cpu/cc2538/periph
+"make" -C /home/theophile/riot-master/RIOT/cpu/cortexm_common
+"make" -C /home/theophile/riot-master/RIOT/cpu/cortexm_common/periph
+"make" -C /home/theophile/riot-master/RIOT/drivers
+"make" -C /home/theophile/riot-master/RIOT/drivers/at86rf215
+"make" -C /home/theophile/riot-master/RIOT/drivers/netdev
+"make" -C /home/theophile/riot-master/RIOT/drivers/periph_common
+"make" -C /home/theophile/riot-master/RIOT/sys
+"make" -C /home/theophile/riot-master/RIOT/sys/auto_init
+"make" -C /home/theophile/riot-master/RIOT/sys/div
+"make" -C /home/theophile/riot-master/RIOT/sys/ecc
+"make" -C /home/theophile/riot-master/RIOT/sys/evtimer
+"make" -C /home/theophile/riot-master/RIOT/sys/fmt
+"make" -C /home/theophile/riot-master/RIOT/sys/frac
+"make" -C /home/theophile/riot-master/RIOT/sys/isrpipe
+"make" -C /home/theophile/riot-master/RIOT/sys/luid
+"make" -C /home/theophile/riot-master/RIOT/sys/malloc_thread_safe
+"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc
+"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/link_layer/mac
+"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/netapi
+"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/netif
+"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/netif/hdr
+"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/netif/ieee802154
+"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/netif/init_devs
+"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/netreg
+"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/pkt
+"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/pktbuf
+"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/pktbuf_static
+"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/priority_pktqueue
+"make" -C /home/theophile/riot-master/RIOT/sys/net/link_layer/csma_sender
+"make" -C /home/theophile/riot-master/RIOT/sys/net/link_layer/eui_provider
+"make" -C /home/theophile/riot-master/RIOT/sys/net/link_layer/ieee802154
+"make" -C /home/theophile/riot-master/RIOT/sys/net/link_layer/l2util
+"make" -C /home/theophile/riot-master/RIOT/sys/net/netif
+"make" -C /home/theophile/riot-master/RIOT/sys/newlib_syscalls_default
+"make" -C /home/theophile/riot-master/RIOT/sys/pm_layered
+"make" -C /home/theophile/riot-master/RIOT/sys/ps
+"make" -C /home/theophile/riot-master/RIOT/sys/random
+"make" -C /home/theophile/riot-master/RIOT/sys/shell
+"make" -C /home/theophile/riot-master/RIOT/sys/shell/commands
+"make" -C /home/theophile/riot-master/RIOT/sys/stdio_uart
+"make" -C /home/theophile/riot-master/RIOT/sys/tsrb
+"make" -C /home/theophile/riot-master/RIOT/sys/xtimer
+"make" -C /home/theophile/riot-master/RIOT/sys/ztimer
+   text	   data	    bss	    dec	    hex	filename
+  56316	    204	  14712	  71232	  11640	/home/theophile/riot-master/RIOT/examples/Raphael/test_recv/bin/openmote-b/test_recv.elf
+/home/theophile/riot-master/RIOT/dist/tools/cc2538-bsl/cc2538-bsl.py  -p "/dev/ttyUSB11" --bootloader-invert-lines --write-erase -v -b 460800 /home/theophile/riot-master/RIOT/examples/Raphael/test_recv/bin/openmote-b/test_recv.bin
+/home/theophile/riot-master/RIOT/dist/tools/pyterm/pyterm -p "/dev/ttyUSB11" -b "115200"  
+2023-07-12 17:05:49,336 # Connect to serial port /dev/ttyUSB11
+Welcome to pyterm!
+Type '/exit' to exit.
+2023-07-12 17:05:50,339 # ��x<�x��x<�8addr 8 bit : 2
+2023-07-12 17:05:50,340 # MY ADDRESS IS !!!!!! 0xb06b
+2023-07-12 17:05:50,341 # My get addr short : b06b
+2023-07-12 17:05:50,341 # ACK TIMEOUT : 864
+2023-07-12 17:05:50,341 # Type du noeud : 2 
+2023-07-12 17:05:50,342 # main(): This is RIOT! (Version: 2022.04-devel-826-g08c2c)
+2023-07-12 17:05:50,343 # You are running RIOT on a(n) openmote-b board.
+2023-07-12 17:05:50,343 # This board features a(n) cc2538 MCU.
+> 2023-07-12 17:06:00,263 # value of ptr : type 1 
+2023-07-12 17:06:00,279 # ENVOYE !!!
+2023-07-12 17:06:00,295 # value of ptr : type 2 
+2023-07-12 17:06:00,471 # value of ptr : type 1 
+2023-07-12 17:06:00,487 # ENVOYE !!!
+2023-07-12 17:06:00,503 # value of ptr : type 2 
+2023-07-12 17:06:00,519 # value of ptr : type 2 
+2023-07-12 17:06:00,711 # value of ptr : type 1 
+2023-07-12 17:06:00,711 # value of ptr : type 2 
+2023-07-12 17:06:00,727 # value of ptr : type 2 
+2023-07-12 17:06:00,743 # value of ptr : type 2 
+2023-07-12 17:06:00,759 # value of ptr : type 2 
+2023-07-12 17:06:00,759 # value of ptr : type 2 
+2023-07-12 17:06:00,951 # value of ptr : type 1 
+2023-07-12 17:06:00,999 # value of ptr : type 2 
+2023-07-12 17:06:01,015 # value of ptr : type 1 
+2023-07-12 17:06:01,031 # value of ptr : type 2 
+2023-07-12 17:06:01,047 # value of ptr : type 1 
+2023-07-12 17:06:01,063 # value of ptr : type 2 
+2023-07-12 17:06:01,095 # value of ptr : type 1 
+2023-07-12 17:06:01,111 # value of ptr : type 2 
+2023-07-12 17:06:01,159 # value of ptr : type 1 
+2023-07-12 17:06:01,175 # value of ptr : type 1 
+2023-07-12 17:06:01,191 # ENVOYE !!!
+2023-07-12 17:06:01,191 # value of ptr : type 2 
+2023-07-12 17:06:01,207 # value of ptr : type 2 
+2023-07-12 17:06:01,207 # value of ptr : type 2 
+2023-07-12 17:06:01,207 # value of ptr : type 2 
+2023-07-12 17:06:01,367 # value of ptr : type 1 
+2023-07-12 17:06:01,399 # ENVOYE !!!
+2023-07-12 17:06:01,575 # value of ptr : type 1 
+2023-07-12 17:06:01,591 # ENVOYE !!!
+2023-07-12 17:06:01,607 # value of ptr : type 2 
+2023-07-12 17:06:01,623 # value of ptr : type 2 
+2023-07-12 17:06:01,623 # value of ptr : type 2 
+2023-07-12 17:06:01,911 # value of ptr : type 1 
+2023-07-12 17:06:01,943 # value of ptr : type 2 
+2023-07-12 17:06:01,958 # value of ptr : type 2 
+2023-07-12 17:06:02,023 # value of ptr : type 1 
+2023-07-12 17:06:02,023 # ENVOYE !!!
+2023-07-12 17:06:02,055 # value of ptr : type 1 
+2023-07-12 17:06:02,055 # ENVOYE !!!
+2023-07-12 17:06:02,070 # value of ptr : type 2 
+2023-07-12 17:06:02,167 # value of ptr : type 1 
+2023-07-12 17:06:02,198 # value of ptr : type 1 
+2023-07-12 17:06:02,199 # ENVOYE !!!
+2023-07-12 17:06:02,215 # value of ptr : type 2 
+2023-07-12 17:06:02,230 # value of ptr : type 2 
+2023-07-12 17:06:02,311 # value of ptr : type 1 
+2023-07-12 17:06:02,327 # ENVOYE !!!
+2023-07-12 17:06:02,343 # value of ptr : type 2 
+2023-07-12 17:06:02,343 # value of ptr : type 2 
+2023-07-12 17:06:02,359 # value of ptr : type 2 
+2023-07-12 17:06:02,583 # value of ptr : type 1 
+2023-07-12 17:06:02,583 # ENVOYE !!!
+2023-07-12 17:06:02,599 # value of ptr : type 2 
+2023-07-12 17:06:02,599 # value of ptr : type 2 
+2023-07-12 17:06:02,615 # value of ptr : type 2 
+2023-07-12 17:06:02,615 # value of ptr : type 2 
+2023-07-12 17:06:02,631 # value of ptr : type 2 
+2023-07-12 17:06:02,663 # value of ptr : type 2 
+2023-07-12 17:06:02,951 # value of ptr : type 1 
+2023-07-12 17:06:02,951 # value of ptr : type 2 
+2023-07-12 17:06:02,967 # value of ptr : type 2 
+2023-07-12 17:06:03,111 # value of ptr : type 1 
+2023-07-12 17:06:03,127 # value of ptr : type 1 
+2023-07-12 17:06:03,159 # value of ptr : type 1 
+2023-07-12 17:06:03,175 # ENVOYE !!!
+2023-07-12 17:06:03,175 # value of ptr : type 2 
+2023-07-12 17:06:03,175 # value of ptr : type 2 
+2023-07-12 17:06:03,191 # value of ptr : type 2 
+2023-07-12 17:06:03,319 # value of ptr : type 1 
+2023-07-12 17:06:03,351 # ENVOYE !!!
+2023-07-12 17:06:03,351 # value of ptr : type 2 
+2023-07-12 17:06:03,367 # value of ptr : type 2 
+2023-07-12 17:06:03,368 # value of ptr : type 2 
+2023-07-12 17:06:03,368 # value of ptr : type 2 
+2023-07-12 17:06:03,383 # value of ptr : type 2 
+2023-07-12 17:06:03,703 # value of ptr : type 1 
+2023-07-12 17:06:03,703 # value of ptr : type 2 
+2023-07-12 17:06:03,718 # value of ptr : type 2 
+2023-07-12 17:06:03,734 # value of ptr : type 2 
+2023-07-12 17:06:03,895 # value of ptr : type 1 
+2023-07-12 17:06:03,959 # value of ptr : type 1 
+2023-07-12 17:06:03,974 # value of ptr : type 1 
+2023-07-12 17:06:03,975 # ENVOYE !!!
+2023-07-12 17:06:03,990 # value of ptr : type 2 
+2023-07-12 17:06:04,006 # value of ptr : type 2 
+2023-07-12 17:06:04,167 # value of ptr : type 1 
+2023-07-12 17:06:04,215 # ENVOYE !!!
+2023-07-12 17:06:04,230 # value of ptr : type 2 
+2023-07-12 17:06:04,407 # value of ptr : type 1 
+2023-07-12 17:06:04,455 # ENVOYE !!!
+2023-07-12 17:06:04,471 # value of ptr : type 2 
+2023-07-12 17:06:04,759 # value of ptr : type 1 
+2023-07-12 17:06:04,775 # value of ptr : type 2 
+2023-07-12 17:06:04,854 # value of ptr : type 1 
+2023-07-12 17:06:04,902 # value of ptr : type 1 
+2023-07-12 17:06:04,934 # value of ptr : type 1 
+2023-07-12 17:06:04,951 # ENVOYE !!!
+2023-07-12 17:06:05,158 # value of ptr : type 1 
+2023-07-12 17:06:05,175 # ENVOYE !!!
+2023-07-12 17:06:05,175 # value of ptr : type 2 
+2023-07-12 17:06:05,191 # value of ptr : type 2 
+2023-07-12 17:06:05,366 # value of ptr : type 1 
+2023-07-12 17:06:05,382 # value of ptr : type 2 
+2023-07-12 17:06:05,398 # value of ptr : type 2 
+2023-07-12 17:06:05,399 # value of ptr : type 2 
+2023-07-12 17:06:05,542 # value of ptr : type 1 
+2023-07-12 17:06:05,558 # value of ptr : type 2 
+2023-07-12 17:06:05,622 # value of ptr : type 1 
+2023-07-12 17:06:05,654 # value of ptr : type 1 
+2023-07-12 17:06:06,534 # value of ptr : type 5 
+2023-07-12 17:06:06,566 # value of ptr : type 11 
+2023-07-12 17:06:06,583 # value of ptr : type 5 
+2023-07-12 17:06:06,615 # value of ptr : type 5 
+2023-07-12 17:06:06,647 # value of ptr : type 12 
+2023-07-12 17:06:06,647 # Order 1 => [mixed] b06b 
+2023-07-12 17:06:06,647 # led1
+2023-07-12 17:06:06,679 # value of ptr : type 5 
+2023-07-12 17:06:06,710 # value of ptr : type 5 
+2023-07-12 17:06:06,742 # value of ptr : type 5 
+2023-07-12 17:06:06,775 # value of ptr : type 12 
+2023-07-12 17:06:06,807 # value of ptr : type 5 
+2023-07-12 17:06:06,838 # value of ptr : type 5 
+2023-07-12 17:06:06,870 # value of ptr : type 5 
+2023-07-12 17:06:06,903 # value of ptr : type 5 
+2023-07-12 17:06:06,935 # value of ptr : type 5 
+2023-07-12 17:06:06,966 # value of ptr : type 12 
+2023-07-12 17:06:06,998 # value of ptr : type 5 
+2023-07-12 17:06:07,015 # value of ptr : type 5 
+2023-07-12 17:06:07,046 # value of ptr : type 5 
+2023-07-12 17:06:07,078 # value of ptr : type 12 
+2023-07-12 17:06:07,111 # value of ptr : type 12 
+2023-07-12 17:06:07,143 # value of ptr : type 5 
+2023-07-12 17:06:07,174 # value of ptr : type 5 
+2023-07-12 17:06:07,207 # value of ptr : type 5 
+2023-07-12 17:06:07,239 # value of ptr : type 5 
+2023-07-12 17:06:07,270 # value of ptr : type 5 
+2023-07-12 17:06:07,302 # value of ptr : type 12 
+2023-07-12 17:06:07,335 # value of ptr : type 12 
+2023-07-12 17:06:07,366 # value of ptr : type 5 
+2023-07-12 17:06:07,399 # value of ptr : type 5 
+2023-07-12 17:06:07,431 # value of ptr : type 12 
+2023-07-12 17:06:07,462 # value of ptr : type 5 
+2023-07-12 17:06:07,494 # value of ptr : type 5 
+2023-07-12 17:06:07,511 # value of ptr : type 5 
+2023-07-12 17:06:07,559 # value of ptr : type 5 
+2023-07-12 17:06:07,575 # value of ptr : type 5 
+2023-07-12 17:06:07,607 # value of ptr : type 12 
+2023-07-12 17:06:07,639 # value of ptr : type 12 
+2023-07-12 17:06:07,671 # value of ptr : type 5 
+2023-07-12 17:06:07,702 # value of ptr : type 5 
+2023-07-12 17:06:07,734 # value of ptr : type 11 
+2023-07-12 17:06:07,750 # value of ptr : type 5 
+2023-07-12 17:06:07,782 # value of ptr : type 5 
+2023-07-12 17:06:07,815 # value of ptr : type 12 
+2023-07-12 17:06:07,847 # value of ptr : type 12 
+2023-07-12 17:06:07,878 # value of ptr : type 5 
+2023-07-12 17:06:07,910 # value of ptr : type 5 
+2023-07-12 17:06:07,942 # value of ptr : type 5 
+2023-07-12 17:06:07,974 # value of ptr : type 5 
+2023-07-12 17:06:08,007 # value of ptr : type 5 
+2023-07-12 17:06:08,038 # value of ptr : type 5 
+2023-07-12 17:06:08,070 # value of ptr : type 12 
+2023-07-12 17:06:08,103 # value of ptr : type 5 
+2023-07-12 17:06:08,135 # value of ptr : type 12 
+2023-07-12 17:06:08,167 # value of ptr : type 12 
+2023-07-12 17:06:08,183 # value of ptr : type 5 
+2023-07-12 17:06:08,215 # value of ptr : type 5 
+2023-07-12 17:06:08,246 # value of ptr : type 5 
+2023-07-12 17:06:08,278 # value of ptr : type 5 
+2023-07-12 17:06:08,310 # value of ptr : type 5 
+2023-07-12 17:06:08,343 # value of ptr : type 12 
+2023-07-12 17:06:08,375 # value of ptr : type 5 
+2023-07-12 17:06:08,407 # value of ptr : type 5 
+2023-07-12 17:06:08,439 # value of ptr : type 12 
+2023-07-12 17:06:08,470 # value of ptr : type 5 
+2023-07-12 17:06:08,502 # value of ptr : type 5 
+2023-07-12 17:06:08,535 # value of ptr : type 5 
+2023-07-12 17:06:08,567 # value of ptr : type 5 
+2023-07-12 17:06:08,598 # value of ptr : type 5 
+2023-07-12 17:06:08,631 # value of ptr : type 12 
+2023-07-12 17:06:08,662 # value of ptr : type 5 
+2023-07-12 17:06:08,694 # value of ptr : type 5 
+2023-07-12 17:06:08,710 # value of ptr : type 5 
+2023-07-12 17:06:08,743 # value of ptr : type 5 
+2023-07-12 17:06:08,775 # value of ptr : type 12 
+2023-07-12 17:06:08,806 # value of ptr : type 5 
+2023-07-12 17:06:08,839 # value of ptr : type 5 
+2023-07-12 17:06:08,870 # value of ptr : type 5 
+2023-07-12 17:06:08,902 # value of ptr : type 11 
+2023-07-12 17:06:08,918 # value of ptr : type 5 
+2023-07-12 17:06:08,951 # value of ptr : type 12 
+2023-07-12 17:06:08,983 # value of ptr : type 5 
+2023-07-12 17:06:09,014 # value of ptr : type 5 
+2023-07-12 17:06:09,046 # value of ptr : type 5 
+2023-07-12 17:06:09,079 # value of ptr : type 12 
+2023-07-12 17:06:09,111 # value of ptr : type 12 
+2023-07-12 17:06:09,111 # Order 26 => [mixed] b06b 
+2023-07-12 17:06:09,111 # led1
+2023-07-12 17:06:09,142 # value of ptr : type 5 
+2023-07-12 17:06:09,175 # value of ptr : type 5 
+2023-07-12 17:06:09,206 # value of ptr : type 5 
+2023-07-12 17:06:09,238 # value of ptr : type 12 
+2023-07-12 17:06:09,271 # value of ptr : type 5 
+2023-07-12 17:06:09,287 # value of ptr : type 5 
+2023-07-12 17:06:09,319 # value of ptr : type 5 
+2023-07-12 17:06:09,351 # value of ptr : type 5 
+2023-07-12 17:06:09,383 # value of ptr : type 5 
+2023-07-12 17:06:09,414 # value of ptr : type 5 
+2023-07-12 17:06:09,446 # value of ptr : type 12 
+2023-07-12 17:06:09,479 # value of ptr : type 5 
+2023-07-12 17:06:09,511 # value of ptr : type 5 
+2023-07-12 17:06:09,543 # value of ptr : type 12 
+2023-07-12 17:06:09,575 # value of ptr : type 12 
+2023-07-12 17:06:09,607 # value of ptr : type 5 
+2023-07-12 17:06:09,638 # value of ptr : type 5 
+2023-07-12 17:06:09,670 # value of ptr : type 5 
+2023-07-12 17:06:09,703 # value of ptr : type 12 
+2023-07-12 17:06:09,734 # value of ptr : type 5 
+2023-07-12 17:06:09,766 # value of ptr : type 5 
+2023-07-12 17:06:09,798 # value of ptr : type 12 
+2023-07-12 17:06:09,830 # value of ptr : type 5 
+2023-07-12 17:06:09,846 # value of ptr : type 5 
+2023-07-12 17:06:09,878 # value of ptr : type 12 
+2023-07-12 17:06:09,911 # value of ptr : type 5 
+2023-07-12 17:06:09,943 # value of ptr : type 5 
+2023-07-12 17:06:09,975 # value of ptr : type 5 
+2023-07-12 17:06:10,007 # value of ptr : type 5 
+2023-07-12 17:06:10,038 # value of ptr : type 5 
+2023-07-12 17:06:10,070 # value of ptr : type 5 
+2023-07-12 17:06:10,102 # value of ptr : type 5 
+2023-07-12 17:06:10,135 # value of ptr : type 12 
+2023-07-12 17:06:10,167 # value of ptr : type 12 
+2023-07-12 17:06:10,199 # value of ptr : type 5 
+2023-07-12 17:06:10,230 # value of ptr : type 5 
+2023-07-12 17:06:10,263 # value of ptr : type 12 
+2023-07-12 17:06:10,294 # value of ptr : type 12 
+2023-07-12 17:06:10,326 # value of ptr : type 5 
+2023-07-12 17:06:10,343 # value of ptr : type 5 
+2023-07-12 17:06:10,375 # value of ptr : type 5 
+2023-07-12 17:06:10,407 # value of ptr : type 12 
+2023-07-12 17:06:10,423 # Order 39 => [mixed] b06b 
+2023-07-12 17:06:10,423 # led1
+2023-07-12 17:06:10,439 # value of ptr : type 5 
+2023-07-12 17:06:10,471 # value of ptr : type 5 
+2023-07-12 17:06:10,502 # value of ptr : type 5 
+2023-07-12 17:06:10,534 # value of ptr : type 5 
+2023-07-12 17:06:10,567 # value of ptr : type 5 
+2023-07-12 17:06:10,599 # value of ptr : type 12 
+2023-07-12 17:06:10,631 # value of ptr : type 5 
+2023-07-12 17:06:10,662 # value of ptr : type 5 
+2023-07-12 17:06:10,695 # value of ptr : type 12 
+2023-07-12 17:06:10,726 # value of ptr : type 12 
+2023-07-12 17:06:10,758 # value of ptr : type 5 
+2023-07-12 17:06:10,791 # value of ptr : type 5 
+2023-07-12 17:06:10,823 # value of ptr : type 5 
+2023-07-12 17:06:10,854 # value of ptr : type 5 
+2023-07-12 17:06:10,870 # value of ptr : type 5 
+2023-07-12 17:06:10,903 # value of ptr : type 5 
+2023-07-12 17:06:10,934 # value of ptr : type 12 
+2023-07-12 17:06:10,966 # value of ptr : type 5 
+2023-07-12 17:06:10,999 # value of ptr : type 5 
+2023-07-12 17:06:11,031 # value of ptr : type 5 
+2023-07-12 17:06:11,063 # value of ptr : type 5 
+2023-07-12 17:06:11,095 # value of ptr : type 12 
+2023-07-12 17:06:11,127 # value of ptr : type 5 
+2023-07-12 17:06:11,158 # value of ptr : type 12 
+2023-07-12 17:06:11,158 # Order 45 => [mixed] b06b 
+2023-07-12 17:06:11,158 # led1
+2023-07-12 17:06:11,190 # value of ptr : type 5 
+2023-07-12 17:06:11,223 # value of ptr : type 12 
+2023-07-12 17:06:11,254 # value of ptr : type 11 
+2023-07-12 17:06:11,270 # value of ptr : type 5 
+2023-07-12 17:06:11,302 # value of ptr : type 5 
+2023-07-12 17:06:11,335 # value of ptr : type 5 
+2023-07-12 17:06:11,366 # value of ptr : type 5 
+2023-07-12 17:06:11,398 # value of ptr : type 12 
+2023-07-12 17:06:11,430 # value of ptr : type 5 
+2023-07-12 17:06:11,446 # value of ptr : type 5 
+2023-07-12 17:06:11,479 # value of ptr : type 5 
+2023-07-12 17:06:11,511 # value of ptr : type 5 
+2023-07-12 17:06:11,542 # value of ptr : type 12 
+2023-07-12 17:06:11,574 # value of ptr : type 12 
+2023-07-12 17:06:11,606 # value of ptr : type 5 
+2023-07-12 17:06:11,639 # value of ptr : type 5 
+2023-07-12 17:06:11,670 # value of ptr : type 5 
+2023-07-12 17:06:11,702 # value of ptr : type 5 
+2023-07-12 17:06:11,734 # value of ptr : type 12 
+2023-07-12 17:06:11,734 # Order 53 => [mixed] b06b 
+2023-07-12 17:06:11,734 # led1
+2023-07-12 17:06:11,767 # value of ptr : type 5 
+2023-07-12 17:06:11,798 # value of ptr : type 5 
+2023-07-12 17:06:11,831 # value of ptr : type 5 
+2023-07-12 17:06:11,863 # value of ptr : type 5 
+2023-07-12 17:06:11,894 # value of ptr : type 5 
+2023-07-12 17:06:11,926 # value of ptr : type 12 
+2023-07-12 17:06:11,926 # Order 55 => [mixed] b06b 
+2023-07-12 17:06:11,926 # led1
+2023-07-12 17:06:11,958 # value of ptr : type 5 
+2023-07-12 17:06:11,990 # value of ptr : type 5 
+2023-07-12 17:06:12,006 # value of ptr : type 5 
+2023-07-12 17:06:12,038 # value of ptr : type 12 
+2023-07-12 17:06:12,070 # value of ptr : type 5 
+2023-07-12 17:06:12,103 # value of ptr : type 5 
+2023-07-12 17:06:12,134 # value of ptr : type 5 
+2023-07-12 17:06:12,166 # value of ptr : type 12 
+2023-07-12 17:06:12,198 # value of ptr : type 5 
+2023-07-12 17:06:12,230 # value of ptr : type 5 
+2023-07-12 17:06:12,262 # value of ptr : type 5 
+2023-07-12 17:06:12,295 # value of ptr : type 5 
+2023-07-12 17:06:12,326 # value of ptr : type 5 
+2023-07-12 17:06:12,358 # value of ptr : type 12 
+2023-07-12 17:06:12,390 # value of ptr : type 5 
+2023-07-12 17:06:12,422 # value of ptr : type 11 
+2023-07-12 17:06:12,438 # value of ptr : type 12 
+2023-07-12 17:06:12,470 # value of ptr : type 12 
+2023-07-12 17:06:12,503 # value of ptr : type 5 
+2023-07-12 17:06:12,534 # value of ptr : type 5 
+2023-07-12 17:06:12,550 # value of ptr : type 5 
+2023-07-12 17:06:12,582 # value of ptr : type 5 
+2023-07-12 17:06:12,614 # value of ptr : type 5 
+2023-07-12 17:06:12,647 # value of ptr : type 12 
+2023-07-12 17:06:12,678 # value of ptr : type 5 
+2023-07-12 17:06:12,710 # value of ptr : type 12 
+2023-07-12 17:06:12,742 # value of ptr : type 5 
+2023-07-12 17:06:12,774 # value of ptr : type 5 
+2023-07-12 17:06:12,806 # value of ptr : type 5 
+2023-07-12 17:06:12,838 # value of ptr : type 5 
+2023-07-12 17:06:12,870 # value of ptr : type 5 
+2023-07-12 17:06:12,902 # value of ptr : type 5 
+2023-07-12 17:06:12,934 # value of ptr : type 5 
+2023-07-12 17:06:12,967 # value of ptr : type 12 
+2023-07-12 17:06:12,999 # value of ptr : type 5 
+2023-07-12 17:06:13,031 # value of ptr : type 12 
+2023-07-12 17:06:13,062 # value of ptr : type 5 
+2023-07-12 17:06:13,094 # value of ptr : type 5 
+2023-07-12 17:06:13,110 # value of ptr : type 5 
+2023-07-12 17:06:13,142 # value of ptr : type 12 
+2023-07-12 17:06:13,174 # value of ptr : type 5 
+2023-07-12 17:06:13,206 # value of ptr : type 5 
+2023-07-12 17:06:13,238 # value of ptr : type 5 
+2023-07-12 17:06:13,270 # value of ptr : type 12 
+2023-07-12 17:06:13,303 # value of ptr : type 5 
+2023-07-12 17:06:13,334 # value of ptr : type 12 
+2023-07-12 17:06:13,366 # value of ptr : type 5 
+2023-07-12 17:06:13,398 # value of ptr : type 5 
+2023-07-12 17:06:13,430 # value of ptr : type 5 
+2023-07-12 17:06:13,462 # value of ptr : type 5 
+2023-07-12 17:06:13,495 # value of ptr : type 5 
+2023-07-12 17:06:13,526 # value of ptr : type 12 
+2023-07-12 17:06:13,558 # value of ptr : type 5 
+2023-07-12 17:06:13,590 # value of ptr : type 5 
+2023-07-12 17:06:13,622 # value of ptr : type 5 
+2023-07-12 17:06:13,638 # value of ptr : type 12 
+2023-07-12 17:06:13,670 # value of ptr : type 5 
+2023-07-12 17:06:13,702 # value of ptr : type 12 
+2023-07-12 17:06:13,734 # value of ptr : type 5 
+2023-07-12 17:06:13,766 # value of ptr : type 5 
+2023-07-12 17:06:13,798 # value of ptr : type 5 
+2023-07-12 17:06:13,830 # value of ptr : type 5 
+2023-07-12 17:06:13,862 # value of ptr : type 12 
+2023-07-12 17:06:13,894 # value of ptr : type 5 
+2023-07-12 17:06:13,926 # value of ptr : type 12 
+2023-07-12 17:06:13,958 # value of ptr : type 5 
+2023-07-12 17:06:13,990 # value of ptr : type 5 
+2023-07-12 17:06:14,022 # value of ptr : type 5 
+2023-07-12 17:06:14,054 # value of ptr : type 12 
+2023-07-12 17:06:14,086 # value of ptr : type 5 
+2023-07-12 17:06:14,118 # value of ptr : type 5 
+2023-07-12 17:06:14,150 # value of ptr : type 5 
+2023-07-12 17:06:14,166 # value of ptr : type 5 
+2023-07-12 17:06:14,198 # value of ptr : type 5 
+2023-07-12 17:06:14,230 # value of ptr : type 12 
+2023-07-12 17:06:14,262 # value of ptr : type 5 
+2023-07-12 17:06:14,294 # value of ptr : type 5 
+2023-07-12 17:06:14,326 # value of ptr : type 5 
+2023-07-12 17:06:14,358 # value of ptr : type 5 
+2023-07-12 17:06:14,390 # value of ptr : type 5 
+2023-07-12 17:06:14,422 # value of ptr : type 5 
+2023-07-12 17:06:14,454 # value of ptr : type 12 
+2023-07-12 17:06:14,486 # value of ptr : type 12 
+2023-07-12 17:06:14,518 # value of ptr : type 5 
+2023-07-12 17:06:14,550 # value of ptr : type 5 
+2023-07-12 17:06:14,582 # value of ptr : type 5 
+2023-07-12 17:06:14,614 # value of ptr : type 5 
+2023-07-12 17:06:14,646 # value of ptr : type 12 
+2023-07-12 17:06:14,662 # value of ptr : type 5 
+2023-07-12 17:06:14,710 # value of ptr : type 12 
+2023-07-12 17:06:14,726 # value of ptr : type 5 
+2023-07-12 17:06:14,774 # value of ptr : type 11 
+2023-07-12 17:06:14,775 # value of ptr : type 12 
+2023-07-12 17:06:14,806 # value of ptr : type 5 
+2023-07-12 17:06:14,838 # value of ptr : type 12 
+2023-07-12 17:06:14,870 # value of ptr : type 5 
+2023-07-12 17:06:14,902 # value of ptr : type 5 
+2023-07-12 17:06:14,934 # value of ptr : type 5 
+2023-07-12 17:06:14,966 # value of ptr : type 5 
+2023-07-12 17:06:14,998 # value of ptr : type 12 
+2023-07-12 17:06:15,030 # value of ptr : type 5 
+2023-07-12 17:06:15,062 # value of ptr : type 12 
+2023-07-12 17:06:15,094 # value of ptr : type 5 
+2023-07-12 17:06:15,126 # value of ptr : type 5 
+2023-07-12 17:06:15,158 # value of ptr : type 5 
+2023-07-12 17:06:15,190 # value of ptr : type 5 
+2023-07-12 17:06:15,222 # value of ptr : type 5 
+2023-07-12 17:06:15,254 # value of ptr : type 12 
+2023-07-12 17:06:15,286 # value of ptr : type 5 
+2023-07-12 17:06:15,302 # value of ptr : type 5 
+2023-07-12 17:06:15,334 # value of ptr : type 5 
+2023-07-12 17:06:15,366 # value of ptr : type 5 
+2023-07-12 17:06:15,398 # value of ptr : type 5 
+2023-07-12 17:06:15,430 # value of ptr : type 12 
+2023-07-12 17:06:15,462 # value of ptr : type 5 
+2023-07-12 17:06:15,494 # value of ptr : type 12 
+2023-07-12 17:06:15,526 # value of ptr : type 5 
+2023-07-12 17:06:15,558 # value of ptr : type 5 
+2023-07-12 17:06:15,590 # value of ptr : type 12 
+2023-07-12 17:06:15,622 # value of ptr : type 5 
+2023-07-12 17:06:15,654 # value of ptr : type 5 
+2023-07-12 17:06:15,686 # value of ptr : type 5 
+2023-07-12 17:06:15,718 # value of ptr : type 5 
+2023-07-12 17:06:15,750 # value of ptr : type 5 
+2023-07-12 17:06:15,782 # value of ptr : type 12 
+2023-07-12 17:06:15,798 # value of ptr : type 12 
+2023-07-12 17:06:15,830 # value of ptr : type 5 
+2023-07-12 17:06:15,862 # value of ptr : type 5 
+2023-07-12 17:06:15,894 # value of ptr : type 5 
+2023-07-12 17:06:15,926 # value of ptr : type 11 
+2023-07-12 17:06:15,942 # value of ptr : type 12 
+2023-07-12 17:06:15,974 # value of ptr : type 5 
+2023-07-12 17:06:16,006 # value of ptr : type 5 
+2023-07-12 17:06:16,038 # value of ptr : type 12 
+2023-07-12 17:06:16,070 # value of ptr : type 5 
+2023-07-12 17:06:16,102 # value of ptr : type 12 
+2023-07-12 17:06:16,134 # value of ptr : type 5 
+2023-07-12 17:06:16,166 # value of ptr : type 5 
+2023-07-12 17:06:16,198 # value of ptr : type 5 
+2023-07-12 17:06:16,230 # value of ptr : type 5 
+2023-07-12 17:06:16,262 # value of ptr : type 5 
+2023-07-12 17:06:16,294 # value of ptr : type 5 
+2023-07-12 17:06:16,326 # value of ptr : type 12 
+2023-07-12 17:06:16,342 # value of ptr : type 5 
+2023-07-12 17:06:16,374 # value of ptr : type 5 
+2023-07-12 17:06:16,406 # value of ptr : type 12 
+2023-07-12 17:06:16,438 # value of ptr : type 5 
+2023-07-12 17:06:16,470 # value of ptr : type 5 
+2023-07-12 17:06:16,502 # value of ptr : type 12 
+2023-07-12 17:06:16,534 # value of ptr : type 5 
+2023-07-12 17:06:16,566 # value of ptr : type 12 
+2023-07-12 17:06:16,598 # value of ptr : type 5 
+2023-07-12 17:06:16,630 # value of ptr : type 5 
+2023-07-12 17:06:16,662 # value of ptr : type 5 
+2023-07-12 17:06:16,694 # value of ptr : type 12 
+2023-07-12 17:06:16,726 # value of ptr : type 12 
+2023-07-12 17:06:16,758 # value of ptr : type 5 
+2023-07-12 17:06:16,790 # value of ptr : type 5 
+2023-07-12 17:06:16,822 # value of ptr : type 12 
+2023-07-12 17:06:16,822 # Order 105 => [mixed] b06b 
+2023-07-12 17:06:16,822 # led1
+2023-07-12 17:06:16,854 # value of ptr : type 5 
+2023-07-12 17:06:16,886 # value of ptr : type 5 
+2023-07-12 17:06:16,902 # value of ptr : type 5 
+2023-07-12 17:06:16,934 # value of ptr : type 5 
+2023-07-12 17:06:16,966 # value of ptr : type 12 
+2023-07-12 17:06:16,998 # value of ptr : type 5 
+2023-07-12 17:06:17,030 # value of ptr : type 5 
+2023-07-12 17:06:17,062 # value of ptr : type 12 
+2023-07-12 17:06:17,094 # value of ptr : type 5 
+2023-07-12 17:06:17,126 # value of ptr : type 5 
+2023-07-12 17:06:17,158 # value of ptr : type 5 
+2023-07-12 17:06:17,190 # value of ptr : type 12 
+2023-07-12 17:06:17,222 # value of ptr : type 5 
+2023-07-12 17:06:17,254 # value of ptr : type 12 
+2023-07-12 17:06:17,286 # value of ptr : type 5 
+2023-07-12 17:06:17,318 # value of ptr : type 5 
+2023-07-12 17:06:17,350 # value of ptr : type 5 
+2023-07-12 17:06:17,382 # value of ptr : type 5 
+2023-07-12 17:06:17,414 # value of ptr : type 12 
+2023-07-12 17:06:17,446 # value of ptr : type 5 
+2023-07-12 17:06:17,462 # value of ptr : type 12 
+2023-07-12 17:06:17,494 # value of ptr : type 5 
+2023-07-12 17:06:17,526 # value of ptr : type 12 
+2023-07-12 17:06:17,558 # value of ptr : type 5 
+2023-07-12 17:06:17,590 # value of ptr : type 5 
+2023-07-12 17:06:17,622 # value of ptr : type 5 
+2023-07-12 17:06:17,654 # value of ptr : type 5 
+2023-07-12 17:06:17,686 # value of ptr : type 5 
+2023-07-12 17:06:17,718 # value of ptr : type 5 
+2023-07-12 17:06:17,750 # value of ptr : type 5 
+2023-07-12 17:06:17,782 # value of ptr : type 12 
+2023-07-12 17:06:17,814 # value of ptr : type 12 
+2023-07-12 17:06:17,846 # value of ptr : type 5 
+2023-07-12 17:06:17,878 # value of ptr : type 5 
+2023-07-12 17:06:17,910 # value of ptr : type 5 
+2023-07-12 17:06:17,942 # value of ptr : type 5 
+2023-07-12 17:06:17,974 # value of ptr : type 5 
+2023-07-12 17:06:17,990 # value of ptr : type 5 
+2023-07-12 17:06:18,022 # value of ptr : type 5 
+2023-07-12 17:06:18,054 # value of ptr : type 5 
+2023-07-12 17:06:18,086 # value of ptr : type 12 
+2023-07-12 17:06:18,118 # value of ptr : type 12 
+2023-07-12 17:06:18,118 # Order 117 => [mixed] b06b 
+2023-07-12 17:06:18,118 # led1
+2023-07-12 17:06:18,150 # value of ptr : type 5 
+2023-07-12 17:06:18,182 # value of ptr : type 12 
+2023-07-12 17:06:18,214 # value of ptr : type 5 
+2023-07-12 17:06:18,246 # value of ptr : type 5 
+2023-07-12 17:06:18,278 # value of ptr : type 11 
+2023-07-12 17:06:18,294 # value of ptr : type 12 
+2023-07-12 17:06:18,326 # value of ptr : type 5 
+2023-07-12 17:06:18,358 # value of ptr : type 5 
+2023-07-12 17:06:18,390 # value of ptr : type 5 
+2023-07-12 17:06:18,422 # value of ptr : type 5 
+2023-07-12 17:06:18,454 # value of ptr : type 12 
+2023-07-12 17:06:18,486 # value of ptr : type 12 
+2023-07-12 17:06:18,518 # value of ptr : type 5 
+2023-07-12 17:06:18,550 # value of ptr : type 5 
+2023-07-12 17:06:18,582 # value of ptr : type 5 
+2023-07-12 17:06:18,614 # value of ptr : type 5 
+2023-07-12 17:06:18,630 # value of ptr : type 5 
+2023-07-12 17:06:18,662 # value of ptr : type 12 
+2023-07-12 17:06:18,694 # value of ptr : type 5 
+2023-07-12 17:06:18,726 # value of ptr : type 5 
+2023-07-12 17:06:18,758 # value of ptr : type 12 
+2023-07-12 17:06:18,790 # value of ptr : type 5 
+2023-07-12 17:06:18,822 # value of ptr : type 5 
+2023-07-12 17:06:18,854 # value of ptr : type 12 
+2023-07-12 17:06:18,886 # value of ptr : type 5 
+2023-07-12 17:06:18,918 # value of ptr : type 12 
+2023-07-12 17:06:18,950 # value of ptr : type 5 
+2023-07-12 17:06:18,982 # value of ptr : type 12 
+2023-07-12 17:06:19,014 # value of ptr : type 5 
+2023-07-12 17:06:19,046 # value of ptr : type 5 
+2023-07-12 17:06:19,078 # value of ptr : type 5 
+2023-07-12 17:06:19,110 # value of ptr : type 5 
+2023-07-12 17:06:19,142 # value of ptr : type 5 
+2023-07-12 17:06:19,158 # value of ptr : type 5 
+2023-07-12 17:06:19,190 # value of ptr : type 5 
+2023-07-12 17:06:19,222 # value of ptr : type 12 
+2023-07-12 17:06:19,254 # value of ptr : type 5 
+2023-07-12 17:06:19,286 # value of ptr : type 5 
+2023-07-12 17:06:19,318 # value of ptr : type 12 
+2023-07-12 17:06:19,350 # value of ptr : type 5 
+2023-07-12 17:06:19,382 # value of ptr : type 5 
+2023-07-12 17:06:19,414 # value of ptr : type 12 
+2023-07-12 17:06:19,446 # value of ptr : type 11 
+2023-07-12 17:06:19,462 # value of ptr : type 5 
+2023-07-12 17:06:19,494 # value of ptr : type 5 
+2023-07-12 17:06:19,526 # value of ptr : type 5 
+2023-07-12 17:06:19,558 # value of ptr : type 5 
+2023-07-12 17:06:19,590 # value of ptr : type 12 
+2023-07-12 17:06:19,622 # value of ptr : type 5 
+2023-07-12 17:06:19,654 # value of ptr : type 12 
+2023-07-12 17:06:19,686 # value of ptr : type 5 
+2023-07-12 17:06:19,718 # value of ptr : type 5 
+2023-07-12 17:06:19,734 # value of ptr : type 5 
+2023-07-12 17:06:19,766 # value of ptr : type 12 
+2023-07-12 17:06:19,798 # value of ptr : type 5 
+2023-07-12 17:06:19,830 # value of ptr : type 5 
+2023-07-12 17:06:19,862 # value of ptr : type 5 
+2023-07-12 17:06:19,894 # value of ptr : type 12 
+2023-07-12 17:06:19,926 # value of ptr : type 5 
+2023-07-12 17:06:19,958 # value of ptr : type 5 
+2023-07-12 17:06:19,990 # value of ptr : type 5 
+2023-07-12 17:06:20,022 # value of ptr : type 5 
+2023-07-12 17:06:20,054 # value of ptr : type 5 
+2023-07-12 17:06:20,086 # value of ptr : type 12 
+2023-07-12 17:06:20,118 # value of ptr : type 5 
+2023-07-12 17:06:20,150 # value of ptr : type 12 
+2023-07-12 17:06:20,182 # value of ptr : type 5 
+2023-07-12 17:06:20,214 # value of ptr : type 5 
+2023-07-12 17:06:20,246 # value of ptr : type 5 
+2023-07-12 17:06:20,277 # value of ptr : type 5 
+2023-07-12 17:06:20,294 # value of ptr : type 12 
+2023-07-12 17:06:20,326 # value of ptr : type 5 
+2023-07-12 17:06:20,358 # value of ptr : type 5 
+2023-07-12 17:06:20,390 # value of ptr : type 5 
+2023-07-12 17:06:20,422 # value of ptr : type 5 
+2023-07-12 17:06:20,454 # value of ptr : type 12 
+2023-07-12 17:06:20,486 # value of ptr : type 5 
+2023-07-12 17:06:20,518 # value of ptr : type 12 
+2023-07-12 17:06:20,550 # value of ptr : type 5 
+2023-07-12 17:06:20,582 # value of ptr : type 5 
+2023-07-12 17:06:20,614 # value of ptr : type 12 
+2023-07-12 17:06:20,646 # value of ptr : type 5 
+2023-07-12 17:06:20,678 # value of ptr : type 5 
+2023-07-12 17:06:20,710 # value of ptr : type 5 
+2023-07-12 17:06:20,742 # value of ptr : type 5 
+2023-07-12 17:06:20,774 # value of ptr : type 5 
+2023-07-12 17:06:20,806 # value of ptr : type 5 
+2023-07-12 17:06:20,822 # value of ptr : type 5 
+2023-07-12 17:06:20,854 # value of ptr : type 12 
+2023-07-12 17:06:20,886 # value of ptr : type 5 
+2023-07-12 17:06:20,918 # value of ptr : type 5 
+2023-07-12 17:06:20,950 # value of ptr : type 5 
+2023-07-12 17:06:20,982 # value of ptr : type 12 
+2023-07-12 17:06:21,014 # value of ptr : type 12 
+2023-07-12 17:06:21,046 # value of ptr : type 5 
+2023-07-12 17:06:21,078 # value of ptr : type 5 
+2023-07-12 17:06:21,110 # value of ptr : type 12 
+2023-07-12 17:06:21,142 # value of ptr : type 12 
+2023-07-12 17:06:21,142 # Order 149 => [mixed] b06b 
+2023-07-12 17:06:21,142 # led1
+2023-07-12 17:06:21,174 # value of ptr : type 5 
+2023-07-12 17:06:21,206 # value of ptr : type 5 
+2023-07-12 17:06:21,238 # value of ptr : type 12 
+2023-07-12 17:06:21,270 # value of ptr : type 5 
+2023-07-12 17:06:21,302 # value of ptr : type 5 
+2023-07-12 17:06:21,334 # value of ptr : type 5 
+2023-07-12 17:06:21,366 # value of ptr : type 5 
+2023-07-12 17:06:21,382 # value of ptr : type 5 
+2023-07-12 17:06:21,414 # value of ptr : type 12 
+2023-07-12 17:06:21,446 # value of ptr : type 5 
+2023-07-12 17:06:21,478 # value of ptr : type 5 
+2023-07-12 17:06:21,510 # value of ptr : type 5 
+2023-07-12 17:06:21,542 # value of ptr : type 12 
+2023-07-12 17:06:21,574 # value of ptr : type 5 
+2023-07-12 17:06:21,606 # value of ptr : type 12 
+2023-07-12 17:06:21,638 # value of ptr : type 5 
+2023-07-12 17:06:21,670 # value of ptr : type 5 
+2023-07-12 17:06:21,702 # value of ptr : type 5 
+2023-07-12 17:06:21,734 # value of ptr : type 5 
+2023-07-12 17:06:21,766 # value of ptr : type 5 
+2023-07-12 17:06:21,798 # value of ptr : type 11 
+2023-07-12 17:06:21,814 # value of ptr : type 5 
+2023-07-12 17:06:21,846 # value of ptr : type 5 
+2023-07-12 17:06:21,878 # value of ptr : type 12 
+2023-07-12 17:06:21,910 # value of ptr : type 12 
+2023-07-12 17:06:21,941 # value of ptr : type 5 
+2023-07-12 17:06:21,958 # value of ptr : type 12 
+2023-07-12 17:06:21,990 # value of ptr : type 5 
+2023-07-12 17:06:22,022 # value of ptr : type 5 
+2023-07-12 17:06:22,054 # value of ptr : type 5 
+2023-07-12 17:06:22,086 # value of ptr : type 5 
+2023-07-12 17:06:22,118 # value of ptr : type 5 
+2023-07-12 17:06:22,150 # value of ptr : type 12 
+2023-07-12 17:06:22,182 # value of ptr : type 5 
+2023-07-12 17:06:22,214 # value of ptr : type 5 
+2023-07-12 17:06:22,245 # value of ptr : type 5 
+2023-07-12 17:06:22,278 # value of ptr : type 12 
+2023-07-12 17:06:22,278 # Order 160 => [mixed] b06b 
+2023-07-12 17:06:22,278 # led1
+2023-07-12 17:06:22,310 # value of ptr : type 5 
+2023-07-12 17:06:22,342 # value of ptr : type 12 
+2023-07-12 17:06:22,374 # value of ptr : type 5 
+2023-07-12 17:06:22,406 # value of ptr : type 5 
+2023-07-12 17:06:22,438 # value of ptr : type 5 
+2023-07-12 17:06:22,469 # value of ptr : type 5 
+2023-07-12 17:06:22,486 # value of ptr : type 5 
+2023-07-12 17:06:22,518 # value of ptr : type 12 
+2023-07-12 17:06:22,550 # value of ptr : type 5 
+2023-07-12 17:06:22,582 # value of ptr : type 5 
+2023-07-12 17:06:22,614 # value of ptr : type 5 
+2023-07-12 17:06:22,646 # value of ptr : type 12 
+2023-07-12 17:06:22,647 # Order 164 => [mixed] b06b 
+2023-07-12 17:06:22,647 # led1
+2023-07-12 17:06:22,677 # value of ptr : type 12 
+2023-07-12 17:06:22,710 # value of ptr : type 5 
+2023-07-12 17:06:22,742 # value of ptr : type 5 
+2023-07-12 17:06:22,774 # value of ptr : type 5 
+2023-07-12 17:06:22,806 # value of ptr : type 5 
+2023-07-12 17:06:22,838 # value of ptr : type 5 
+2023-07-12 17:06:22,870 # value of ptr : type 5 
+2023-07-12 17:06:22,901 # value of ptr : type 12 
+2023-07-12 17:06:22,934 # value of ptr : type 12 
+2023-07-12 17:06:22,966 # value of ptr : type 11 
+2023-07-12 17:06:22,981 # value of ptr : type 5 
+2023-07-12 17:06:23,013 # value of ptr : type 5 
+2023-07-12 17:06:23,046 # value of ptr : type 5 
+2023-07-12 17:06:23,062 # value of ptr : type 12 
+2023-07-12 17:06:23,094 # value of ptr : type 5 
+2023-07-12 17:06:23,125 # value of ptr : type 12 
+2023-07-12 17:06:23,158 # value of ptr : type 5 
+2023-07-12 17:06:23,189 # value of ptr : type 5 
+2023-07-12 17:06:23,221 # value of ptr : type 5 
+2023-07-12 17:06:23,254 # value of ptr : type 12 
+2023-07-12 17:06:23,286 # value of ptr : type 12 
+2023-07-12 17:06:23,317 # value of ptr : type 5 
+2023-07-12 17:06:23,349 # value of ptr : type 5 
+2023-07-12 17:06:23,381 # value of ptr : type 5 
+2023-07-12 17:06:23,413 # value of ptr : type 5 
+2023-07-12 17:06:23,445 # value of ptr : type 12 
+2023-07-12 17:06:23,477 # value of ptr : type 5 
+2023-07-12 17:06:23,510 # value of ptr : type 5 
+2023-07-12 17:06:23,541 # value of ptr : type 5 
+2023-07-12 17:06:23,573 # value of ptr : type 12 
+2023-07-12 17:06:23,589 # value of ptr : type 5 
+2023-07-12 17:06:23,621 # value of ptr : type 5 
+2023-07-12 17:06:23,653 # value of ptr : type 12 
+2023-07-12 17:06:23,686 # value of ptr : type 5 
+2023-07-12 17:06:23,718 # value of ptr : type 5 
+2023-07-12 17:06:23,749 # value of ptr : type 12 
+2023-07-12 17:06:23,781 # value of ptr : type 5 
+2023-07-12 17:06:23,814 # value of ptr : type 12 
+2023-07-12 17:06:23,846 # value of ptr : type 5 
+2023-07-12 17:06:23,877 # value of ptr : type 5 
+2023-07-12 17:06:23,909 # value of ptr : type 5 
+2023-07-12 17:06:23,941 # value of ptr : type 5 
+2023-07-12 17:06:23,974 # value of ptr : type 5 
+2023-07-12 17:06:24,006 # value of ptr : type 12 
+2023-07-12 17:06:24,038 # value of ptr : type 5 
+2023-07-12 17:06:24,069 # value of ptr : type 5 
+2023-07-12 17:06:24,085 # value of ptr : type 12 
+2023-07-12 17:06:24,133 # value of ptr : type 5 
+2023-07-12 17:06:24,150 # value of ptr : type 5 
+2023-07-12 17:06:24,182 # value of ptr : type 5 
+2023-07-12 17:06:24,213 # value of ptr : type 12 
+2023-07-12 17:06:24,245 # value of ptr : type 5 
+2023-07-12 17:06:24,277 # value of ptr : type 5 
+2023-07-12 17:06:24,309 # value of ptr : type 12 
+2023-07-12 17:06:24,342 # value of ptr : type 5 
+2023-07-12 17:06:24,374 # value of ptr : type 12 
+2023-07-12 17:06:24,405 # value of ptr : type 5 
+2023-07-12 17:06:24,437 # value of ptr : type 5 
+2023-07-12 17:06:24,470 # value of ptr : type 5 
+2023-07-12 17:06:24,502 # value of ptr : type 5 
+2023-07-12 17:06:24,533 # value of ptr : type 5 
+2023-07-12 17:06:24,565 # value of ptr : type 5 
+2023-07-12 17:06:24,598 # value of ptr : type 12 
+2023-07-12 17:06:24,629 # value of ptr : type 5 
+2023-07-12 17:06:24,645 # value of ptr : type 5 
+2023-07-12 17:06:24,677 # value of ptr : type 5 
+2023-07-12 17:06:24,710 # value of ptr : type 12 
+2023-07-12 17:06:24,725 # Order 185 => [mixed] b06b 
+2023-07-12 17:06:24,725 # led1
+2023-07-12 17:06:24,741 # value of ptr : type 5 
+2023-07-12 17:06:24,774 # value of ptr : type 5 
+2023-07-12 17:06:24,806 # value of ptr : type 5 
+2023-07-12 17:06:24,837 # value of ptr : type 5 
+2023-07-12 17:06:24,869 # value of ptr : type 5 
+2023-07-12 17:06:24,901 # value of ptr : type 5 
+2023-07-12 17:06:24,933 # value of ptr : type 12 
+2023-07-12 17:06:24,965 # value of ptr : type 5 
+2023-07-12 17:06:24,997 # value of ptr : type 12 
+2023-07-12 17:06:25,030 # value of ptr : type 5 
+2023-07-12 17:06:25,061 # value of ptr : type 5 
+2023-07-12 17:06:25,093 # value of ptr : type 5 
+2023-07-12 17:06:25,126 # value of ptr : type 5 
+2023-07-12 17:06:25,157 # value of ptr : type 12 
+2023-07-12 17:06:25,173 # value of ptr : type 5 
+2023-07-12 17:06:25,205 # value of ptr : type 5 
+2023-07-12 17:06:25,237 # value of ptr : type 12 
+2023-07-12 17:06:25,269 # value of ptr : type 5 
+2023-07-12 17:06:25,317 # value of ptr : type 11 
+2023-07-12 17:06:25,317 # value of ptr : type 5 
+2023-07-12 17:06:25,350 # value of ptr : type 5 
+2023-07-12 17:06:25,381 # value of ptr : type 5 
+2023-07-12 17:06:25,413 # value of ptr : type 5 
+2023-07-12 17:06:25,446 # value of ptr : type 5 
+2023-07-12 17:06:25,478 # value of ptr : type 12 
+2023-07-12 17:06:25,478 # Order 194 => [mixed] b06b 
+2023-07-12 17:06:25,479 # led1
+2023-07-12 17:06:25,510 # value of ptr : type 5 
+2023-07-12 17:06:25,542 # value of ptr : type 5 
+2023-07-12 17:06:25,574 # value of ptr : type 5 
+2023-07-12 17:06:25,605 # value of ptr : type 5 
+2023-07-12 17:06:25,637 # value of ptr : type 5 
+2023-07-12 17:06:25,670 # value of ptr : type 5 
+2023-07-12 17:06:25,702 # value of ptr : type 12 
+2023-07-12 17:06:25,733 # value of ptr : type 5 
+2023-07-12 17:06:25,750 # value of ptr : type 12 
+2023-07-12 17:06:25,782 # value of ptr : type 12 
+2023-07-12 17:06:25,813 # value of ptr : type 5 
+2023-07-12 17:06:25,845 # value of ptr : type 5 
+2023-07-12 17:06:25,878 # value of ptr : type 5 
+2023-07-12 17:06:25,910 # value of ptr : type 5 
+2023-07-12 17:06:25,942 # value of ptr : type 5 
+2023-07-12 17:06:25,973 # value of ptr : type 12 
+2023-07-12 17:06:26,006 # value of ptr : type 12 
+2023-07-12 17:06:26,037 # value of ptr : type 5 
+2023-07-12 17:06:26,069 # value of ptr : type 5 
+2023-07-12 17:06:26,102 # value of ptr : type 5 
+2023-07-12 17:06:26,134 # value of ptr : type 5 
+2023-07-12 17:06:26,166 # value of ptr : type 12 
+2023-07-12 17:06:26,198 # value of ptr : type 12 
+2023-07-12 17:06:26,230 # value of ptr : type 5 
+2023-07-12 17:06:26,261 # value of ptr : type 5 
+2023-07-12 17:06:26,277 # value of ptr : type 5 
+2023-07-12 17:06:26,310 # value of ptr : type 12 
+2023-07-12 17:06:26,342 # value of ptr : type 5 
+2023-07-12 17:06:26,373 # value of ptr : type 5 
+2023-07-12 17:06:26,406 # value of ptr : type 5 
+2023-07-12 17:06:26,437 # value of ptr : type 5 
+2023-07-12 17:06:26,469 # value of ptr : type 11 
+2023-07-12 17:06:26,485 # value of ptr : type 12 
+2023-07-12 17:06:26,518 # value of ptr : type 5 
+2023-07-12 17:06:26,549 # value of ptr : type 5 
+2023-07-12 17:06:26,581 # value of ptr : type 12 
+2023-07-12 17:06:26,613 # value of ptr : type 12 
+2023-07-12 17:06:26,646 # value of ptr : type 5 
+2023-07-12 17:06:26,678 # value of ptr : type 5 
+2023-07-12 17:06:26,710 # value of ptr : type 5 
+2023-07-12 17:06:26,742 # value of ptr : type 5 
+2023-07-12 17:06:26,773 # value of ptr : type 5 
+2023-07-12 17:06:26,805 # value of ptr : type 12 
+2023-07-12 17:06:26,838 # value of ptr : type 5 
+2023-07-12 17:06:26,854 # value of ptr : type 5 
+2023-07-12 17:06:26,885 # value of ptr : type 5 
+2023-07-12 17:06:26,917 # value of ptr : type 12 
+2023-07-12 17:06:26,950 # value of ptr : type 5 
+2023-07-12 17:06:26,982 # value of ptr : type 5 
+2023-07-12 17:06:27,013 # value of ptr : type 5 
+2023-07-12 17:06:27,046 # value of ptr : type 12 
+2023-07-12 17:06:27,078 # value of ptr : type 12 
+2023-07-12 17:06:27,109 # value of ptr : type 5 
+2023-07-12 17:06:27,141 # value of ptr : type 5 
+2023-07-12 17:06:27,174 # value of ptr : type 5 
+2023-07-12 17:06:27,206 # value of ptr : type 12 
+2023-07-12 17:06:27,238 # value of ptr : type 5 
+2023-07-12 17:06:27,270 # value of ptr : type 12 
+2023-07-12 17:06:27,302 # value of ptr : type 5 
+2023-07-12 17:06:27,333 # value of ptr : type 5 
+2023-07-12 17:06:27,365 # value of ptr : type 12 
+2023-07-12 17:06:27,398 # value of ptr : type 5 
+2023-07-12 17:06:27,414 # value of ptr : type 5 
+2023-07-12 17:06:27,446 # value of ptr : type 5 
+2023-07-12 17:06:27,478 # value of ptr : type 5 
+2023-07-12 17:06:27,509 # value of ptr : type 5 
+2023-07-12 17:06:27,541 # value of ptr : type 12 
+2023-07-12 17:06:27,573 # value of ptr : type 5 
+2023-07-12 17:06:27,606 # value of ptr : type 5 
+2023-07-12 17:06:27,637 # value of ptr : type 5 
+2023-07-12 17:06:27,669 # value of ptr : type 12 
+2023-07-12 17:06:27,702 # value of ptr : type 12 
+2023-07-12 17:06:27,733 # value of ptr : type 5 
+2023-07-12 17:06:27,765 # value of ptr : type 5 
+2023-07-12 17:06:27,798 # value of ptr : type 12 
+2023-07-12 17:06:27,830 # value of ptr : type 5 
+2023-07-12 17:06:27,861 # value of ptr : type 5 
+2023-07-12 17:06:27,893 # value of ptr : type 5 
+2023-07-12 17:06:27,925 # value of ptr : type 5 
+2023-07-12 17:06:27,941 # value of ptr : type 5 
+2023-07-12 17:06:27,974 # value of ptr : type 12 
+2023-07-12 17:06:28,006 # value of ptr : type 12 
+2023-07-12 17:06:28,038 # value of ptr : type 5 
+2023-07-12 17:06:28,069 # value of ptr : type 5 
+2023-07-12 17:06:28,101 # value of ptr : type 5 
+2023-07-12 17:06:28,133 # value of ptr : type 5 
+2023-07-12 17:06:28,166 # value of ptr : type 12 
+2023-07-12 17:06:28,198 # value of ptr : type 5 
+2023-07-12 17:06:28,230 # value of ptr : type 5 
+2023-07-12 17:06:28,261 # value of ptr : type 12 
+2023-07-12 17:06:28,293 # value of ptr : type 5 
+2023-07-12 17:06:28,325 # value of ptr : type 12 
+2023-07-12 17:06:28,358 # value of ptr : type 12 
+2023-07-12 17:06:28,389 # value of ptr : type 5 
+2023-07-12 17:06:28,421 # value of ptr : type 5 
+2023-07-12 17:06:28,453 # value of ptr : type 5 
+2023-07-12 17:06:28,485 # value of ptr : type 5 
+2023-07-12 17:06:28,501 # value of ptr : type 12 
+2023-07-12 17:06:28,533 # value of ptr : type 5 
+2023-07-12 17:06:28,566 # value of ptr : type 5 
+2023-07-12 17:06:28,598 # value of ptr : type 5 
+2023-07-12 17:06:28,630 # value of ptr : type 5 
+2023-07-12 17:06:28,661 # value of ptr : type 12 
+2023-07-12 17:06:28,662 # Order 226 => [mixed] b06b 
+2023-07-12 17:06:28,662 # led1
+2023-07-12 17:06:28,694 # value of ptr : type 5 
+2023-07-12 17:06:28,725 # value of ptr : type 5 
+2023-07-12 17:06:28,757 # value of ptr : type 5 
+2023-07-12 17:06:28,790 # value of ptr : type 5 
+2023-07-12 17:06:28,821 # value of ptr : type 11 
+2023-07-12 17:06:28,837 # value of ptr : type 12 
+2023-07-12 17:06:28,869 # value of ptr : type 5 
+2023-07-12 17:06:28,902 # value of ptr : type 5 
+2023-07-12 17:06:28,933 # value of ptr : type 5 
+2023-07-12 17:06:28,965 # value of ptr : type 5 
+2023-07-12 17:06:28,997 # value of ptr : type 12 
+2023-07-12 17:06:29,030 # value of ptr : type 5 
+2023-07-12 17:06:29,062 # value of ptr : type 5 
+2023-07-12 17:06:29,093 # value of ptr : type 5 
+2023-07-12 17:06:29,110 # value of ptr : type 12 
+2023-07-12 17:06:29,141 # value of ptr : type 5 
+2023-07-12 17:06:29,173 # value of ptr : type 12 
+2023-07-12 17:06:29,205 # value of ptr : type 12 
+2023-07-12 17:06:29,238 # value of ptr : type 5 
+2023-07-12 17:06:29,269 # value of ptr : type 5 
+2023-07-12 17:06:29,301 # value of ptr : type 5 
+2023-07-12 17:06:29,334 # value of ptr : type 12 
+2023-07-12 17:06:29,366 # value of ptr : type 5 
+2023-07-12 17:06:29,398 # value of ptr : type 5 
+2023-07-12 17:06:29,430 # value of ptr : type 5 
+2023-07-12 17:06:29,462 # value of ptr : type 5 
+2023-07-12 17:06:29,493 # value of ptr : type 5 
+2023-07-12 17:06:29,525 # value of ptr : type 12 
+2023-07-12 17:06:29,558 # value of ptr : type 5 
+2023-07-12 17:06:29,589 # value of ptr : type 5 
+2023-07-12 17:06:29,621 # value of ptr : type 5 
+2023-07-12 17:06:29,653 # value of ptr : type 12 
+2023-07-12 17:06:29,670 # value of ptr : type 5 
+2023-07-12 17:06:29,701 # value of ptr : type 12 
+2023-07-12 17:06:29,733 # value of ptr : type 5 
+2023-07-12 17:06:29,766 # value of ptr : type 12 
+2023-07-12 17:06:29,797 # value of ptr : type 5 
+2023-07-12 17:06:29,830 # value of ptr : type 5 
+2023-07-12 17:06:29,862 # value of ptr : type 12 
+2023-07-12 17:06:29,893 # value of ptr : type 5 
+2023-07-12 17:06:29,925 # value of ptr : type 5 
+2023-07-12 17:06:29,957 # value of ptr : type 5 
+2023-07-12 17:06:46,015 # Exiting Pyterm

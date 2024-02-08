@@ -1,0 +1,8 @@
+{
+    "cmake.configureOnOpen": true,
+    "files.associations": {
+        "rtt.h": "c",
+        "gnrc.h": "c",
+        "ieee802154.h": "c"
+    }
+}

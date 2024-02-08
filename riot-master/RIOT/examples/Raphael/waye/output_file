@@ -1,0 +1,74 @@
+Building application "waye" for "samr21-xpro" with MCU "samd21".
+
+"make" -C /home/theophile/riot-master/RIOT/boards/common/init
+"make" -C /home/theophile/riot-master/RIOT/boards/samr21-xpro
+"make" -C /home/theophile/riot-master/RIOT/core
+"make" -C /home/theophile/riot-master/RIOT/core/lib
+"make" -C /home/theophile/riot-master/RIOT/cpu/samd21
+"make" -C /home/theophile/riot-master/RIOT/cpu/cortexm_common
+"make" -C /home/theophile/riot-master/RIOT/cpu/cortexm_common/periph
+"make" -C /home/theophile/riot-master/RIOT/cpu/sam0_common
+"make" -C /home/theophile/riot-master/RIOT/cpu/sam0_common/periph
+"make" -C /home/theophile/riot-master/RIOT/cpu/samd21/periph
+"make" -C /home/theophile/riot-master/RIOT/cpu/samd21/vectors
+"make" -C /home/theophile/riot-master/RIOT/drivers
+"make" -C /home/theophile/riot-master/RIOT/drivers/at86rf2xx
+"make" -C /home/theophile/riot-master/RIOT/drivers/edbg_eui
+"make" -C /home/theophile/riot-master/RIOT/drivers/netdev
+"make" -C /home/theophile/riot-master/RIOT/drivers/periph_common
+"make" -C /home/theophile/riot-master/RIOT/drivers/sba_sp6t
+"make" -C /home/theophile/riot-master/RIOT/sys
+"make" -C /home/theophile/riot-master/RIOT/sys/auto_init
+"make" -C /home/theophile/riot-master/RIOT/sys/div
+"make" -C /home/theophile/riot-master/RIOT/sys/ecc
+"make" -C /home/theophile/riot-master/RIOT/sys/evtimer
+"make" -C /home/theophile/riot-master/RIOT/sys/fmt
+"make" -C /home/theophile/riot-master/RIOT/sys/frac
+"make" -C /home/theophile/riot-master/RIOT/sys/isrpipe
+"make" -C /home/theophile/riot-master/RIOT/sys/luid
+"make" -C /home/theophile/riot-master/RIOT/sys/malloc_thread_safe
+"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc
+"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/link_layer/mac
+"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/link_layer/waye
+"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/netapi
+"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/netif
+"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/netif/hdr
+"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/netif/ieee802154
+"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/netif/init_devs
+"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/netreg
+"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/pkt
+"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/pktbuf
+"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/pktbuf_static
+"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/priority_pktqueue
+"make" -C /home/theophile/riot-master/RIOT/sys/net/link_layer/csma_sender
+"make" -C /home/theophile/riot-master/RIOT/sys/net/link_layer/eui_provider
+"make" -C /home/theophile/riot-master/RIOT/sys/net/link_layer/ieee802154
+"make" -C /home/theophile/riot-master/RIOT/sys/net/link_layer/l2util
+"make" -C /home/theophile/riot-master/RIOT/sys/net/netif
+"make" -C /home/theophile/riot-master/RIOT/sys/newlib_syscalls_default
+"make" -C /home/theophile/riot-master/RIOT/sys/od
+"make" -C /home/theophile/riot-master/RIOT/sys/pm_layered
+"make" -C /home/theophile/riot-master/RIOT/sys/ps
+"make" -C /home/theophile/riot-master/RIOT/sys/random
+"make" -C /home/theophile/riot-master/RIOT/sys/shell
+"make" -C /home/theophile/riot-master/RIOT/sys/shell/commands
+"make" -C /home/theophile/riot-master/RIOT/sys/stdio_uart
+"make" -C /home/theophile/riot-master/RIOT/sys/tsrb
+"make" -C /home/theophile/riot-master/RIOT/sys/xtimer
+"make" -C /home/theophile/riot-master/RIOT/sys/ztimer
+   text	   data	    bss	    dec	    hex	filename
+  64120	    200	  15032	  79352	  135f8	/home/theophile/riot-master/RIOT/examples/Raphael/waye/bin/samr21-xpro/waye.elf
+/home/theophile/riot-master/RIOT/dist/tools/edbg/edbg.sh flash /home/theophile/riot-master/RIOT/examples/Raphael/waye/bin/samr21-xpro/waye.bin
+### Flashing Target ###
+Debugger: ATMEL EDBG CMSIS-DAP ATML2127031800011750 03.25.01B6 (S)
+Clock frequency: 16.0 MHz
+Target: SAM R21G18 (Rev C)
+Verification........... done.
+Done flashing
+/home/theophile/riot-master/RIOT/dist/tools/pyterm/pyterm -p "/dev/ttyACM0" -b "115200"  
+Twisted not available, please install it if you want to use pyterm's JSON capabilities
+2023-12-18 14:11:41,590 # Connect to serial port /dev/ttyACM0
+Welcome to pyterm!
+Type '/exit' to exit.
+2023-12-18 14:11:42,593 # Inside gnrc_netif_init_devs
+2023-12-18 14:11:42,593 # Exiting Pyterm
