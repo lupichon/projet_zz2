@@ -55,6 +55,29 @@ static void configure_i2c_slave(void)
 	i2c_slave_enable(&i2c_slave_instance);
 }
 
+//configuration de la broche utilisée pour générer des interruptions
+void init_irq_pin(void)
+{
+	struct port_config config_port;
+	port_get_config_defaults(&config_port);
+	config_port.direction = PORT_PIN_DIR_OUTPUT;
+	port_pin_set_config(ITR_PIN_MASTER, &config_port);
+	port_pin_set_output_level(ITR_PIN_MASTER, false);
+}
+
+//envoie d'une interrutpion
+void send_interrupt(void)
+{
+	for (uint8_t i = 0; i < 110; i++)
+	{
+	port_pin_set_output_level(ITR_PIN_MASTER, true);		//motif à détecter pour la carte cible
+	delay_us(50);
+	port_pin_set_output_level(ITR_PIN_MASTER, false);
+	delay_us(50);
+	}
+}
+
+
 int main (void)
 {
 	system_init();
