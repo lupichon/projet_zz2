@@ -115,10 +115,13 @@ src/main.d src/main.o: ../src/main.c ../src/asf.h \
  ../src/ASF/sam0/drivers/system/clock/clock.h \
  ../src/ASF/sam0/drivers/system/clock/gclk.h \
  ../src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da_ha1/clock_feature.h \
+ ../src/ASF/sam0/drivers/extint/extint.h \
+ ../src/ASF/sam0/drivers/system/pinmux/pinmux.h \
+ ../src/ASF/sam0/drivers/extint/extint_callback.h \
+ ../src/ASF/sam0/drivers/extint/extint_callback.h \
  ../src/ASF/common/boards/board.h \
  ../src/ASF/sam0/boards/samr21_xplained_pro/samr21_xplained_pro.h \
  ../src/config/conf_board.h ../src/ASF/sam0/drivers/port/port.h \
- ../src/ASF/sam0/drivers/system/pinmux/pinmux.h \
  ../src/ASF/sam0/drivers/sercom/i2c/i2c_common.h \
  ../src/ASF/sam0/drivers/sercom/sercom.h \
  ../src/ASF/sam0/drivers/system/system.h \
@@ -128,7 +131,11 @@ src/main.d src/main.o: ../src/main.c ../src/asf.h \
  ../src/ASF/sam0/drivers/system/interrupt/system_interrupt_samr21/system_interrupt_features.h \
  ../src/ASF/sam0/drivers/sercom/sercom_pinout.h \
  ../src/ASF/sam0/drivers/sercom/i2c/i2c_master.h \
- ../src/ASF/sam0/drivers/sercom/i2c/i2c_common.h
+ ../src/ASF/sam0/drivers/sercom/i2c/i2c_common.h \
+ ../src/ASF/sam0/drivers/wdt/wdt.h \
+ ../src/ASF/sam0/drivers/wdt/wdt_callback.h \
+ ../src/ASF/sam0/drivers/wdt/wdt.h \
+ ../src/ASF/sam0/drivers/wdt/wdt_callback.h
 
 ../src/asf.h:
 
@@ -366,6 +373,14 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 ../src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da_ha1/clock_feature.h:
 
+../src/ASF/sam0/drivers/extint/extint.h:
+
+../src/ASF/sam0/drivers/system/pinmux/pinmux.h:
+
+../src/ASF/sam0/drivers/extint/extint_callback.h:
+
+../src/ASF/sam0/drivers/extint/extint_callback.h:
+
 ../src/ASF/common/boards/board.h:
 
 ../src/ASF/sam0/boards/samr21_xplained_pro/samr21_xplained_pro.h:
@@ -373,8 +388,6 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 ../src/config/conf_board.h:
 
 ../src/ASF/sam0/drivers/port/port.h:
-
-../src/ASF/sam0/drivers/system/pinmux/pinmux.h:
 
 ../src/ASF/sam0/drivers/sercom/i2c/i2c_common.h:
 
@@ -395,3 +408,11 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 ../src/ASF/sam0/drivers/sercom/i2c/i2c_master.h:
 
 ../src/ASF/sam0/drivers/sercom/i2c/i2c_common.h:
+
+../src/ASF/sam0/drivers/wdt/wdt.h:
+
+../src/ASF/sam0/drivers/wdt/wdt_callback.h:
+
+../src/ASF/sam0/drivers/wdt/wdt.h:
+
+../src/ASF/sam0/drivers/wdt/wdt_callback.h:
