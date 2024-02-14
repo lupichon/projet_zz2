@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>7.0</ProjectVersion>
     <ToolchainName>com.Atmel.ARMGCC.C</ToolchainName>
-    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <ProjectGuid>{dce6c7e3-ee26-4d79-826b-08594b9ad897}</ProjectGuid>
     <avrdevice>ATSAMR21G18A</avrdevice>
     <avrdeviceseries>samr21</avrdeviceseries>
     <OutputType>Executable</OutputType>
@@ -32,15 +32,19 @@
       <framework-data>
         <options>
           <option id="common.boards" value="Add" config="" content-id="Atmel.ASF" />
+          <option id="common2.services.delay" value="Add" config="systick" content-id="Atmel.ASF" />
+          <option id="sam0.drivers.extint" value="Add" config="callback" content-id="Atmel.ASF" />
           <option id="sam0.drivers.port" value="Add" config="" content-id="Atmel.ASF" />
           <option id="sam0.drivers.sercom.i2c.master" value="Add" config="polled" content-id="Atmel.ASF" />
           <option id="sam0.drivers.system" value="Add" config="" content-id="Atmel.ASF" />
-          <option id="common2.services.delay" value="Add" config="systick" content-id="Atmel.ASF" />
+          <option id="sam0.drivers.wdt" value="Add" config="callback" content-id="Atmel.ASF" />
           <option id="common.applications.user_application.xplained_pro2" value="Add" config="" content-id="Atmel.ASF" />
           <option id="common.utils" value="Add" config="" content-id="Atmel.ASF" />
           <option id="sam0.utils.cmsis.samr21.source.template" value="Add" config="" content-id="Atmel.ASF" />
         </options>
-        <configurations />
+        <configurations>
+          <configuration key="config.thirdparty.os.freertos-7_4_2.memory_manager" value="1_static_allocation" default="1_static_allocation" content-id="Atmel.ASF" />
+        </configurations>
         <files>
           <file path="src/main.c" framework="" version="" source="common2/applications/xplained_pro_user_application/main.c" changed="False" content-id="Atmel.ASF" />
           <file path="src/config/conf_board.h" framework="" version="" source="common2/applications/xplained_pro_user_application/samr21g18a_samr21_xplained_pro/config/conf_board.h" changed="False" content-id="Atmel.ASF" />
@@ -176,6 +180,17 @@
           <file path="src/ASF/common2/services/delay/sam0/systick_counter.c" framework="" version="3.52.0" source="common2\services\delay\sam0\systick_counter.c" changed="False" content-id="Atmel.ASF" />
           <file path="src/ASF/common2/services/delay/delay.h" framework="" version="3.52.0" source="common2\services\delay\delay.h" changed="False" content-id="Atmel.ASF" />
           <file path="src/ASF/common2/services/delay/sam0/systick_counter.h" framework="" version="3.52.0" source="common2\services\delay\sam0\systick_counter.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/extint/extint.h" framework="" version="3.52.0" source="sam0\drivers\extint\extint.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/Config/conf_extint.h" framework="" version="3.52.0" source="sam0\drivers\extint\module_config\conf_extint.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/extint/extint_sam_d_r_h/extint.c" framework="" version="3.52.0" source="sam0\drivers\extint\extint_sam_d_r_h\extint.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/extint/extint_callback.c" framework="" version="3.52.0" source="sam0\drivers\extint\extint_callback.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/extint/extint_callback.h" framework="" version="3.52.0" source="sam0\drivers\extint\extint_callback.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/wdt/wdt_callback.c" framework="" version="3.52.0" source="sam0\drivers\wdt\wdt_callback.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/wdt/wdt.c" framework="" version="3.52.0" source="sam0\drivers\wdt\wdt.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/wdt/wdt_callback.h" framework="" version="3.52.0" source="sam0\drivers\wdt\wdt_callback.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/wdt/wdt.h" framework="" version="3.52.0" source="sam0\drivers\wdt\wdt.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/wdt/quick_start/qs_wdt_basic.h" framework="" version="3.52.0" source="sam0\drivers\wdt\quick_start\qs_wdt_basic.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/sam0/drivers/wdt/quick_start_callback/qs_wdt_callback.h" framework="" version="3.52.0" source="sam0\drivers\wdt\quick_start_callback\qs_wdt_callback.h" changed="False" content-id="Atmel.ASF" />
         </files>
         <documentation help="https://asf.microchip.com/docs/3.52.0/common.applications.user_application.xplained_pro2.samr21_xplained_pro/html/index.html" />
         <offline-documentation help="" />
@@ -203,6 +218,8 @@
       <Value>ARM_MATH_CM0PLUS=true</Value>
       <Value>I2C_MASTER_CALLBACK_MODE=false</Value>
       <Value>SYSTICK_MODE</Value>
+      <Value>EXTINT_CALLBACK_MODE=true</Value>
+      <Value>WDT_CALLBACK_MODE=true</Value>
     </ListValues>
   </armgcc.compiler.symbols.DefSymbols>
   <armgcc.compiler.directories.IncludePaths>
@@ -238,6 +255,9 @@
       <Value>../src/ASF/sam0/drivers/sercom/i2c/i2c_sam0</Value>
       <Value>../src/ASF/common2/services/delay</Value>
       <Value>../src/ASF/common2/services/delay/sam0</Value>
+      <Value>../src/ASF/sam0/drivers/extint</Value>
+      <Value>../src/ASF/sam0/drivers/extint/extint_sam_d_r_h</Value>
+      <Value>../src/ASF/sam0/drivers/wdt</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
   <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
@@ -293,9 +313,12 @@
       <Value>../src/ASF/sam0/drivers/sercom/i2c/i2c_sam0</Value>
       <Value>../src/ASF/common2/services/delay</Value>
       <Value>../src/ASF/common2/services/delay/sam0</Value>
+      <Value>../src/ASF/sam0/drivers/extint</Value>
+      <Value>../src/ASF/sam0/drivers/extint/extint_sam_d_r_h</Value>
+      <Value>../src/ASF/sam0/drivers/wdt</Value>
     </ListValues>
   </armgcc.assembler.general.IncludePaths>
-  <armgcc.preprocessingassembler.general.AssemblerFlags>-DARM_MATH_CM0PLUS=true -DBOARD=SAMR21_XPLAINED_PRO -D__SAMR21G18A__ -DI2C_MASTER_CALLBACK_MODE=false -DSYSTICK_MODE</armgcc.preprocessingassembler.general.AssemblerFlags>
+  <armgcc.preprocessingassembler.general.AssemblerFlags>-DARM_MATH_CM0PLUS=true -DBOARD=SAMR21_XPLAINED_PRO -D__SAMR21G18A__ -DI2C_MASTER_CALLBACK_MODE=false -DSYSTICK_MODE -DEXTINT_CALLBACK_MODE=true -DWDT_CALLBACK_MODE=true</armgcc.preprocessingassembler.general.AssemblerFlags>
   <armgcc.preprocessingassembler.general.IncludePaths>
     <ListValues>
       <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
@@ -329,6 +352,9 @@
       <Value>../src/ASF/sam0/drivers/sercom/i2c/i2c_sam0</Value>
       <Value>../src/ASF/common2/services/delay</Value>
       <Value>../src/ASF/common2/services/delay/sam0</Value>
+      <Value>../src/ASF/sam0/drivers/extint</Value>
+      <Value>../src/ASF/sam0/drivers/extint/extint_sam_d_r_h</Value>
+      <Value>../src/ASF/sam0/drivers/wdt</Value>
     </ListValues>
   </armgcc.preprocessingassembler.general.IncludePaths>
 </ArmGcc>
@@ -350,6 +376,8 @@
       <Value>ARM_MATH_CM0PLUS=true</Value>
       <Value>I2C_MASTER_CALLBACK_MODE=false</Value>
       <Value>SYSTICK_MODE</Value>
+      <Value>EXTINT_CALLBACK_MODE=true</Value>
+      <Value>WDT_CALLBACK_MODE=true</Value>
     </ListValues>
   </armgcc.compiler.symbols.DefSymbols>
   <armgcc.compiler.directories.IncludePaths>
@@ -385,6 +413,9 @@
       <Value>../src/ASF/sam0/drivers/sercom/i2c/i2c_sam0</Value>
       <Value>../src/ASF/common2/services/delay</Value>
       <Value>../src/ASF/common2/services/delay/sam0</Value>
+      <Value>../src/ASF/sam0/drivers/extint</Value>
+      <Value>../src/ASF/sam0/drivers/extint/extint_sam_d_r_h</Value>
+      <Value>../src/ASF/sam0/drivers/wdt</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
   <armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
@@ -441,10 +472,13 @@
       <Value>../src/ASF/sam0/drivers/sercom/i2c/i2c_sam0</Value>
       <Value>../src/ASF/common2/services/delay</Value>
       <Value>../src/ASF/common2/services/delay/sam0</Value>
+      <Value>../src/ASF/sam0/drivers/extint</Value>
+      <Value>../src/ASF/sam0/drivers/extint/extint_sam_d_r_h</Value>
+      <Value>../src/ASF/sam0/drivers/wdt</Value>
     </ListValues>
   </armgcc.assembler.general.IncludePaths>
   <armgcc.assembler.debugging.DebugLevel>Default (-g)</armgcc.assembler.debugging.DebugLevel>
-  <armgcc.preprocessingassembler.general.AssemblerFlags>-DARM_MATH_CM0PLUS=true -DBOARD=SAMR21_XPLAINED_PRO -D__SAMR21G18A__ -DI2C_MASTER_CALLBACK_MODE=false -DSYSTICK_MODE</armgcc.preprocessingassembler.general.AssemblerFlags>
+  <armgcc.preprocessingassembler.general.AssemblerFlags>-DARM_MATH_CM0PLUS=true -DBOARD=SAMR21_XPLAINED_PRO -D__SAMR21G18A__ -DI2C_MASTER_CALLBACK_MODE=false -DSYSTICK_MODE -DEXTINT_CALLBACK_MODE=true -DWDT_CALLBACK_MODE=true</armgcc.preprocessingassembler.general.AssemblerFlags>
   <armgcc.preprocessingassembler.general.IncludePaths>
     <ListValues>
       <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
@@ -478,6 +512,9 @@
       <Value>../src/ASF/sam0/drivers/sercom/i2c/i2c_sam0</Value>
       <Value>../src/ASF/common2/services/delay</Value>
       <Value>../src/ASF/common2/services/delay/sam0</Value>
+      <Value>../src/ASF/sam0/drivers/extint</Value>
+      <Value>../src/ASF/sam0/drivers/extint/extint_sam_d_r_h</Value>
+      <Value>../src/ASF/sam0/drivers/wdt</Value>
     </ListValues>
   </armgcc.preprocessingassembler.general.IncludePaths>
   <armgcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcc.preprocessingassembler.debugging.DebugLevel>
@@ -500,6 +537,18 @@
     <None Include="src\ASF\common2\services\delay\sam0\systick_counter.h">
       <SubType>compile</SubType>
     </None>
+    <None Include="src\ASF\sam0\drivers\extint\extint.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\sam0\drivers\extint\extint_callback.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\sam0\drivers\extint\extint_callback.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\sam0\drivers\extint\extint_sam_d_r_h\extint.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\ASF\sam0\drivers\sercom\i2c\i2c_sam0\i2c_master.c">
       <SubType>compile</SubType>
     </Compile>
@@ -869,9 +918,30 @@
     <Compile Include="src\ASF\sam0\drivers\system\system.c">
       <SubType>compile</SubType>
     </Compile>
+    <None Include="src\ASF\sam0\drivers\wdt\quick_start\qs_wdt_basic.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\sam0\drivers\wdt\quick_start_callback\qs_wdt_callback.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\sam0\drivers\wdt\wdt.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\sam0\drivers\wdt\wdt.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\sam0\drivers\wdt\wdt_callback.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\sam0\drivers\wdt\wdt_callback.h">
+      <SubType>compile</SubType>
+    </None>
     <Compile Include="src\ASF\sam0\utils\syscalls\gcc\syscalls.c">
       <SubType>compile</SubType>
     </Compile>
+    <None Include="src\config\conf_extint.h">
+      <SubType>compile</SubType>
+    </None>
     <Compile Include="src\main.c">
       <SubType>compile</SubType>
     </Compile>
@@ -901,6 +971,8 @@
     <Folder Include="src\ASF\sam0\boards\" />
     <Folder Include="src\ASF\sam0\boards\samr21_xplained_pro\" />
     <Folder Include="src\ASF\sam0\drivers\" />
+    <Folder Include="src\ASF\sam0\drivers\extint\" />
+    <Folder Include="src\ASF\sam0\drivers\extint\extint_sam_d_r_h\" />
     <Folder Include="src\ASF\sam0\drivers\port\" />
     <Folder Include="src\ASF\sam0\drivers\port\quick_start\" />
     <Folder Include="src\ASF\sam0\drivers\sercom\" />
@@ -919,6 +991,9 @@
     <Folder Include="src\ASF\sam0\drivers\system\power\power_sam_d_r_h\" />
     <Folder Include="src\ASF\sam0\drivers\system\reset\" />
     <Folder Include="src\ASF\sam0\drivers\system\reset\reset_sam_d_r_h\" />
+    <Folder Include="src\ASF\sam0\drivers\wdt\" />
+    <Folder Include="src\ASF\sam0\drivers\wdt\quick_start\" />
+    <Folder Include="src\ASF\sam0\drivers\wdt\quick_start_callback\" />
     <Folder Include="src\ASF\sam0\utils\" />
     <Folder Include="src\ASF\sam0\utils\cmsis\" />
     <Folder Include="src\ASF\sam0\utils\cmsis\samr21\" />

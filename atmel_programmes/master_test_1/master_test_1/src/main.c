@@ -1,20 +1,32 @@
 #include <asf.h>
 #include <delay.h>
 #include <i2c_master.h>
-#include <time.h>
 
-#define DATA_LENGTH 2
+#define DATA_LENGTH 10
 #define SLAVE_ADDRESS 0x12
 #define TIMEOUT 1000
 
-#define VAL 0
-#define PORT 10
+#define IRQ_PIN 7
 
+
+int val = 0;
+int bug = 0, nb = 0;
 //premiere valeur : état (0 ou 1)
 //deuxieme valeur : temps dans cet etat
 static uint8_t write_buffer[DATA_LENGTH] = {
-	0x00, 0x00
+	0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09
 };
+
+struct i2c_master_packet packet = {
+	.address = SLAVE_ADDRESS,
+	.data_length = DATA_LENGTH,
+	.data = write_buffer,
+	.ten_bit_address = false,
+	.high_speed = false,
+	.hs_master_code = 0x00,
+};
+
+
 
 static uint8_t read_buffer[DATA_LENGTH];
 
@@ -44,20 +56,45 @@ static void config_led(void)
 	port_pin_set_output_level(LED_0_PIN, LED_0_INACTIVE);
 }
 
-static void config_autre_bus(void)
-{
-	struct port_config pin_conf;
-	port_get_config_defaults(&pin_conf);
-	pin_conf.direction = PORT_PIN_DIR_OUTPUT;
-	port_pin_set_config(PORT, &pin_conf);
-	port_pin_set_output_level(PORT,VAL);
-}
-
 static void onde(void)
 {
-	VAL = !=VAL;
-	port_pin_set_output_level(10,VAL);
-	delay_ms(500);
+	/*
+	PM->APBCMASK.reg |= PM_APBCMASK_TC3; 
+	GCLK->CLKCTRL.reg = GCLK_CLKCTRL_ID_TCC0_TCC1 << GCLK_CLKCTRL_ID_Pos | GCLK_CLKCTRL_GEN_GCLK1 << GCLK_CLKCTRL_GEN_Pos | GCLK_CLKCTRL_CLKEN;
+	
+	TC3->COUNT16.CTRLA.reg &= ~TC_CTRLA_ENABLE;
+
+	TC3->COUNT16.CTRLA.reg |= TC_CTRLA_MODE_COUNT16; // Mode 16 bits
+	TC3->COUNT16.CTRLA.reg |= TC_CTRLA_WAVEGEN_MFRQ; // Mode de fonctionnement : fréquence de mesure
+	TC3->COUNT16.CTRLA.reg |= TC_CTRLA_PRESCALER_DIV1024; // Diviseur de fréquence : 1024
+	
+	TC3->COUNT16.CC[0].reg = (uint16_t)(SystemCoreClock / 1024 / 1000 * TIMER_PERIOD_MS);
+	TC3->COUNT16.INTENSET.reg = TC_INTENSET_OVF;
+	NVIC_EnableIRQ(TC3_IRQn);
+	TC3->COUNT16.CTRLA.reg |= 1;
+	uint32_t start_counter = timer_counter;
+	*/
+	if(!bug)
+	{
+		val = !val;
+		port_pin_set_output_level(10,val);
+		packet.data[0] = val;
+		int v = port_pin_get_output_level(10);
+		/*if(v == 0)
+		{
+			port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);
+		}
+		else
+		{
+			port_pin_set_output_level(LED_0_PIN,LED_0_INACTIVE);
+		}*/
+		delay_ms(500);
+	}
+	nb++;
+	if(nb==3)
+	{
+		bug = 1;
+	}
 }
 
 static void blink_led(uint8_t nb_blinks)
@@ -71,8 +108,19 @@ static void blink_led(uint8_t nb_blinks)
 	}
 }
 
+void irq_handler(void)
+{
+	port_pin_set_output_level(LED_0_PIN, LED_0_INACTIVE);
+	delay_ms(500);
+	port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);
+	delay_ms(200);
+	port_pin_set_output_level(LED_0_PIN, LED_0_INACTIVE);
+	delay_ms(1000);
+	port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);
+}
+
 //initialisation de la borche à laquelle on envoit des interruptions
-/*
+
 void init_irq_interrupt(void)
 {
  	struct extint_chan_conf config_extint_chan;
@@ -82,90 +130,24 @@ void init_irq_interrupt(void)
 	config_extint_chan.gpio_pin_pull = EXTINT_PULL_NONE;					//résistance de tirage
 	config_extint_chan.detection_criteria = EXTINT_DETECT_RISING;			//citère de détéction de l'interruption
 	config_extint_chan.filter_input_signal = true;
-	extint_chan_set_config(6, &config_extint_chan);							//configuration du canal d'entrée grâce à la structure (6 = canal)
-	extint_register_callback(irq_handler, 6, EXTINT_CALLBACK_TYPE_DETECT);	//permet de définir la fonction callback appelée à chaque interruption
-	extint_chan_enable_callback(6, EXTINT_CALLBACK_TYPE_DETECT);			//activer la détéction d'interruptions
+	extint_chan_set_config(6, &config_extint_chan);							//configuration du canal d'entrée grâce à la structure
+	extint_register_callback(irq_handler,6, EXTINT_CALLBACK_TYPE_DETECT);	//permet de définir la fonction callback appelée à chaque interruption
+	extint_chan_enable_callback(6, EXTINT_CALLBACK_TYPE_DETECT);			//activer la détéction d'interruptions		
 																			//EXTINT_CALLBACK_TYPE_DETECT -> structure qui permet de configurer la condition d'interruption 
 }
 
-void irq_handler(void)
-{
-	irq_count++;
-	if(irq_count>=100)
-	{
-		irq_count = 0;
-		DELAY = 0;
-	}
-}
-*/
-
-/*
 int main (void)
 {
 	system_init();
 	delay_init();
 	configure_i2c_master();
 	config_led();
-	
+	system_interrupt_enable_global();
+	init_irq_interrupt();
 	uint16_t timeout = 0;
-	
-	struct i2c_master_packet packet = {
-		.address = SLAVE_ADDRESS,
-		.data_length = DATA_LENGTH,
-		.data = write_buffer,
-		.ten_bit_address = false,
-		.high_speed = false,
-		.hs_master_code = 0x00,
-	};
-	
-	while (i2c_master_write_packet_wait(&i2c_master_instance, &packet) != STATUS_OK)
-	{
-		if (timeout++ == TIMEOUT)
-		{
-			break;
-		}
-	}
-	
-	if (timeout < TIMEOUT)
-	{
-		blink_led(5);
-	}
-
-	packet.data = read_buffer;
-	while (i2c_master_read_packet_wait(&i2c_master_instance, &packet) != STATUS_OK)
-	{
-		if (timeout++ == TIMEOUT)
-		{
-			break;
-		}
-	}
-}*/
-
-int main()
-{
-	system_init();
-	delay_init();
-	configure_i2c_master();
-	config_autre_bus();
-
-	struct i2c_master_packet packet = 
-	{
-		.address = SLAVE_ADDRESS,
-		.data_length = DATA_LENGTH,
-		.data = write_buffer,
-		.ten_bit_address = false,
-		.high_speed = false,
-		.hs_master_code = 0x00,
-	};
-
 	while(1)
 	{
-		clock_t debut = clock();
-		onde()
-		.data[0] = //lecture du port 10;
-		clock_t end = clock();
-		.data[1] = (double)(end - begin) / CLOCKS_PER_SEC;
-
+		onde();
 		while (i2c_master_write_packet_wait(&i2c_master_instance, &packet) != STATUS_OK)
 		{
 			if (timeout++ == TIMEOUT)
@@ -173,8 +155,27 @@ int main()
 				break;
 			}
 		}
-	}
+		if (timeout < TIMEOUT)
+		{
+			//blink_led(5);
+		}
+		else
+		{
+			//blink_led(1);
+		}
+	}	
+	/*
+	packet.data = read_buffer;
+	while (i2c_master_read_packet_wait(&i2c_master_instance, &packet) != STATUS_OK)
+	{
+		if (timeout++ == TIMEOUT)
+		{
+			break;
+		}
+	}*/
 }
+
+
 
 /*
 Le puits est chargé de produire sur un autre bus (appelons le bus de sortie) une forme d'onde basique : un signal rectangulaire à une fréquence à définir.

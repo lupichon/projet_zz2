@@ -6,6 +6,8 @@
 #define SLAVE_ADDRESS 0x12
 #define TIMEOUT 1000
 
+#define ITR_PIN_MASTER PIN_PA07
+
 static uint8_t write_buffer[DATA_LENGTH] = {
 	0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09,
 };
@@ -24,7 +26,7 @@ static void config_led(void)
 	port_pin_set_output_level(LED_0_PIN, LED_0_INACTIVE);
 }
 
-/*
+
 static void blink_led(uint8_t nb_blinks)
 {
 	for (int i = 0; i < nb_blinks; i++)
@@ -35,7 +37,7 @@ static void blink_led(uint8_t nb_blinks)
 		delay_ms(500);
 	}
 }
-*/
+
 
 static void configure_i2c_slave(void)
 {
@@ -68,24 +70,36 @@ void init_irq_pin(void)
 //envoie d'une interrutpion
 void send_interrupt(void)
 {
+	/*
 	for (uint8_t i = 0; i < 110; i++)
 	{
-	port_pin_set_output_level(ITR_PIN_MASTER, true);		//motif à détecter pour la carte cible
-	delay_us(50);
-	port_pin_set_output_level(ITR_PIN_MASTER, false);
-	delay_us(50);
+		port_pin_set_output_level(ITR_PIN_MASTER, true);		//motif à détecter pour la carte cible
+		delay_us(50);
+		port_pin_set_output_level(ITR_PIN_MASTER, false);
+		delay_us(50);
 	}
+	*/
+	port_pin_set_output_level(ITR_PIN_MASTER,true);
+	int test = port_pin_get_output_level(ITR_PIN_MASTER);
+	if(test)
+	{
+		port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);
+	}
+	delay_us(50);
+	port_pin_set_output_level(ITR_PIN_MASTER,false);
+	delay_us(50);
+	port_pin_set_output_level(ITR_PIN_MASTER,true);
 }
 
+int probleme = 0;
 
 int main (void)
 {
 	system_init();
-	
 	config_led();
-	
 	configure_i2c_slave();
-	
+	init_irq_pin();
+	system_interrupt_enable_global();
 	enum i2c_slave_direction dir;
 	
 	struct i2c_slave_packet packet = {
@@ -101,15 +115,26 @@ int main (void)
 		{
 			packet.data = read_buffer;
 			i2c_slave_read_packet_wait(&i2c_slave_instance, &packet);
-			if (packet.data[4] == 0x04)
+			if (packet.data[0] == 0)
 			{
-				port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);
+				//port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);
+			}
+			else
+			{
+				//port_pin_set_output_level(LED_0_PIN,LED_0_INACTIVE);
 			}
 		}
+		/*
 		else if (dir == I2C_SLAVE_DIRECTION_WRITE)
 		{
 			packet.data = write_buffer;
 			i2c_slave_write_packet_wait(&i2c_slave_instance, &packet);
+		}*/
+		probleme = 1;
+		if(probleme)
+		{
+			send_interrupt();
 		}
+		probleme = 0;
 	}
 }
