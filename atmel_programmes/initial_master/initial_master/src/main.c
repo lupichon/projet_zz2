@@ -2,10 +2,12 @@
 #include <i2c_slave.h>
 #include <i2c_master.h>
 #include <delay.h>
-//#define SLAVE_ADDRESS 0x12
+#include <stdlib.h>
 #define TIMEOUT 1000
 #define INFO 0x44
 
+
+uint8_t infos[20] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
 enum packet_info {
 	MSG_TYPE,
 	DATA,
@@ -26,11 +28,16 @@ enum addresses {
 	SLAVE_1_ADDRESS,
 	};
 
-static uint8_t write_buffer[DATA_LENGTH] = {
+static uint8_t write_buffer_master[DATA_LENGTH] = {
 	NO_DATA, NO_DATA,
 };
 
-static uint8_t read_buffer[DATA_LENGTH];
+static uint8_t write_buffer_slave[DATA_LENGTH] = {
+	NO_DATA, NO_DATA,
+};
+
+static uint8_t read_buffer_master[DATA_LENGTH];
+static uint8_t read_buffer_slave[DATA_LENGTH];
 
 struct i2c_slave_module i2c_slave_instance;
 struct i2c_master_module i2c_master_instance;
@@ -89,9 +96,9 @@ int main (void)
 	uint8_t i_am_master = 0;
 	
 	struct i2c_master_packet packet_master = {
-		.address = NO_DATA,
+		.address = SLAVE_1_ADDRESS,
 		.data_length = DATA_LENGTH,
-		.data = write_buffer,
+		.data = write_buffer_master,
 		.ten_bit_address = false,
 		.high_speed = false,
 		.hs_master_code = 0x00,
@@ -99,117 +106,109 @@ int main (void)
 	
 	struct i2c_slave_packet packet_slave = {
 		.data_length = DATA_LENGTH,
-		.data = write_buffer,
+		.data = write_buffer_slave,
 	};
 	
-	status_code status = STATUS_BUSY;
+	enum status_code status = STATUS_BUSY;
 	
 	delay_ms(2000);
 	
+	configure_i2c_slave();
+	
+	uint8_t info_progression = 0;
+	
 	while (run)
 	{
-		configure_i2c_slave();
-		packet_slave.data = read_buffer;
-		while (i2c_slave_read_packet_wait(&i2c_slave_instance, &packet_slave) != STATUS_OK)
+		packet_slave.data = read_buffer_slave;
+		enum i2c_slave_direction dir = I2C_SLAVE_DIRECTION_READ;
+		while (dir != I2C_SLAVE_DIRECTION_NONE)
 		{
-			if (timeout++ == TIMEOUT)
-			{
-				break;
-			}
-		}
-		if (timeout == TIMEOUT)
-		{
+			dir = i2c_slave_get_direction_wait(&i2c_slave_instance);
 			i_am_master = 1;
-		}
-		else
-		{
-			if (timeout < TIMEOUT)
+			if (dir == I2C_SLAVE_DIRECTION_READ)
 			{
 				i_am_master = 0;
+				break;
 			}
 		}
 		
 		if (i_am_master)
 		{
+			if (infos[info_progression] == 14)
+			{
+				port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);
+			}
+			i2c_slave_disable(&i2c_slave_instance);
 			configure_i2c_master();
-			packet_master.address = SLAVE_1_ADDRESS;
-			write_buffer[MSG_TYPE] = I_AM_MASTER;
-			write_buffer[DATA] = MY_ADDRESS;
-			packet_master.data = write_buffer;
+
+			write_buffer_master[MSG_TYPE] = I_AM_MASTER;
+			write_buffer_master[DATA] = MY_ADDRESS;
+			packet_master.data = write_buffer_master;
 			
 			while (status != STATUS_OK)
 			{
 				status = i2c_master_write_packet_wait(&i2c_master_instance, &packet_master);
 			}
+			
 			status = STATUS_BUSY;
-			packet_master.data = read_buffer;
-			while (read_buffer[MSG_TYPE] != I_AM_SLAVE)
+			packet_master.data = read_buffer_master;
+			while (read_buffer_master[MSG_TYPE] != I_AM_READY)
 			{
 				i2c_master_read_packet_wait(&i2c_master_instance, &packet_master);
 			}
-			
-			status = STATUS_BUSY;
-			packet_master.data = read_buffer;
-			while (read_buffer[MSG_TYPE] != I_AM_READY)
+			// jusque la ca marche
+			write_buffer_master[MSG_TYPE] = INFO_MSG;
+			while (info_progression < 20)
 			{
-				i2c_master_read_packet_wait(&i2c_master_instance, &packet_master);
-			}
-			
-			status = STATUS_BUSY;
-			write_buffer[MSG_TYPE] = INFO_MSG;
-			write_buffer[DATA] = INFO;
-			packet_master.data = write_buffer;
-			
-			port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);
-			while (INFO)
-			{
-				i2c_master_write_packet_wait(&i2c_master_instance, &packet_master);
+				write_buffer_master[DATA] = infos[info_progression];
+				packet_master.data = write_buffer_master;
+				if (info_progression < 14) // bug
+				{
+					
+					while (i2c_master_write_packet_wait(&i2c_master_instance, &packet_master) != STATUS_OK)
+					{
+						
+					}
+					info_progression++;
+				}	
 			}
 		}
 		else
 		{
-	
-			packet_slave.data = read_buffer;
-			while (read_buffer[MSG_TYPE] != I_AM_MASTER)
+			packet_slave.data = read_buffer_slave;
+			while (read_buffer_slave[MSG_TYPE] != I_AM_MASTER)
 			{
 				i2c_slave_read_packet_wait(&i2c_slave_instance, &packet_slave);
 			}
-			//uint8_t master_address = read_buffer[DATA];
 			
-			write_buffer[MSG_TYPE] = I_AM_SLAVE;
-			write_buffer[DATA] = NO_DATA;
-			packet_slave.data = write_buffer;
+			uint8_t master_address = read_buffer_slave[DATA];
+			write_buffer_slave[MSG_TYPE] = I_AM_READY;
+			write_buffer_slave[DATA] = NO_DATA;
+			packet_slave.data = write_buffer_slave;
 			
 			while (status != STATUS_OK)
 			{
 				status = i2c_slave_write_packet_wait(&i2c_slave_instance, &packet_slave);
 			}
-			
-			write_buffer[MSG_TYPE] = I_AM_READY;
-			write_buffer[DATA] = NO_DATA;
-			packet_slave.data = write_buffer;
-			
+			// ca marche jusque la
 			uint8_t listen = 1;
-			
-			port_pin_set_output_level(LED_0_PIN, LED_0_INACTIVE);
-			
 			while (listen)
 			{
-				/*
-				while (status != STATUS_OK)
+				dir = i2c_slave_get_direction_wait(&i2c_slave_instance);
+				
+				if (dir == I2C_SLAVE_DIRECTION_READ)
 				{
+					packet_slave.data = read_buffer_slave;
 					i2c_slave_read_packet_wait(&i2c_slave_instance, &packet_slave);
-					if (timeout++ == TIMEOUT)
+					if (packet_slave.data[DATA] == infos[info_progression])
+					{
+						info_progression++;
+					}
+					else
 					{
 						break;
 					}
 				}
-				if (timeout == TIMEOUT)
-				{
-					//send_interrupt
-					// listen = 0;
-				}
-				*/
 			}
 		}
 	}

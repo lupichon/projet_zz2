@@ -6,6 +6,8 @@ Device_Startup\startup_samr21.c
 
 Device_Startup\system_samr21.c
 
+src\ASF\sam0\drivers\rtc\rtc_sam_d_r_h\rtc_count.c
+
 src\ASF\sam0\drivers\sercom\i2c\i2c_sam0\i2c_master.c
 
 src\ASF\sam0\drivers\sercom\i2c\i2c_sam0\i2c_slave.c
