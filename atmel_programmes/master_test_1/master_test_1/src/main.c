@@ -7,6 +7,7 @@
 #define TIMEOUT 1000
 
 #define IRQ_PIN 7
+#define CANAL 7
 
 
 int val = 0;
@@ -89,12 +90,12 @@ static void onde(void)
 			port_pin_set_output_level(LED_0_PIN,LED_0_INACTIVE);
 		}*/
 		delay_ms(500);
-	}
+	}/*
 	nb++;
 	if(nb==3)
 	{
 		bug = 1;
-	}
+	}*/
 }
 
 static void blink_led(uint8_t nb_blinks)
@@ -110,29 +111,26 @@ static void blink_led(uint8_t nb_blinks)
 
 void irq_handler(void)
 {
-	port_pin_set_output_level(LED_0_PIN, LED_0_INACTIVE);
-	delay_ms(500);
+	/*
+	blink_led(5);
 	port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);
-	delay_ms(200);
-	port_pin_set_output_level(LED_0_PIN, LED_0_INACTIVE);
-	delay_ms(1000);
-	port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);
+	delay_ms(1000);*/
+	system_reset();
 }
 
 //initialisation de la borche à laquelle on envoit des interruptions
-
 void init_irq_interrupt(void)
 {
  	struct extint_chan_conf config_extint_chan;
  	extint_chan_get_config_defaults(&config_extint_chan);
 	config_extint_chan.gpio_pin = IRQ_PIN;									//numero de broche associé à l'interruption
-	config_extint_chan.gpio_pin_mux = MUX_PA22A_EIC_EXTINT6;				//configuration de la broche en canal d'entrée
-	config_extint_chan.gpio_pin_pull = EXTINT_PULL_NONE;					//résistance de tirage
-	config_extint_chan.detection_criteria = EXTINT_DETECT_RISING;			//citère de détéction de l'interruption
+	config_extint_chan.gpio_pin_mux = MUX_PA07A_EIC_EXTINT7;				//configuration de la broche en canal d'entrée
+	config_extint_chan.gpio_pin_pull = EXTINT_PULL_DOWN;					//résistance de tirage
+	//config_extint_chan.detection_criteria = EXTINT_DETECT_RISING;			//citère de détéction de l'interruption
 	config_extint_chan.filter_input_signal = true;
-	extint_chan_set_config(6, &config_extint_chan);							//configuration du canal d'entrée grâce à la structure
-	extint_register_callback(irq_handler,6, EXTINT_CALLBACK_TYPE_DETECT);	//permet de définir la fonction callback appelée à chaque interruption
-	extint_chan_enable_callback(6, EXTINT_CALLBACK_TYPE_DETECT);			//activer la détéction d'interruptions		
+	extint_chan_set_config(CANAL, &config_extint_chan);							//configuration du canal d'entrée grâce à la structure
+	extint_register_callback(irq_handler,CANAL, EXTINT_CALLBACK_TYPE_DETECT);	//permet de définir la fonction callback appelée à chaque interruption
+	extint_chan_enable_callback(CANAL, EXTINT_CALLBACK_TYPE_DETECT);			//activer la détéction d'interruptions		
 																			//EXTINT_CALLBACK_TYPE_DETECT -> structure qui permet de configurer la condition d'interruption 
 }
 
@@ -142,12 +140,14 @@ int main (void)
 	delay_init();
 	configure_i2c_master();
 	config_led();
-	system_interrupt_enable_global();
 	init_irq_interrupt();
+	system_interrupt_enable_global();
 	uint16_t timeout = 0;
+	//delay_ms(3000);
+	//port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);
 	while(1)
 	{
-		onde();
+		/*onde();
 		while (i2c_master_write_packet_wait(&i2c_master_instance, &packet) != STATUS_OK)
 		{
 			if (timeout++ == TIMEOUT)
@@ -162,6 +162,15 @@ int main (void)
 		else
 		{
 			//blink_led(1);
+		}*/
+		int test = port_pin_get_input_level(IRQ_PIN);
+		if(test==true)
+		{
+			//port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);
+		}
+		else
+		{
+			//port_pin_set_output_level(LED_0_PIN, LED_0_INACTIVE);
 		}
 	}	
 	/*

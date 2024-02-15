@@ -68,34 +68,26 @@ void init_irq_pin(void)
 }
 
 //envoie d'une interrutpion
-void send_interrupt(void)
+ void send_interrupt(void)
 {
-	/*
-	for (uint8_t i = 0; i < 110; i++)
+	port_pin_set_output_level(ITR_PIN_MASTER, true);
+	delay_us(50);
+	port_pin_set_output_level(ITR_PIN_MASTER, false);
+	/*for (uint8_t i = 0; i < 110;i++)
 	{
-		port_pin_set_output_level(ITR_PIN_MASTER, true);		//motif à détecter pour la carte cible
+		port_pin_set_output_level(ITR_PIN_MASTER, true);
 		delay_us(50);
 		port_pin_set_output_level(ITR_PIN_MASTER, false);
 		delay_us(50);
-	}
-	*/
-	port_pin_set_output_level(ITR_PIN_MASTER,true);
-	int test = port_pin_get_output_level(ITR_PIN_MASTER);
-	if(test)
-	{
-		port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);
-	}
-	delay_us(50);
-	port_pin_set_output_level(ITR_PIN_MASTER,false);
-	delay_us(50);
-	port_pin_set_output_level(ITR_PIN_MASTER,true);
-}
+	}*/
+ }
 
 int probleme = 0;
 
 int main (void)
 {
 	system_init();
+	delay_init();
 	config_led();
 	configure_i2c_slave();
 	init_irq_pin();
@@ -106,10 +98,9 @@ int main (void)
 		.data_length = DATA_LENGTH,
 		.data = write_buffer,
 	};
-	
 	while (1)
 	{
-		dir = i2c_slave_get_direction_wait(&i2c_slave_instance);
+		/*dir = i2c_slave_get_direction_wait(&i2c_slave_instance);
 		
 		if (dir == I2C_SLAVE_DIRECTION_READ)
 		{
@@ -124,17 +115,19 @@ int main (void)
 				//port_pin_set_output_level(LED_0_PIN,LED_0_INACTIVE);
 			}
 		}
-		/*
+		
 		else if (dir == I2C_SLAVE_DIRECTION_WRITE)
 		{
 			packet.data = write_buffer;
 			i2c_slave_write_packet_wait(&i2c_slave_instance, &packet);
 		}*/
-		probleme = 1;
-		if(probleme)
+		
+		if(!probleme)
 		{
 			send_interrupt();
+			probleme = 1;
 		}
-		probleme = 0;
+		//probleme = !probleme;
+		delay_ms(3000);
 	}
 }
