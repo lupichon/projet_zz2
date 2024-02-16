@@ -59,6 +59,10 @@
 // From module: Delay routines
 #include <delay.h>
 
+// From module: EXTINT - External Interrupt (Callback APIs)
+#include <extint.h>
+#include <extint_callback.h>
+
 // From module: Generic board support
 #include <board.h>
 
@@ -75,6 +79,10 @@
 #include <rtc_count.h>
 #include <rtc_tamper.h>
 
+// From module: SERCOM Callback API
+#include <sercom.h>
+#include <sercom_interrupt.h>
+
 // From module: SERCOM I2C - Master Mode I2C (Polled APIs)
 #include <i2c_common.h>
 #include <i2c_master.h>
@@ -85,6 +93,10 @@
 
 // From module: SERCOM Polled API
 #include <sercom.h>
+
+// From module: SERCOM SPI - Serial Peripheral Interface (Callback APIs)
+#include <spi.h>
+#include <spi_interrupt.h>
 
 // From module: SYSTEM - Clock Management for SAMD21/R21/DA/HA
 #include <clock.h>

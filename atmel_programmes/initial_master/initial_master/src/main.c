@@ -3,11 +3,30 @@
 #include <i2c_master.h>
 #include <delay.h>
 #include <stdlib.h>
+#include <nmasic.h>
+#include <m2m_wifi.h>
+
 #define TIMEOUT 1000
 #define INFO 0x44
 
-
-uint8_t infos[20] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+uint8_t infos[20] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};	/*uint8 mac_addrr[6],IsMacAddrValid;
+	//port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);
+	ret = m2m_wifi_get_otp_mac_address(&mac_addrr,IsMacAddrValid);
+	nmi_get_mac_address(&mac_addrr);
+	port_pin_set_output_level(LED_0_PIN, LED_0_INACTIVE);
+	srand(mac_addrr);sint8 ret;
+tstrWifiInitParam pWifiInitParam;
+memset(&pWifiInitParam, 0, sizeof(tstrWifiInitParam));
+pWifiInitParam.pfAppWifiCb = wifi_event_callback;
+ret = m2m_wifi_init(&pWifiInitParam);
+if(ret == M2M_SUCCESS)
+{
+	port_pin_set_output_level(LED_0_PIN, LED_0_INACTIVE);
+}
+else
+{
+	port_pin_set_output_level(LED_0_PIN,LED_0_ACTIVE);
+}*/
 enum packet_info {
 	MSG_TYPE,
 	DATA,
@@ -84,6 +103,10 @@ static void config_led(void)
 	port_pin_set_output_level(LED_0_PIN, LED_0_INACTIVE);
 }
 
+void wifi_event_callback()
+{
+	
+}
 
 int main (void)
 {
@@ -111,36 +134,28 @@ int main (void)
 	
 	enum status_code status = STATUS_BUSY;
 	
-	delay_ms(2000);
-	
-	configure_i2c_slave();
-	
 	uint8_t info_progression = 0;
 	
+	delay_ms(5000);
+	packet_slave.data = read_buffer_slave;
+	configure_i2c_slave();
 	while (run)
 	{
-		packet_slave.data = read_buffer_slave;
-		enum i2c_slave_direction dir = I2C_SLAVE_DIRECTION_READ;
-		while (dir != I2C_SLAVE_DIRECTION_NONE)
+		enum i2c_slave_direction dir = i2c_slave_get_direction_wait(&i2c_slave_instance);
+		if(dir == I2C_SLAVE_DIRECTION_NONE)
 		{
-			dir = i2c_slave_get_direction_wait(&i2c_slave_instance);
+			i2c_slave_disable(&i2c_slave_instance);
+			configure_i2c_master();
 			i_am_master = 1;
-			if (dir == I2C_SLAVE_DIRECTION_READ)
-			{
-				i_am_master = 0;
-				break;
-			}
+			port_pin_set_output_level(LED_0_PIN,LED_0_ACTIVE);
 		}
-		
+
 		if (i_am_master)
 		{
 			if (infos[info_progression] == 14)
 			{
 				port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);
 			}
-			i2c_slave_disable(&i2c_slave_instance);
-			configure_i2c_master();
-
 			write_buffer_master[MSG_TYPE] = I_AM_MASTER;
 			write_buffer_master[DATA] = MY_ADDRESS;
 			packet_master.data = write_buffer_master;
@@ -149,7 +164,8 @@ int main (void)
 			{
 				status = i2c_master_write_packet_wait(&i2c_master_instance, &packet_master);
 			}
-			
+			//port_pin_set_output_level(LED_0_PIN,LED_0_INACTIVE);
+			/*
 			status = STATUS_BUSY;
 			packet_master.data = read_buffer_master;
 			while (read_buffer_master[MSG_TYPE] != I_AM_READY)
@@ -209,7 +225,7 @@ int main (void)
 						break;
 					}
 				}
-			}
+			}*/
 		}
 	}
 }

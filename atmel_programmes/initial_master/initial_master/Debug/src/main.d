@@ -115,13 +115,15 @@ src/main.d src/main.o: ../src/main.c ../src/asf.h \
  ../src/ASF/sam0/drivers/system/clock/clock.h \
  ../src/ASF/sam0/drivers/system/clock/gclk.h \
  ../src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da_ha1/clock_feature.h \
+ ../src/ASF/sam0/drivers/extint/extint.h \
+ ../src/ASF/sam0/drivers/system/pinmux/pinmux.h \
+ ../src/ASF/sam0/drivers/extint/extint_callback.h \
+ ../src/ASF/sam0/drivers/extint/extint_callback.h \
  ../src/ASF/common/boards/board.h \
  ../src/ASF/sam0/boards/samr21_xplained_pro/samr21_xplained_pro.h \
  ../src/config/conf_board.h ../src/ASF/sam0/drivers/port/port.h \
- ../src/ASF/sam0/drivers/system/pinmux/pinmux.h \
  ../src/ASF/sam0/drivers/rtc/rtc_count.h ../src/config/conf_clocks.h \
  ../src/ASF/sam0/drivers/rtc/rtc_tamper.h \
- ../src/ASF/sam0/drivers/sercom/i2c/i2c_common.h \
  ../src/ASF/sam0/drivers/sercom/sercom.h \
  ../src/ASF/sam0/drivers/system/system.h \
  ../src/ASF/sam0/drivers/system/power/power_sam_d_r_h/power.h \
@@ -129,9 +131,29 @@ src/main.d src/main.o: ../src/main.c ../src/asf.h \
  ../src/ASF/sam0/drivers/system/interrupt/system_interrupt.h \
  ../src/ASF/sam0/drivers/system/interrupt/system_interrupt_samr21/system_interrupt_features.h \
  ../src/ASF/sam0/drivers/sercom/sercom_pinout.h \
+ ../src/ASF/sam0/drivers/sercom/sercom_interrupt.h \
+ ../src/ASF/sam0/drivers/sercom/sercom.h \
+ ../src/ASF/sam0/drivers/sercom/i2c/i2c_common.h \
  ../src/ASF/sam0/drivers/sercom/i2c/i2c_master.h \
  ../src/ASF/sam0/drivers/sercom/i2c/i2c_common.h \
- ../src/ASF/sam0/drivers/sercom/i2c/i2c_slave.h
+ ../src/ASF/sam0/drivers/sercom/i2c/i2c_slave.h \
+ ../src/ASF/sam0/drivers/sercom/spi/spi.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\string.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\xlocale.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\string.h \
+ ../src/config/conf_spi.h \
+ ../src/ASF/sam0/drivers/sercom/spi/spi_interrupt.h \
+ ../src/ASF/sam0/drivers/sercom/spi/spi.h \
+ ../src/ASF/common/components/wifi/winc1500/host_drv/driver/source/nmasic.h \
+ ../src/ASF/common/components/wifi/winc1500/host_drv/common/include/nm_common.h \
+ ../src/ASF/common/components/wifi/winc1500/host_drv/bsp/include/nm_bsp.h \
+ ../src/ASF/common/components/wifi/winc1500/host_drv/common/include/nm_debug.h \
+ ../src/ASF/common/components/wifi/winc1500/host_drv/bsp/include/nm_bsp_internal.h \
+ ../src/ASF/common/components/wifi/winc1500/host_drv/bsp/include/nm_bsp_samr21.h \
+ ../src/config/conf_winc.h \
+ ../src/ASF/common/components/wifi/winc1500/host_drv/driver/include/m2m_wifi.h \
+ ../src/ASF/common/components/wifi/winc1500/host_drv/driver/include/m2m_types.h \
+ ../src/ASF/common/components/wifi/winc1500/host_drv/driver/source/nmdrv.h
 
 ../src/asf.h:
 
@@ -369,6 +391,14 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 ../src/ASF/sam0/drivers/system/clock/clock_samd21_r21_da_ha1/clock_feature.h:
 
+../src/ASF/sam0/drivers/extint/extint.h:
+
+../src/ASF/sam0/drivers/system/pinmux/pinmux.h:
+
+../src/ASF/sam0/drivers/extint/extint_callback.h:
+
+../src/ASF/sam0/drivers/extint/extint_callback.h:
+
 ../src/ASF/common/boards/board.h:
 
 ../src/ASF/sam0/boards/samr21_xplained_pro/samr21_xplained_pro.h:
@@ -377,15 +407,11 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 ../src/ASF/sam0/drivers/port/port.h:
 
-../src/ASF/sam0/drivers/system/pinmux/pinmux.h:
-
 ../src/ASF/sam0/drivers/rtc/rtc_count.h:
 
 ../src/config/conf_clocks.h:
 
 ../src/ASF/sam0/drivers/rtc/rtc_tamper.h:
-
-../src/ASF/sam0/drivers/sercom/i2c/i2c_common.h:
 
 ../src/ASF/sam0/drivers/sercom/sercom.h:
 
@@ -401,8 +427,48 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 ../src/ASF/sam0/drivers/sercom/sercom_pinout.h:
 
+../src/ASF/sam0/drivers/sercom/sercom_interrupt.h:
+
+../src/ASF/sam0/drivers/sercom/sercom.h:
+
+../src/ASF/sam0/drivers/sercom/i2c/i2c_common.h:
+
 ../src/ASF/sam0/drivers/sercom/i2c/i2c_master.h:
 
 ../src/ASF/sam0/drivers/sercom/i2c/i2c_common.h:
 
 ../src/ASF/sam0/drivers/sercom/i2c/i2c_slave.h:
+
+../src/ASF/sam0/drivers/sercom/spi/spi.h:
+
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\string.h:
+
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\xlocale.h:
+
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\string.h:
+
+../src/config/conf_spi.h:
+
+../src/ASF/sam0/drivers/sercom/spi/spi_interrupt.h:
+
+../src/ASF/sam0/drivers/sercom/spi/spi.h:
+
+../src/ASF/common/components/wifi/winc1500/host_drv/driver/source/nmasic.h:
+
+../src/ASF/common/components/wifi/winc1500/host_drv/common/include/nm_common.h:
+
+../src/ASF/common/components/wifi/winc1500/host_drv/bsp/include/nm_bsp.h:
+
+../src/ASF/common/components/wifi/winc1500/host_drv/common/include/nm_debug.h:
+
+../src/ASF/common/components/wifi/winc1500/host_drv/bsp/include/nm_bsp_internal.h:
+
+../src/ASF/common/components/wifi/winc1500/host_drv/bsp/include/nm_bsp_samr21.h:
+
+../src/config/conf_winc.h:
+
+../src/ASF/common/components/wifi/winc1500/host_drv/driver/include/m2m_wifi.h:
+
+../src/ASF/common/components/wifi/winc1500/host_drv/driver/include/m2m_types.h:
+
+../src/ASF/common/components/wifi/winc1500/host_drv/driver/source/nmdrv.h:

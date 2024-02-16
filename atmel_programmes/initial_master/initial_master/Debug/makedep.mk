@@ -6,6 +6,54 @@ Device_Startup\startup_samr21.c
 
 Device_Startup\system_samr21.c
 
+src\ASF\common\components\wifi\winc1500\host_app\provisioning\base64decode.c
+
+src\ASF\common\components\wifi\winc1500\host_app\provisioning\http_content.c
+
+src\ASF\common\components\wifi\winc1500\host_app\provisioning\wifi_prov.c
+
+src\ASF\common\components\wifi\winc1500\host_drv\bsp\source\nm_bsp_samr21.c
+
+src\ASF\common\components\wifi\winc1500\host_drv\bus_wrapper\source\nm_bus_wrapper_samr21.c
+
+src\ASF\common\components\wifi\winc1500\host_drv\common\source\nm_common.c
+
+src\ASF\common\components\wifi\winc1500\host_drv\driver\source\m2m_ate_mode.c
+
+src\ASF\common\components\wifi\winc1500\host_drv\driver\source\m2m_crypto.c
+
+src\ASF\common\components\wifi\winc1500\host_drv\driver\source\m2m_hif.c
+
+src\ASF\common\components\wifi\winc1500\host_drv\driver\source\m2m_ota.c
+
+src\ASF\common\components\wifi\winc1500\host_drv\driver\source\m2m_periph.c
+
+src\ASF\common\components\wifi\winc1500\host_drv\driver\source\m2m_ssl.c
+
+src\ASF\common\components\wifi\winc1500\host_drv\driver\source\m2m_wifi.c
+
+src\ASF\common\components\wifi\winc1500\host_drv\driver\source\nmasic.c
+
+src\ASF\common\components\wifi\winc1500\host_drv\driver\source\nmbus.c
+
+src\ASF\common\components\wifi\winc1500\host_drv\driver\source\nmdrv.c
+
+src\ASF\common\components\wifi\winc1500\host_drv\driver\source\nmi2c.c
+
+src\ASF\common\components\wifi\winc1500\host_drv\driver\source\nmspi.c
+
+src\ASF\common\components\wifi\winc1500\host_drv\driver\source\nmuart.c
+
+src\ASF\common\components\wifi\winc1500\host_drv\socket\source\socket.c
+
+src\ASF\common\components\wifi\winc1500\host_drv\spi_flash\source\flexible_flash.c
+
+src\ASF\common\components\wifi\winc1500\host_drv\spi_flash\source\spi_flash.c
+
+src\ASF\sam0\drivers\extint\extint_callback.c
+
+src\ASF\sam0\drivers\extint\extint_sam_d_r_h\extint.c
+
 src\ASF\sam0\drivers\rtc\rtc_sam_d_r_h\rtc_count.c
 
 src\ASF\sam0\drivers\sercom\i2c\i2c_sam0\i2c_master.c
@@ -21,6 +69,12 @@ src\ASF\common\utils\interrupt\interrupt_sam_nvic.c
 src\ASF\sam0\boards\samr21_xplained_pro\board_init.c
 
 src\ASF\sam0\drivers\port\port.c
+
+src\ASF\sam0\drivers\sercom\sercom_interrupt.c
+
+src\ASF\sam0\drivers\sercom\spi\spi.c
+
+src\ASF\sam0\drivers\sercom\spi\spi_interrupt.c
 
 src\ASF\sam0\drivers\system\clock\clock_samd21_r21_da_ha1\clock.c
 
