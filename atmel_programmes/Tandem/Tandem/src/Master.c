@@ -2,7 +2,7 @@
 #include "interrupt.h"
 
 
-uint8_t master_election()
+uint8_t master_election(void)
 {
 	i2c_slave_disable(&i2c_slave_instance);
 	i2c_slave_enable(&i2c_slave_instance);
