@@ -1,6 +1,6 @@
 #include "Slave.h"
 
-void read_slave(uint8_t msg_type)
+void read_slave(enum messages msg_type)
 {
 	packet_slave.data = read_buffer_slave;
 	while (read_buffer_slave[MSG_TYPE] != msg_type)
@@ -9,7 +9,7 @@ void read_slave(uint8_t msg_type)
 	}
 }
 
-void write_slave(uint8_t msg_type, uint8_t data)
+void write_slave(enum messages msg_type, uint8_t data)
 {
 	uint8_t master_address = read_buffer_slave[DATA];
 	write_buffer_slave[MSG_TYPE] = msg_type;

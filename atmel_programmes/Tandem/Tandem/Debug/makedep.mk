@@ -6,6 +6,10 @@ Device_Startup\startup_samr21.c
 
 Device_Startup\system_samr21.c
 
+src\ASF\sam0\drivers\tc\tc_interrupt.c
+
+src\ASF\sam0\drivers\tc\tc_sam_d_r_h\tc.c
+
 src\Master.c
 
 src\Slave.c

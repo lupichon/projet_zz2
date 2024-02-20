@@ -109,4 +109,8 @@
 // From module: SYSTEM - Reset Management for SAM D20/D21/R21/D09/D10/D11/DA/HA
 #include <reset.h>
 
+// From module: TC - Timer Counter (Callback APIs)
+#include <tc.h>
+#include <tc_interrupt.h>
+
 #endif // ASF_H

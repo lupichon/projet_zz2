@@ -9,8 +9,8 @@
 #define WORD2_ADDRESS 0x0080A044
 #define WORD3_ADDRESS 0x0080A048
 
-void write_slave(uint8_t msg_type, uint8_t data);
-void read_slave(uint8_t msg_type);
+void write_slave(enum messages msg_type, uint8_t data);
+void read_slave(enum messages msg_type);
 unsigned int unique_id(void);
 
 

@@ -24,7 +24,7 @@ uint8_t master_election(void)
 	return i_am_master;
 }
 
-void send_master(uint8_t msg_type, uint8_t data)
+void send_master(enum messages msg_type, uint8_t data)
 {
 	write_buffer_master[MSG_TYPE] = msg_type;
 	write_buffer_master[DATA] = data;
@@ -36,7 +36,7 @@ void send_master(uint8_t msg_type, uint8_t data)
 	}
 }
 
-void read_master(uint8_t msg_type)
+void read_master(enum messages msg_type)
 {
 	packet_master.data = read_buffer_master;
 	while (read_buffer_master[MSG_TYPE] != msg_type)
