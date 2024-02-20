@@ -1,5 +1,6 @@
 #include "LED.h"
 
+// Configuration de la LED
 void config_led(void)
 {
 	struct port_config pin_conf;
@@ -10,7 +11,14 @@ void config_led(void)
 	port_pin_set_output_level(LED_0_PIN, LED_0_INACTIVE);
 }
 
-void conf_led(void)
+// Clignotement de la LED avec parametres
+void blink_led(uint16_t duration, uint8_t nb_blinks)
 {
-	config_led();
+	for (uint8_t i = 0; i < nb_blinks; i++)
+	{
+		port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);
+		delay_ms(duration);
+		port_pin_set_output_level(LED_0_PIN, LED_0_INACTIVE);
+		delay_ms(duration);
+	}
 }

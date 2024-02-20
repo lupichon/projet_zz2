@@ -1,6 +1,6 @@
 #include "interrupt.h"
 
-
+// Gestion des interruptions
 void irq_handler(void)
 {
 	
@@ -31,6 +31,7 @@ void init_irq_pin(void)
 	port_pin_set_output_level(ITR_PIN_MASTER, false);
 }
 
+// Envoi de l'interruption de l'esclave vers le maitre
  void send_interrupt(void)
 {
 	port_pin_set_output_level(ITR_PIN_MASTER, true);

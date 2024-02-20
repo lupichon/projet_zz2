@@ -1,5 +1,6 @@
 #include "I2C.h"
 
+// Configuration en maitre
 void configure_i2c_master(void)
 {
 	struct i2c_master_config config_i2c_master;
@@ -14,6 +15,7 @@ void configure_i2c_master(void)
 	
 }
 
+// Configuration en esclave
 void configure_i2c_slave(void)
 {
 	struct i2c_slave_config config_i2c_slave;

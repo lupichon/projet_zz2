@@ -1,13 +1,14 @@
 #include "Master.h"
 #include "interrupt.h"
+#include <stdbool.h>
 
-
-uint8_t master_election()
+// Election du maitre
+bool master_election()
 {
 	i2c_slave_disable(&i2c_slave_instance);
 	i2c_slave_enable(&i2c_slave_instance);
 	configure_i2c_slave();	
-	uint8_t i_am_master = 0;
+	bool i_am_master = false;
 	enum i2c_slave_direction dir = i2c_slave_get_direction_wait(&i2c_slave_instance);
 	
 	if(dir == I2C_SLAVE_DIRECTION_NONE)
@@ -15,7 +16,7 @@ uint8_t master_election()
 		init_irq_interrupt();
 		i2c_slave_disable(&i2c_slave_instance);
 		configure_i2c_master();
-		i_am_master = 1;
+		i_am_master = true;
 	}	
 	else
 	{
@@ -24,6 +25,7 @@ uint8_t master_election()
 	return i_am_master;
 }
 
+// Envoi du maitre a l'esclave
 void send_master(enum messages msg_type, uint8_t data)
 {
 	write_buffer_master[MSG_TYPE] = msg_type;
@@ -33,15 +35,5 @@ void send_master(enum messages msg_type, uint8_t data)
 	while (status != STATUS_OK)
 	{
 		status = i2c_master_write_packet_wait(&i2c_master_instance, &packet_master);
-	}
-	//port_pin_set_output_level(LED_0_PIN, LED_0_ACTIVE);
-}
-
-void read_master(enum messages msg_type)
-{
-	packet_master.data = read_buffer_master;
-	while (read_buffer_master[MSG_TYPE] != msg_type)
-	{
-		i2c_master_read_packet_wait(&i2c_master_instance, &packet_master);
 	}
 }
