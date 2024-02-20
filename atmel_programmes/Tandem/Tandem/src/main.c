@@ -50,7 +50,7 @@ int main (void)
 	
 	unsigned id = unique_id();
 	srand(id);
-	delay_ms(100);
+	delay_ms((rand()%6000)+1000);
 	//port_pin_set_output_level(LED_0_PIN,LED_0_ACTIVE);
 	i_am_master = master_election();
 
