@@ -4,6 +4,7 @@
 #include <asf.h>
 #include "I2C.h"
 #include "Slave.h"
+#include "Master.h"
 
 #define IRQ_PIN 7
 #define TIMER_PIN PIN_PA06
@@ -14,7 +15,7 @@
 #define PERIODE 100
 
 extern struct tc_module tc_instance;
-extern uint8_t start_counter, end_counter;
+extern uint8_t time_1, time_2;
 
 void irq_handler(void);
 void init_irq_interrupt(void);

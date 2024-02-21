@@ -16,15 +16,13 @@ uint8_t master_election(void)
 		i2c_slave_disable(&i2c_slave_instance);
 		configure_i2c_master();
 		i_am_master = 1;
-		configure_port_heartbeat(PORT_PIN_DIR_OUTPUT);
-		configure_tc();
+		configure_tc();	
 		configure_tc_callbacks();
+		send_master(I_AM_MASTER,0x00);
 	}	
 	else
 	{
-		configure_port_heartbeat(PORT_PIN_DIR_INPUT);
 		configure_tc();
-		slave_interrupt();
 		init_irq_pin();
 	}
 	return i_am_master;

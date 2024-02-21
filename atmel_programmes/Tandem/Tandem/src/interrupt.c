@@ -43,16 +43,16 @@ uint8_t val = 0;
 void tc_callback_heartbeat(struct tc_module *const module_inst)
 {
 	int bug = rand()%1000;
-	if(1)
+	if(bug>200)
 	{
-		port_pin_set_output_level(TIMER_PIN,val);
-		val = !val;
 		//port_pin_set_output_level(LED0_PIN,LED_0_INACTIVE);
+		send_master(I_AM_MASTER,0x00);	
+		//port_pin_set_output_level(LED0_PIN,LED_0_ACTIVE);
 	}
 	else
 	{
 		port_pin_set_output_level(LED0_PIN,LED_0_INACTIVE);
-		delay_ms(500);
+		delay_ms(1000);
 		port_pin_set_output_level(LED0_PIN,LED_0_ACTIVE);
 	}
 }void configure_tc(void)
@@ -80,25 +80,15 @@ void configure_tc_callbacks(void)
 {
 	if(v==0)
 	{
-		tc_set_count_value(&tc_instance,0);
-		tc_start_counter(&tc_instance);
-		//start_counter = tc_get_count_value(&tc_instance);
-		//port_pin_set_output_level(LED0_PIN,LED_0_ACTIVE);
+		time_2 = tc_get_count_value(&tc_instance);
 	}
 	else
 	{
-		end_counter = tc_get_count_value(&tc_instance);
-		if(end_counter == 0)
-		{
-			port_pin_set_output_level(LED0_PIN,LED_0_ACTIVE);
-		}
-		else
-		{
-			port_pin_set_output_level(LED0_PIN,LED_0_INACTIVE);port_pin_set_output_level(LED0_PIN,LED_0_INACTIVE);
-		}
-		tc_stop_counter(&tc_instance);
-		//port_pin_set_output_level(LED0_PIN,LED_0_INACTIVE);
+		time_1 = tc_get_count_value(&tc_instance);
 	}
+	tc_stop_counter(&tc_instance);
+	tc_set_count_value(&tc_instance,0);
+	tc_start_counter(&tc_instance);
 	v= !v;
 }void slave_interrupt(void){
 	struct extint_chan_conf config_extint_chan;
@@ -110,5 +100,4 @@ void configure_tc_callbacks(void)
 	config_extint_chan.filter_input_signal = true;
 	extint_chan_set_config(CANAL_SLAVE, &config_extint_chan);							
 	extint_register_callback(start_timer,CANAL_SLAVE, EXTINT_CALLBACK_TYPE_DETECT);	
-	extint_chan_enable_callback(CANAL_SLAVE, EXTINT_CALLBACK_TYPE_DETECT);			
-	}
+	extint_chan_enable_callback(CANAL_SLAVE, EXTINT_CALLBACK_TYPE_DETECT);			}

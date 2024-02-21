@@ -1,12 +1,25 @@
 #include "Slave.h"
 
-void read_slave(enum messages msg_type)
+uint8_t read_slave(enum messages msg_type)
 {
+	tc_set_count_value(&tc_instance,0);
+	tc_start_counter(&tc_instance);
+	uint32_t counter = 0;
+	uint32_t bug = 0;
+
 	packet_slave.data = read_buffer_slave;
-	while (read_buffer_slave[MSG_TYPE] != msg_type)
+	while (counter<PERIODE && read_buffer_slave[MSG_TYPE] != msg_type)
 	{
 		i2c_slave_read_packet_wait(&i2c_slave_instance, &packet_slave);
+		counter = tc_get_count_value(&tc_instance);
 	}
+	read_buffer_slave[MSG_TYPE] = NO_INFO;
+	tc_stop_counter(&tc_instance);
+	if(counter>=PERIODE)
+	{
+		bug = 1;
+	}
+	return bug;
 }
 
 void write_slave(enum messages msg_type, uint8_t data)

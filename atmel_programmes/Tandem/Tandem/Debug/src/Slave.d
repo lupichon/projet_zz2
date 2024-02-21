@@ -137,7 +137,8 @@ src/Slave.d src/Slave.o: ../src/Slave.c ../src/Slave.h ../src/asf.h \
  ../src/ASF/sam0/drivers/sercom/i2c/i2c_slave.h \
  ../src/ASF/sam0/drivers/tc/tc.h \
  ../src/ASF/sam0/drivers/tc/tc_interrupt.h \
- ../src/ASF/sam0/drivers/tc/tc.h ../src/I2C.h
+ ../src/ASF/sam0/drivers/tc/tc.h ../src/I2C.h ../src/interrupt.h \
+ ../src/Master.h
 
 ../src/Slave.h:
 
@@ -428,3 +429,7 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 ../src/ASF/sam0/drivers/tc/tc.h:
 
 ../src/I2C.h:
+
+../src/interrupt.h:
+
+../src/Master.h:

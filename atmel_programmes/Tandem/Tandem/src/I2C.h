@@ -43,7 +43,8 @@ enum messages {
 	I_AM_SLAVE = 0xA1,
 	I_AM_READY = 0xA2,
 	YES = 0xA3,
-	INFO_MSG = 0xA4
+	INFO_MSG = 0xA4,
+	NO_INFO = 0xA5
 };
 
 void configure_i2c_master(void);
