@@ -1,3 +1,0 @@
-CFLAGS += -DCPU_FAM_$(call uppercase_and_underscore,$(CPU_FAM))
-
-INCLUDES += -I$(RIOTCPU)/nrf5x_common/include

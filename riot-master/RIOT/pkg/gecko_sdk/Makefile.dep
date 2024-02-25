@@ -1,2 +1,0 @@
-USEMODULE += gecko_sdk_emlib
-USEMODULE += gecko_sdk_emlib_extra

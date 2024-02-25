@@ -1,2 +1,0 @@
-INCLUDES += -I$(PKGDIRBASE)/gecko_sdk/dist/emlib/inc
-INCLUDES += -I$(PKGDIRBASE)/gecko_sdk/dist/emlib-extra/inc

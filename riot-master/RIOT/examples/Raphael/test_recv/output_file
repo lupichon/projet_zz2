@@ -1,70 +1,0 @@
-Building application "test_recv" for "openmote-b" with MCU "cc2538".
-
-"make" -C /home/theophile/riot-master/RIOT/boards/common/init
-"make" -C /home/theophile/riot-master/RIOT/boards/openmote-b
-"make" -C /home/theophile/riot-master/RIOT/core
-"make" -C /home/theophile/riot-master/RIOT/core/lib
-"make" -C /home/theophile/riot-master/RIOT/cpu/cc2538
-"make" -C /home/theophile/riot-master/RIOT/cpu/cc2538/periph
-"make" -C /home/theophile/riot-master/RIOT/cpu/cortexm_common
-"make" -C /home/theophile/riot-master/RIOT/cpu/cortexm_common/periph
-"make" -C /home/theophile/riot-master/RIOT/drivers
-"make" -C /home/theophile/riot-master/RIOT/drivers/at86rf215
-"make" -C /home/theophile/riot-master/RIOT/drivers/netdev
-"make" -C /home/theophile/riot-master/RIOT/drivers/periph_common
-"make" -C /home/theophile/riot-master/RIOT/sys
-"make" -C /home/theophile/riot-master/RIOT/sys/auto_init
-"make" -C /home/theophile/riot-master/RIOT/sys/div
-"make" -C /home/theophile/riot-master/RIOT/sys/ecc
-"make" -C /home/theophile/riot-master/RIOT/sys/evtimer
-"make" -C /home/theophile/riot-master/RIOT/sys/fmt
-"make" -C /home/theophile/riot-master/RIOT/sys/frac
-"make" -C /home/theophile/riot-master/RIOT/sys/isrpipe
-"make" -C /home/theophile/riot-master/RIOT/sys/luid
-"make" -C /home/theophile/riot-master/RIOT/sys/malloc_thread_safe
-"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc
-"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/link_layer/mac
-"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/netapi
-"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/netif
-"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/netif/hdr
-"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/netif/ieee802154
-"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/netif/init_devs
-"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/netreg
-"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/pkt
-"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/pktbuf
-"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/pktbuf_static
-"make" -C /home/theophile/riot-master/RIOT/sys/net/gnrc/priority_pktqueue
-"make" -C /home/theophile/riot-master/RIOT/sys/net/link_layer/csma_sender
-"make" -C /home/theophile/riot-master/RIOT/sys/net/link_layer/eui_provider
-"make" -C /home/theophile/riot-master/RIOT/sys/net/link_layer/ieee802154
-"make" -C /home/theophile/riot-master/RIOT/sys/net/link_layer/l2util
-"make" -C /home/theophile/riot-master/RIOT/sys/net/netif
-"make" -C /home/theophile/riot-master/RIOT/sys/newlib_syscalls_default
-"make" -C /home/theophile/riot-master/RIOT/sys/pm_layered
-"make" -C /home/theophile/riot-master/RIOT/sys/ps
-"make" -C /home/theophile/riot-master/RIOT/sys/random
-"make" -C /home/theophile/riot-master/RIOT/sys/shell
-"make" -C /home/theophile/riot-master/RIOT/sys/shell/commands
-"make" -C /home/theophile/riot-master/RIOT/sys/stdio_uart
-"make" -C /home/theophile/riot-master/RIOT/sys/tsrb
-"make" -C /home/theophile/riot-master/RIOT/sys/xtimer
-"make" -C /home/theophile/riot-master/RIOT/sys/ztimer
-   text	   data	    bss	    dec	    hex	filename
-  59872	    204	  14708	  74784	  12420	/home/theophile/riot-master/RIOT/examples/Raphael/test_recv/bin/openmote-b/test_recv.elf
-/home/theophile/riot-master/RIOT/dist/tools/cc2538-bsl/cc2538-bsl.py  -p "/dev/ttyUSB3" --bootloader-invert-lines --write-erase -v -b 460800 /home/theophile/riot-master/RIOT/examples/Raphael/test_recv/bin/openmote-b/test_recv.bin
-Opening port /dev/ttyUSB3, baud 460800
-Reading data from /home/theophile/riot-master/RIOT/examples/Raphael/test_recv/bin/openmote-b/test_recv.bin
-Cannot auto-detect firmware filetype: Assuming .bin
-Connecting to target...
-CC2538 PG2.0: 512KB Flash, 32KB SRAM, CCFG at 0x0027FFD4
-Primary IEEE Address: 00:12:4B:00:19:35:68:96
-    Erase before write done                 
-Writing 524288 bytes starting at address 0x00200000
- Write 248 bytes at 0x00200000 Write 248 bytes at 0x002000F8 Write 248 bytes at 0x002001F0 Write 248 bytes at 0x002002E8 Write 248 bytes at 0x002003E0 Write 248 bytes at 0x002004D8 Write 248 bytes at 0x002005D0 Write 248 bytes at 0x002006C8 Write 248 bytes at 0x002007C0 Write 248 bytes at 0x002008B8 Write 248 bytes at 0x002009B0 Write 248 bytes at 0x00200AA8 Write 248 bytes at 0x00200BA0 Write 248 bytes at 0x00200C98 Write 248 bytes at 0x00200D90 Write 248 bytes at 0x00200E88 Write 248 bytes at 0x00200F80 Write 248 bytes at 0x00201078 Write 248 bytes at 0x00201170 Write 248 bytes at 0x00201268 Write 248 bytes at 0x00201360 Write 248 bytes at 0x00201458 Write 248 bytes at 0x00201550 Write 248 bytes at 0x00201648 Write 248 bytes at 0x00201740 Write 248 bytes at 0x00201838 Write 248 bytes at 0x00201930 Write 248 bytes at 0x00201A28 Write 248 bytes at 0x00201B20 Write 248 bytes at 0x00201C18 Write 248 bytes at 0x00201D10 Write 248 bytes at 0x00201E08 Write 248 bytes at 0x00201F00 Write 248 bytes at 0x00201FF8 Write 248 bytes at 0x002020F0 Write 248 bytes at 0x002021E8 Write 248 bytes at 0x002022E0 Write 248 bytes at 0x002023D8 Write 248 bytes at 0x002024D0 Write 248 bytes at 0x002025C8 Write 248 bytes at 0x002026C0 Write 248 bytes at 0x002027B8 Write 248 bytes at 0x002028B0 Write 248 bytes at 0x002029A8 Write 248 bytes at 0x00202AA0 Write 248 bytes at 0x00202B98 Write 248 bytes at 0x00202C90 Write 248 bytes at 0x00202D88 Write 248 bytes at 0x00202E80 Write 248 bytes at 0x00202F78 Write 248 bytes at 0x00203070 Write 248 bytes at 0x00203168 Write 248 bytes at 0x00203260 Write 248 bytes at 0x00203358 Write 248 bytes at 0x00203450 Write 248 bytes at 0x00203548 Write 248 bytes at 0x00203640 Write 248 bytes at 0x00203738 Write 248 bytes at 0x00203830 Write 248 bytes at 0x00203928 Write 248 bytes at 0x00203A20 Write 248 bytes at 0x00203B18 Write 248 bytes at 0x00203C10 Write 248 bytes at 0x00203D08 Write 248 bytes at 0x00203E00 Write 248 bytes at 0x00203EF8 Write 248 bytes at 0x00203FF0 Write 248 bytes at 0x002040E8 Write 248 bytes at 0x002041E0 Write 248 bytes at 0x002042D8 Write 248 bytes at 0x002043D0 Write 248 bytes at 0x002044C8 Write 248 bytes at 0x002045C0 Write 248 bytes at 0x002046B8 Write 248 bytes at 0x002047B0 Write 248 bytes at 0x002048A8 Write 248 bytes at 0x002049A0 Write 248 bytes at 0x00204A98 Write 248 bytes at 0x00204B90 Write 248 bytes at 0x00204C88 Write 248 bytes at 0x00204D80 Write 248 bytes at 0x00204E78 Write 248 bytes at 0x00204F70 Write 248 bytes at 0x00205068 Write 248 bytes at 0x00205160 Write 248 bytes at 0x00205258 Write 248 bytes at 0x00205350 Write 248 bytes at 0x00205448 Write 248 bytes at 0x00205540 Write 248 bytes at 0x00205638 Write 248 bytes at 0x00205730 Write 248 bytes at 0x00205828 Write 248 bytes at 0x00205920 Write 248 bytes at 0x00205A18 Write 248 bytes at 0x00205B10 Write 248 bytes at 0x00205C08 Write 248 bytes at 0x00205D00 Write 248 bytes at 0x00205DF8 Write 248 bytes at 0x00205EF0 Write 248 bytes at 0x00205FE8 Write 248 bytes at 0x002060E0 Write 248 bytes at 0x002061D8 Write 248 bytes at 0x002062D0 Write 248 bytes at 0x002063C8 Write 248 bytes at 0x002064C0 Write 248 bytes at 0x002065B8 Write 248 bytes at 0x002066B0 Write 248 bytes at 0x002067A8 Write 248 bytes at 0x002068A0 Write 248 bytes at 0x00206998 Write 248 bytes at 0x00206A90 Write 248 bytes at 0x00206B88 Write 248 bytes at 0x00206C80 Write 248 bytes at 0x00206D78 Write 248 bytes at 0x00206E70 Write 248 bytes at 0x00206F68 Write 248 bytes at 0x00207060 Write 248 bytes at 0x00207158 Write 248 bytes at 0x00207250 Write 248 bytes at 0x00207348 Write 248 bytes at 0x00207440 Write 248 bytes at 0x00207538 Write 248 bytes at 0x00207630 Write 248 bytes at 0x00207728 Write 248 bytes at 0x00207820 Write 248 bytes at 0x00207918 Write 248 bytes at 0x00207A10 Write 248 bytes at 0x00207B08 Write 248 bytes at 0x00207C00 Write 248 bytes at 0x00207CF8 Write 248 bytes at 0x00207DF0 Write 248 bytes at 0x00207EE8 Write 248 bytes at 0x00207FE0 Write 248 bytes at 0x002080D8 Write 248 bytes at 0x002081D0 Write 248 bytes at 0x002082C8 Write 248 bytes at 0x002083C0 Write 248 bytes at 0x002084B8 Write 248 bytes at 0x002085B0 Write 248 bytes at 0x002086A8 Write 248 bytes at 0x002087A0 Write 248 bytes at 0x00208898 Write 248 bytes at 0x00208990 Write 248 bytes at 0x00208A88 Write 248 bytes at 0x00208B80 Write 248 bytes at 0x00208C78 Write 248 bytes at 0x00208D70 Write 248 bytes at 0x00208E68 Write 248 bytes at 0x00208F60 Write 248 bytes at 0x00209058 Write 248 bytes at 0x00209150 Write 248 bytes at 0x00209248 Write 248 bytes at 0x00209340 Write 248 bytes at 0x00209438 Write 248 bytes at 0x00209530 Write 248 bytes at 0x00209628 Write 248 bytes at 0x00209720 Write 248 bytes at 0x00209818 Write 248 bytes at 0x00209910 Write 248 bytes at 0x00209A08 Write 248 bytes at 0x00209B00 Write 248 bytes at 0x00209BF8 Write 248 bytes at 0x00209CF0 Write 248 bytes at 0x00209DE8 Write 248 bytes at 0x00209EE0 Write 248 bytes at 0x00209FD8 Write 248 bytes at 0x0020A0D0 Write 248 bytes at 0x0020A1C8 Write 248 bytes at 0x0020A2C0 Write 248 bytes at 0x0020A3B8 Write 248 bytes at 0x0020A4B0 Write 248 bytes at 0x0020A5A8 Write 248 bytes at 0x0020A6A0 Write 248 bytes at 0x0020A798 Write 248 bytes at 0x0020A890 Write 248 bytes at 0x0020A988 Write 248 bytes at 0x0020AA80 Write 248 bytes at 0x0020AB78 Write 248 bytes at 0x0020AC70 Write 248 bytes at 0x0020AD68 Write 248 bytes at 0x0020AE60 Write 248 bytes at 0x0020AF58 Write 248 bytes at 0x0020B050 Write 248 bytes at 0x0020B148 Write 248 bytes at 0x0020B240 Write 248 bytes at 0x0020B338 Write 248 bytes at 0x0020B430 Write 248 bytes at 0x0020B528 Write 248 bytes at 0x0020B620 Write 248 bytes at 0x0020B718 Write 248 bytes at 0x0020B810 Write 248 bytes at 0x0020B908 Write 248 bytes at 0x0020BA00 Write 248 bytes at 0x0020BAF8 Write 248 bytes at 0x0020BBF0 Write 248 bytes at 0x0020BCE8 Write 248 bytes at 0x0020BDE0 Write 248 bytes at 0x0020BED8 Write 248 bytes at 0x0020BFD0 Write 248 bytes at 0x0020C0C8 Write 248 bytes at 0x0020C1C0 Write 248 bytes at 0x0020C2B8 Write 248 bytes at 0x0020C3B0 Write 248 bytes at 0x0020C4A8 Write 248 bytes at 0x0020C5A0 Write 248 bytes at 0x0020C698 Write 248 bytes at 0x0020C790 Write 248 bytes at 0x0020C888 Write 248 bytes at 0x0020C980 Write 248 bytes at 0x0020CA78 Write 248 bytes at 0x0020CB70 Write 248 bytes at 0x0020CC68 Write 248 bytes at 0x0020CD60 Write 248 bytes at 0x0020CE58 Write 248 bytes at 0x0020CF50 Write 248 bytes at 0x0020D048 Write 248 bytes at 0x0020D140 Write 248 bytes at 0x0020D238 Write 248 bytes at 0x0020D330 Write 248 bytes at 0x0020D428 Write 248 bytes at 0x0020D520 Write 248 bytes at 0x0020D618 Write 248 bytes at 0x0020D710 Write 248 bytes at 0x0020D808 Write 248 bytes at 0x0020D900 Write 248 bytes at 0x0020D9F8 Write 248 bytes at 0x0020DAF0 Write 248 bytes at 0x0020DBE8 Write 248 bytes at 0x0020DCE0 Write 248 bytes at 0x0020DDD8 Write 248 bytes at 0x0020DED0 Write 248 bytes at 0x0020DFC8 Write 248 bytes at 0x0020E0C0 Write 248 bytes at 0x0020E1B8 Write 248 bytes at 0x0020E2B0 Write 248 bytes at 0x0020E3A8 Write 248 bytes at 0x0020E4A0 Write 248 bytes at 0x0020E598 Write 248 bytes at 0x0020E690 Write 248 bytes at 0x0020E788 Write 248 bytes at 0x0020E880 Write 248 bytes at 0x0020E978 Write 248 bytes at 0x0020EA70 Write 248 bytes at 0x0027FEF8Write 16 bytes at 0x0027FFF0
-    Write done                              
-/home/theophile/riot-master/RIOT/dist/tools/pyterm/pyterm -p "/dev/ttyUSB3" -b "115200"  
-Twisted not available, please install it if you want to use pyterm's JSON capabilities
-2023-12-18 14:19:47,604 # Connect to serial port /dev/ttyUSB3
-Welcome to pyterm!
-Type '/exit' to exit.
-2023-12-18 14:19:48,607 # Exiting Pyterm

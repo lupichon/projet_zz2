@@ -1,2 +1,0 @@
-include $(RIOTBOARD)/common/microbit/Makefile.dep
-include $(RIOTBOARD)/common/nrf52/Makefile.dep
