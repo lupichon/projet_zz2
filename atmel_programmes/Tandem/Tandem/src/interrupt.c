@@ -1,103 +1,111 @@
+/**
+ * @file interrupt.c
+ * @authors PICHON Lucas (Lucas.PICHON@etu.isima.fr) & ROBIN Igor (Igor.ROBIN@etu.isima.fr)
+ * @brief Fonctions pour la gestion des interruptions 
+ * @version 1.0
+ * @date 2024-02-25
+ * 
+ * 
+ */
+
 #include "interrupt.h"
 
 
+/**
+ * @brief Gestionnaire d'interruption IRQ
+ *
+ * Cette fonction r√©initialise le syst√®me lorsqu'une interruption est d√©clench√©e.
+ */
 void irq_handler(void)
 {
-	
-	system_reset();
+    system_reset(); 
 }
 
-
+/**
+ * @brief Initialise l'interruption IRQ (ma√Ætre)
+ */
 void init_irq_interrupt(void)
 {
-	struct extint_chan_conf config_extint_chan;
-	extint_chan_get_config_defaults(&config_extint_chan);
-	config_extint_chan.gpio_pin = IRQ_PIN;									//numero de broche associÈ ‡ l'interruption
-	config_extint_chan.gpio_pin_mux = MUX_PA07A_EIC_EXTINT7;				//configuration de la broche en canal d'entrÈe
-	config_extint_chan.gpio_pin_pull = EXTINT_PULL_DOWN;					//rÈsistance de tirage
-	config_extint_chan.detection_criteria = EXTINT_DETECT_RISING;			//citËre de dÈtÈction de l'interruption
-	config_extint_chan.filter_input_signal = true;
-	extint_chan_set_config(CANAL, &config_extint_chan);							//configuration du canal d'entrÈe gr‚ce ‡ la structure
-	extint_register_callback(irq_handler,CANAL, EXTINT_CALLBACK_TYPE_DETECT);	//permet de dÈfinir la fonction callback appelÈe ‡ chaque interruption
-	extint_chan_enable_callback(CANAL, EXTINT_CALLBACK_TYPE_DETECT);			//activer la dÈtÈction d'interruptions
-	//EXTINT_CALLBACK_TYPE_DETECT -> structure qui permet de configurer la condition d'interruption
+    struct extint_chan_conf config_extint_chan; 								/* Configuration du canal d'interruption externe */
+    extint_chan_get_config_defaults(&config_extint_chan);
+
+    config_extint_chan.gpio_pin = IRQ_PIN; 										/* Sp√©cifier le num√©ro de la broche GPIO */
+    config_extint_chan.gpio_pin_mux = MUX_PA07A_EIC_EXTINT7; 					/* Sp√©cifier le multiplexeur de la broche GPIO */
+    config_extint_chan.gpio_pin_pull = EXTINT_PULL_DOWN; 						/* Activer la r√©sistance de pull-down */
+    config_extint_chan.detection_criteria = EXTINT_DETECT_RISING; 				/* D√©finir le crit√®re de d√©tection sur le front montant */
+    config_extint_chan.filter_input_signal = true; 								/* Activer le filtrage du signal d'entr√©e */
+    
+    extint_chan_set_config(CANAL, &config_extint_chan); 						/* Configurer le canal d'interruption externe */
+    extint_register_callback(irq_handler, CANAL, EXTINT_CALLBACK_TYPE_DETECT); 	/* Enregistrer le gestionnaire d'interruption */
+    extint_chan_enable_callback(CANAL, EXTINT_CALLBACK_TYPE_DETECT); 			/* Activer le rappel d'interruption */
 }
 
+/**
+ * @brief Initialise la broche d'interruption (esclaves)
+ */
 void init_irq_pin(void)
 {
-	struct port_config config_port;
-	port_get_config_defaults(&config_port);
-	config_port.direction = PORT_PIN_DIR_OUTPUT;
-	port_pin_set_config(ITR_PIN_MASTER, &config_port);
-	port_pin_set_output_level(ITR_PIN_MASTER, false);
+    struct port_config config_port;						/* Configuration de la broche */
+    port_get_config_defaults(&config_port);
+
+    config_port.direction = PORT_PIN_DIR_OUTPUT; 		/* D√©finir la direction de la broche comme sortie */
+    port_pin_set_config(ITR_PIN_MASTER, &config_port); 	/* Configurer la broche */
+    port_pin_set_output_level(ITR_PIN_MASTER, false); 	/* Mettre le niveau de sortie √† bas */
 }
 
- void send_interrupt(void)
+/**
+ * @brief Envoie une interruption
+ */
+void send_interrupt(void)
 {
-	port_pin_set_output_level(ITR_PIN_MASTER, true);
-	delay_us(50);
-	port_pin_set_output_level(ITR_PIN_MASTER, false);
+	/* Cr√©ation d'un front montant sur la broche d'interruption */
+    port_pin_set_output_level(ITR_PIN_MASTER, true); 
+    delay_us(50); 
+    port_pin_set_output_level(ITR_PIN_MASTER, false); 
 }
 
-uint8_t val = 0;
+/**
+ * @brief Callback du timer pour le battement de coeur
+ *
+ * @param module_inst Instance du module timer/counter
+ */
 void tc_callback_heartbeat(struct tc_module *const module_inst)
 {
-	int bug = rand()%1000;
-	if(bug>200)
-	{
-		//port_pin_set_output_level(LED0_PIN,LED_0_INACTIVE);
-		send_master(I_AM_MASTER,0x00);	
-		//port_pin_set_output_level(LED0_PIN,LED_0_ACTIVE);
-	}
-	else
-	{
-		port_pin_set_output_level(LED0_PIN,LED_0_INACTIVE);
-		delay_ms(1000);
-		port_pin_set_output_level(LED0_PIN,LED_0_ACTIVE);
-	}
-}void configure_tc(void)
-{
-	struct tc_config config_tc;
-	tc_get_config_defaults(&config_tc);
-	config_tc.counter_size = TC_COUNTER_SIZE_8BIT;
-	config_tc.clock_source = GCLK_GENERATOR_1;
-	config_tc.clock_prescaler = TC_CLOCK_PRESCALER_DIV1024;
-	config_tc.counter_8_bit.period = PERIODE;
-	config_tc.counter_8_bit.compare_capture_channel[0] = 50;
-	config_tc.counter_8_bit.compare_capture_channel[1] = 54;
-	tc_init(&tc_instance, CONF_TC_MODULE, &config_tc);
-	tc_enable(&tc_instance);
+    int bug = rand() % 1000; /* Simulation d'un bug */
+    if (bug > 200)
+    {
+        send_master(I_AM_MASTER, 0x00); /* Envoie du battement de coeur sur le bus I2C */
+    }
+    else /* bug */
+    {
+        port_pin_set_output_level(LED0_PIN, LED_0_INACTIVE);
+        delay_ms(1000); 
+        port_pin_set_output_level(LED0_PIN, LED_0_ACTIVE); 
+    }
 }
 
+/**
+ * @brief Configure le timer
+ */
+void configure_tc(void)
+{
+    struct tc_config config_tc; 
+    tc_get_config_defaults(&config_tc);
+
+    config_tc.counter_size = TC_COUNTER_SIZE_8BIT; 			/* Taille du compteur */
+    config_tc.clock_source = GCLK_GENERATOR_1; 				/* Source d'horloge */
+    config_tc.clock_prescaler = TC_CLOCK_PRESCALER_DIV1024; /* Pr√©scaleur d'horloge */
+    config_tc.counter_8_bit.period = PERIODE; 				/* P√©riode du compteur */
+
+    tc_init(&tc_instance, CONF_TC_MODULE, &config_tc); 		/* Initialiser le timer */
+    tc_enable(&tc_instance); 								/* Activer le timer */
+}
+
+/**
+ * @brief Configure les rappels du timer
+ */
 void configure_tc_callbacks(void)
 {
-	tc_register_callback(&tc_instance, tc_callback_heartbeat,TC_CALLBACK_OVERFLOW);
-	tc_enable_callback(&tc_instance, TC_CALLBACK_OVERFLOW);
-}void configure_port_heartbeat(enum port_pin_dir direction){	struct port_config pin_conf;
-	port_get_config_defaults(&pin_conf);
-	pin_conf.direction = direction;
-	port_pin_set_config(TIMER_PIN, &pin_conf);}uint8_t v = 0;void start_timer(void)
-{
-	if(v==0)
-	{
-		time_2 = tc_get_count_value(&tc_instance);
-	}
-	else
-	{
-		time_1 = tc_get_count_value(&tc_instance);
-	}
-	tc_stop_counter(&tc_instance);
-	tc_set_count_value(&tc_instance,0);
-	tc_start_counter(&tc_instance);
-	v= !v;
-}void slave_interrupt(void){
-	struct extint_chan_conf config_extint_chan;
-	extint_chan_get_config_defaults(&config_extint_chan);
-	config_extint_chan.gpio_pin = TIMER_PIN;									
-	config_extint_chan.gpio_pin_mux = MUX_PA06A_EIC_EXTINT6;	
-	config_extint_chan.gpio_pin_pull = EXTINT_PULL_DOWN;				
-	config_extint_chan.detection_criteria = EXTINT_DETECT_BOTH;			
-	config_extint_chan.filter_input_signal = true;
-	extint_chan_set_config(CANAL_SLAVE, &config_extint_chan);							
-	extint_register_callback(start_timer,CANAL_SLAVE, EXTINT_CALLBACK_TYPE_DETECT);	
-	extint_chan_enable_callback(CANAL_SLAVE, EXTINT_CALLBACK_TYPE_DETECT);			}
+    tc_register_callback(&tc_instance, tc_callback_heartbeat, TC_CALLBACK_OVERFLOW); 	/* Enregistrer le rappel de d√©bordement */
+    tc_enable_callback(&tc_instance, TC_CALLBACK_OVERFLOW); 							/* Activer le rappel de d√©bordement */
+}
