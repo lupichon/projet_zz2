@@ -1,7 +1,7 @@
 # Projet de deuxième année ISIMA
 ## Lucas PICHON et Igor ROBIN
 ## Filière F1 : Informatique des systèmes intéractifs pour l'embarqué, la robotique et le virtuel
-# Mise en place d'un tandem afin d'améliorer la fiabilité d'un réseau en étoile
+# Réseau de capteurs sans fils - Contrôle en tandem
 
 ## Afin de pouvoir visualiser le code du projet :
 - Télécharger et installer Microchip (Atmel) Studio 7.0 : https://www.microchip.com/en-us/tools-resources/develop/microchip-studio#Downloads
